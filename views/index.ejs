@@ -1,3 +1,51 @@
 <%- include('partials/head'); %>
-    <h2>Hi project oba</h2>
+    <ul>
+        <li id="titelLogo">
+            <h2>ob</h2>
+            <h2 id="titelA">a</h2>
+        </li>
+        <li><a>Website Oba</a></li>
+    </ul>
+
+    <section>
+        <img id="buddy" src="/img/humaaan-4.png">
+        <!-- Chat -->
+        <section id="chat">
+            <h3>Stel een vraag</h3>
+            <ul>
+                <li>Welkom, ik ben obaAssistent .
+                    Graag help ik je verder met het vinden van informatie.</li>
+                <li>Informatie vinden over:
+                    uit de categorie: activiteiten, boeken, cursus, DvD’s, Stardsarchief
+                    of overheid/gemeente informatie</li>
+                <li>
+                    <span>Stel een vraag, bijvoorbeeld:</span>
+                    <button id="btnBook">Ik zoek een boek</button>
+                    <button>Ik wil belasting aangifte doen</button>
+                </li>
+                <li class="showResult">Ik zoek een boek</li>
+                <li class="showResult">Geef aan wat voor soort boek je zoekt</li>
+            </ul>
+            <span class="fallback"></span>
+            <form id="formChat">
+                <input id="inputChat" type="text" autocomplete="off" placeholder="Stel een vraag">
+                <button><span>Send</span></button>
+            </form>
+        </section>
+
+        <!-- result-->
+        <section class="showResult">
+            <h3>Resultaten: kookboek</h3>
+            <ul>
+                <li><img scr="#" alt="afbeelding boek">
+                    <p>Kookboek / recepten en foto's Brigitte Carrere</p>
+                </li>
+                <li><img scr="#" alt="afbeelding boek">
+                    <p>Kookboek / recepten en foto's Brigitte Carrere</p>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+
     <%- include('partials/footer'); %>
