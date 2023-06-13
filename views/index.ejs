@@ -1,3 +1,14 @@
 <%- include('partials/head'); %>
-    <h2>Hi project oba</h2>
-    <%- include('partials/footer'); %>
+<h2>Hi project oba</h2>
+
+<form id="searchForm">
+  <input
+    type="text"
+    name="query"
+    placeholder="What would you like to find"
+    id="query"
+  />
+  <button type="submit" id="searchButton">Search</button>
+</form>
+<div id="searchResults"></div>
+<%- include('partials/footer'); %>
