@@ -14,6 +14,8 @@ module.exports = {
         "camelcase": ["error", { "properties": "always" }],
         "block-spacing": ["error", "always"],
         "comma-spacing": ["error", { "before": false, "after": true }],
-        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        "no-const-assign": ["off"],
+
     }
 }
