@@ -16,7 +16,14 @@
   --mainRed: #ff0000;
 }
 
-/* Nav styling */
+svg {
+  width: 50%;
+}
+main {
+  padding-top: 3rem;
+  max-width: 90vw;
+}
+
 ul:first-of-type {
   display: flex;
   margin-bottom: 3rem;
@@ -34,30 +41,20 @@ li#titelLogo:first-of-type {
   margin-right: 5rem;
 }
 
-section#containerBud {
-  text-align: center;
-}
-/* svg*/
-
-svg {
-  width: 50%;
-}
-
-/* welcome text*/
-#content {
-}
-
-/*container chat*/
-section#containerChat {
+section:first-of-type {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-/* chat*/
+
+img#buddy {
+  width: 20%;
+  height: 20%;
+  position: relative;
+  top: 10rem;
+}
 section#chat {
-  width: 30rem;
+  width: 40rem;
   height: 35rem;
-  background-color: rgba(70, 146, 125, 0.25);
+  background: #fffcf2;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -66,7 +63,7 @@ section#chat {
 section#chat > ul {
   display: block;
   margin: 0 !important;
-  padding: 1rem;
+  padding: 0.2em;
   list-style-type: none;
   flex-grow: 2;
   width: 30rem;
@@ -122,7 +119,6 @@ section#chat form > button::after {
   content: "⇒";
 }
 
-/*show result*/
 .showResult {
   display: none;
 }
@@ -130,23 +126,28 @@ li.showResult {
   text-align: end;
 }
 
-/*********************/
-/*    WEBSITE MODE   */
-/*********************/
-@media (min-width: 40em) {
-  section#mainContent {
-    display: flex;
-    justify-content: center;
-  }
+.showResult p {
+  width: 40%;
+  font-size: 0.7em;
+}
 
-  #containerBud {
-    position: relative;
-    flex-direction: row-reverse;
-  }
+.showResult h3 {
+  text-align: center;
+}
 
-  #content {
-  }
+.showResult ul {
+  margin-left: 1rem;
+}
 
-  #svg-help {
-  }
+/* welcome text*/
+span#content {
+  width: 40%;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+section > section:first-of-type {
+  position: relative;
 }

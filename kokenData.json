@@ -1,0 +1,1665 @@
+{
+    "meta": {
+        "time-taken": "275",
+        "result-count": "1436",
+        "page-count": "20",
+        "rctx": "ASWIQQ6CMBQFX6mEGI5gXLhzhzTxPKRipT98WmwL0Tt4Jo@jwpUXMJHEZGYWIyBLFKg16SP7IfKs0hx9q27OurtyUmA9aHKQKHvfG@evyDfUBNPG0YRRdyZXh23bWEqWOsuLqbxojiYDXt@VQvZ4S7F@fjIBFP6kAeyq4H2qmK4TnavlFVNg5I7FDw==",
+        "current-page": "1",
+        "current-sort-method": "relevance",
+        "sort-methods": [
+            "relevance",
+            "year",
+            "title",
+            "author"
+        ]
+    },
+    "results": [
+        {
+            "id": "|oba-catalogus|1132990",
+            "frabl": {
+                "key1": "koken voor de keizer",
+                "key2": "marloes morshuis",
+                "cnt": "1",
+                "value": "3CFC3755DFF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Marloes-Morshuis/Koken-voor-de-keizer/Boek/?itemid=%7coba-catalogus%7c1132990",
+            "titles": [
+                "Koken voor de keizer",
+                "Koken voor de keizer / Marloes Morshuis"
+            ],
+            "isbn": [
+                "=9789491773310"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=39189739X&isbn=9789491773310&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/39189739X&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Marloes Morshuis"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Marloes Morshuis",
+                    "firstname": "Marloes",
+                    "lastname": "Morshuis",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                }
+            ],
+            "year": "2015",
+            "publisher": [
+                "Palmslag, [Groningen], maart 2015"
+            ],
+            "subject-topical": [
+                "Koken",
+                "Overleven"
+            ],
+            "genres": [
+                "Sprookjes"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "summaries": [
+                "Mick heeft een weddenschap met de wrede keizer Linus I afgesloten. Mick moet een week lang lekkere dingen voor de keizer koken. Maar de keizer lust niets. Met achterin de recepten van Mick. Vanaf ca. 10 jaar."
+            ],
+            "description": [
+                "223 pagina's",
+                "223 pagina's ; 23 cm"
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken voor de keizer",
+                        "key2": "marloes morshuis",
+                        "cnt": "1",
+                        "value": "3CFC3755DFF360A0"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "|oba-catalogus|1166432",
+            "frabl": {
+                "key1": "koken en bakken",
+                "key2": "moniek van zijl",
+                "cnt": "1",
+                "value": "763C0147ECF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Moniek-van-Zijl/Koken-en-bakken/Boek/?itemid=%7coba-catalogus%7c1166432",
+            "titles": [
+                "Koken en bakken",
+                "Koken en bakken / Moniek van Zijl"
+            ],
+            "isbn": [
+                "=9789001864910"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=408204559&isbn=9789001864910&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/408204559&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Moniek van Zijl",
+                "Marlies Huijzer",
+                "Marijn van der Wateren"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Moniek van Zijl",
+                    "firstname": "Moniek",
+                    "lastname": "Zijl",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Marlies Huijzer",
+                    "lastname": "Marlies Huijzer",
+                    "localized-type": "Redacteur",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Marijn van der Wateren",
+                    "lastname": "Marijn van der Wateren",
+                    "localized-type": "Illustrator",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2016",
+            "publisher": [
+                "Noordhoff Uitgevers, Groningen, [2016]"
+            ],
+            "subject-topical": [
+                "Koken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "24 pagina's",
+                "24 pagina's: gekleurde illustraties ; 20 cm"
+            ],
+            "note": "Met literatuuropgave",
+            "series": [
+                {
+                    "text": "Informatie"
+                }
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken en bakken",
+                        "key2": "moniek van zijl",
+                        "cnt": "1",
+                        "value": "763C0147ECF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "J629"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1102995",
+            "frabl": {
+                "key1": "koken voor dummies",
+                "key2": "joke reijnders",
+                "cnt": "2",
+                "value": "1311F0C833F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Joke-Reijnders/Koken-voor-dummies/Boek/?itemid=%7coba-catalogus%7c1102995",
+            "titles": [
+                "Koken voor dummies",
+                "Koken voor dummies / Joke Reijnders"
+            ],
+            "isbn": [
+                "9789043030540"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=363224289&isbn=9789043030540&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/363224289&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Joke Reijnders",
+                "Bas den Braver"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Joke Reijnders",
+                    "firstname": "Joke",
+                    "lastname": "Reijnders",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Bas den Braver",
+                    "lastname": "Bas den Braver",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2014",
+            "publisher": [
+                "Pearson, Amsterdam, [2014]"
+            ],
+            "subject-topical": [
+                "Koken",
+                "Kookboeken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "XII, 256 pagina's, 16 ongenummerde paginas platen",
+                "XII, 256 pagina's, 16 ongenummerde paginas platen: illustraties ; 24 cm"
+            ],
+            "note": "Met index",
+            "undup": {
+                "alsoAvailableAsCount": "1",
+                "items": [
+                    {
+                        "key1": "koken voor dummies",
+                        "key2": "joke reijnders",
+                        "cnt": "2",
+                        "value": "1311F0C833F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|257045",
+            "frabl": {
+                "key1": "horeca koken",
+                "key2": "gjbrandsma hgmdoreleijers phendriks",
+                "cnt": "1",
+                "value": "218187BE2DF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/G-J-Brandsma/Horeca-koken/Boek/?itemid=%7coba-catalogus%7c257045",
+            "titles": [
+                "Horeca koken",
+                "Horeca koken / onder red. van G.J. Brandsma, H.G.M. Doreleijers, J.F.M. van der Zijden ; met medew. van P. Hendriks, C. de Rooij"
+            ],
+            "isbn": [
+                "9011064275"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=229820492&isbn=9789011064270&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/229820492&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "G.J. Brandsma",
+                "H.G.M. Doreleijers",
+                "P. Hendriks"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "G.J. Brandsma",
+                    "lastname": "G.J. Brandsma",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "H.G.M. Doreleijers",
+                    "lastname": "H.G.M. Doreleijers",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "P. Hendriks",
+                    "lastname": "P. Hendriks",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2001",
+            "publisher": [
+                "EPN, Houten, 2001"
+            ],
+            "subject-topical": [
+                "Horeca",
+                "Koken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "186 p",
+                "186 p: ill ; 30 cm"
+            ],
+            "note": "Met reg",
+            "series": [
+                {
+                    "text": "Smakelijk!."
+                },
+                {
+                    "text": "Theorieboeken"
+                }
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "horeca koken",
+                        "key2": "gjbrandsma hgmdoreleijers phendriks",
+                        "cnt": "1",
+                        "value": "218187BE2DF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|175299",
+            "frabl": {
+                "key1": "zelf koken",
+                "key2": "fred van hees",
+                "cnt": "1",
+                "value": "7D9C4ACC73F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Fred-van-Hees/Zelf-koken/Boek/?itemid=%7coba-catalogus%7c175299",
+            "titles": [
+                "Zelf koken",
+                "Zelf koken / Fred van Hees ; [foto's Denise Hager ; tek. Bea Boelen ... et al.]"
+            ],
+            "isbn": [
+                "9005002948"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=152322590&isbn=9789005002943&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/152322590&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Fred van Hees",
+                "Denise Hager",
+                "Bea g Boelen"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Fred van Hees",
+                    "firstname": "Fred",
+                    "lastname": "Hees",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Denise Hager",
+                    "lastname": "Denise Hager",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Bea g Boelen",
+                    "lastname": "Bea g Boelen",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "1996",
+            "publisher": [
+                "De Ruiter, Houten, 1996"
+            ],
+            "subject-topical": [
+                "Koken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "20 p",
+                "20 p: ill ; 19 cm"
+            ],
+            "note": "Met lit. opg",
+            "series": [
+                {
+                    "text": "Informatie"
+                }
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "zelf koken",
+                        "key2": "fred van hees",
+                        "cnt": "1",
+                        "value": "7D9C4ACC73F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1220682",
+            "frabl": {
+                "key1": "beren koken",
+                "key2": "mikael niemi",
+                "cnt": "1",
+                "value": "66C292CEDAF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Mikael-Niemi/Beren-koken/Boek/?itemid=%7coba-catalogus%7c1220682",
+            "titles": [
+                "Beren koken",
+                "Beren koken / Mikael Niemi"
+            ],
+            "isbn": [
+                "=9789025453213"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=422374482&isbn=9789025453213&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/422374482&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Mikael Niemi",
+                "Geri de Boer"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Mikael Niemi",
+                    "firstname": "Mikael",
+                    "lastname": "Niemi",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Geri de Boer",
+                    "lastname": "Geri de Boer",
+                    "localized-type": "Vertaler",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2019",
+            "publisher": [
+                "Uitgeverij Atlas Contact, Amsterdam, juni 2019"
+            ],
+            "genres": [
+                "Historische roman",
+                "Thriller"
+            ],
+            "languages": [
+                "Nederlands",
+                "Zweeds"
+            ],
+            "summaries": [
+                "Als in 1852 in het uiterste noorden van Zweden een veehoudster verdwijnt, gaat de dominee, samen met zijn Samische beschermeling, op onderzoek uit."
+            ],
+            "description": [
+                "431 pagina's",
+                "431 pagina's: portret ; 21 cm"
+            ],
+            "note": "Vertaling van: Koka björn. - Stockholm : Piratförlaget, (c)2017",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "beren koken",
+                        "key2": "mikael niemi",
+                        "cnt": "1",
+                        "value": "66C292CEDAF360A0"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "|oba-catalogus|1239801",
+            "frabl": {
+                "key1": "koken eten leven ingredienten recepten en verhalen",
+                "key2": "nigella lawson",
+                "cnt": "1",
+                "value": "437762F14BF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Nigella-Lawson/Koken-eten-leven-ingredienten-recepten-en/Boek/?itemid=%7coba-catalogus%7c1239801",
+            "titles": [
+                "Koken, eten, leven : ingrediënten, recepten en verhalen",
+                "Koken, eten, leven : ingrediënten, recepten en verhalen / Nigella Lawson"
+            ],
+            "isbn": [
+                "=9789045043074"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=427666031&isbn=9789045043074&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/427666031&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Nigella Lawson",
+                "Ingrid Buthod-Girard"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Nigella Lawson",
+                    "firstname": "Nigella",
+                    "lastname": "Lawson",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Ingrid Buthod-Girard",
+                    "lastname": "Ingrid Buthod-Girard",
+                    "localized-type": "Vertaler",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2020",
+            "publisher": [
+                "Uitgeverij Atlas Contact, Amsterdam, [2020]"
+            ],
+            "subject-topical": [
+                "Kookboeken",
+                "Koken",
+                "Verhalen",
+                "Eten"
+            ],
+            "languages": [
+                "Nederlands",
+                "Engels"
+            ],
+            "description": [
+                "352 pagina's",
+                "352 pagina's: foto's ; 25 cm"
+            ],
+            "note": "Vertaling van: Cook, eat, repeat. - London : Chatto & Windus, (c)2020",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken eten leven ingredienten recepten en verhalen",
+                        "key2": "nigella lawson",
+                        "cnt": "1",
+                        "value": "437762F14BF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1227727",
+            "frabl": {
+                "key1": "koken doe je zo",
+                "key2": "arthur le caisne",
+                "cnt": "1",
+                "value": "5473041A7AF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Arthur-le-Caisne/Koken-doe-je-zo!/Boek/?itemid=%7coba-catalogus%7c1227727",
+            "titles": [
+                "Koken doe je zo!",
+                "Koken doe je zo! / Arthur le Caisne"
+            ],
+            "isbn": [
+                "=9789461432247"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=422932906&isbn=9789461432247&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/422932906&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Arthur le Caisne",
+                "Yannis Varoutsikos",
+                "Ingrid Buthod",
+                "Trijnie Duut",
+                "Akkie de Jong",
+                "Milou Breunesse"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Arthur le Caisne",
+                    "firstname": "Arthur le",
+                    "lastname": "Caisne",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Yannis Varoutsikos",
+                    "lastname": "Yannis Varoutsikos",
+                    "localized-type": "Illustrator",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Ingrid Buthod",
+                    "lastname": "Ingrid Buthod",
+                    "localized-type": "Vertaler",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Trijnie Duut",
+                    "lastname": "Trijnie Duut",
+                    "localized-type": "Redacteur",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Akkie de Jong",
+                    "lastname": "Akkie de Jong",
+                    "localized-type": "Vertaler",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Milou Breunesse",
+                    "lastname": "Milou Breunesse",
+                    "localized-type": "Redacteur",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2019",
+            "publisher": [
+                "Good Cook, Hilversum, [2019]"
+            ],
+            "subject-topical": [
+                "Koken"
+            ],
+            "languages": [
+                "Nederlands",
+                "Frans"
+            ],
+            "description": [
+                "237 pagina's",
+                "237 pagina's: illustraties ; 25 cm"
+            ],
+            "note": "Vertaling van: Pourquoi les spaghetti bolognese n'existent pas?. - Hachette-Livre, (c)2019",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken doe je zo",
+                        "key2": "arthur le caisne",
+                        "cnt": "1",
+                        "value": "5473041A7AF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1228592",
+            "frabl": {
+                "key1": "iexplore roofdieren",
+                "key2": "camilla de la bedoyere",
+                "cnt": "1",
+                "value": "4654D68ACCF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Camilla-de-la-Bedoyere/iExplore-roofdieren/Boek/?itemid=%7coba-catalogus%7c1228592",
+            "titles": [
+                "iExplore : roofdieren",
+                "iExplore : roofdieren / Camilla de la Bédoyère"
+            ],
+            "isbn": [
+                "=9789492899408"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=422941573&isbn=9789492899408&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/422941573&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Camilla de La Bédoyère",
+                "Marten van de Kraats",
+                "Alexandra Koken"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Camilla de La Bédoyère",
+                    "firstname": "Camilla",
+                    "lastname": "Bédoyère",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Marten van de Kraats",
+                    "lastname": "Marten van de Kraats",
+                    "localized-type": "Vertaler",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Alexandra Koken",
+                    "lastname": "Alexandra Koken",
+                    "localized-type": "Redacteur",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2019",
+            "publisher": [
+                "Condor, [Amsterdam], [2019]"
+            ],
+            "subject-topical": [
+                "Roofdieren",
+                "Augmented reality"
+            ],
+            "languages": [
+                "Nederlands",
+                "Engels"
+            ],
+            "summaries": [
+                "Laat de ratelslang niet op de bank kruipen en spring weg als de witte haai op je af komt! Maak kennis met de gevaarlijkste roofdieren uit de hele wereld. Via een (gratis) app met Augmented Reality sta je oog in oog met deze dieren. Oblong uitgave met veel kleurenfoto's. Vanaf ca. 10 t/m 13 jaar."
+            ],
+            "description": [
+                "28 ongenummerde pagina's",
+                "28 ongenummerde pagina's: gekleurde illustraties ; 24 × 27 cm"
+            ],
+            "note": "Vertaling van: iExplore : predators. - London : Carlton Books Limited, (c)2017",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "iexplore roofdieren",
+                        "key2": "camilla de la bedoyere",
+                        "cnt": "1",
+                        "value": "4654D68ACCF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "J592.1"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1074498",
+            "frabl": {
+                "key1": "on food and cooking the science and lore of the kitchen",
+                "key2": "harold mcgee",
+                "cnt": "2",
+                "value": "F04226935F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Harold-McGee/Over-eten-en-koken-wetenschap-cultuur-in/Boek/?itemid=%7coba-catalogus%7c1074498",
+            "titles": [
+                "Over eten en koken : wetenschap & cultuur in de keuken",
+                "Over eten en koken : wetenschap & cultuur in de keuken / Harold McGee"
+            ],
+            "isbn": [
+                "9789046813935"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=352698853&isbn=9789046813935&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/352698853&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Harold McGee",
+                "Jacques Meerman",
+                "Jolijn van Dop"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Harold McGee",
+                    "firstname": "Harold",
+                    "lastname": "McGee",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Jacques Meerman",
+                    "lastname": "Jacques Meerman",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Jolijn van Dop",
+                    "lastname": "Jolijn van Dop",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2013",
+            "publisher": [
+                "Nieuw Amsterdam, [Amsterdam], 2013"
+            ],
+            "subject-topical": [
+                "Voedingsmiddelen",
+                "Moleculair koken"
+            ],
+            "languages": [
+                "Nederlands",
+                "Engels"
+            ],
+            "description": [
+                "874 p",
+                "874 p: ill ; 25 cm"
+            ],
+            "note": "Vert. van: McGee on food & cooking : an encyclopedia of kitchen science, history and culture. - Scribner [etc.], cop. 2004. - Oorspr. titel: On food and cooking : the science and lore of the kitchen. - New York : Scribner, 1984",
+            "undup": {
+                "alsoAvailableAsCount": "1",
+                "items": [
+                    {
+                        "key1": "on food and cooking the science and lore of the kitchen",
+                        "key2": "harold mcgee",
+                        "cnt": "2",
+                        "value": "F04226935F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|212641",
+            "frabl": {
+                "key1": "aan de kook 101 keer koken met ouderen",
+                "key2": "alice beernink",
+                "cnt": "1",
+                "value": "3AA5D080CF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Alice-Beernink/Aan-de-kook-101-keer-koken-met-ouderen/Boek/?itemid=%7coba-catalogus%7c212641",
+            "titles": [
+                "Aan de kook : 101 keer koken met ouderen",
+                "Aan de kook : 101 keer koken met ouderen / Alice Beernink, Klaas Jansma ; m.m.v. Nederlandse topkoks"
+            ],
+            "isbn": [
+                "905574199X (in ringband)"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=197473547&isbn=9789055741991&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/197473547&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Alice Beernink",
+                "Klaas Jansma"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Alice Beernink",
+                    "firstname": "Alice",
+                    "lastname": "Beernink",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Klaas Jansma",
+                    "lastname": "Klaas Jansma",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2000",
+            "publisher": [
+                "Intro, [Baarn], [2000]"
+            ],
+            "subject-topical": [
+                "Koken",
+                "Ouderen"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "96 p",
+                "96 p: ill ; 32 cm"
+            ],
+            "note": "Met index",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "aan de kook 101 keer koken met ouderen",
+                        "key2": "alice beernink",
+                        "cnt": "1",
+                        "value": "3AA5D080CF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1111692",
+            "frabl": {
+                "key1": "koken het handboek",
+                "key2": "koen hardeman heikki verdurme koksijde hotelschool ter duinen",
+                "cnt": "1",
+                "value": "4A444B9EA1F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Koen-Hardeman/Koken-het-handboek/Boek/?itemid=%7coba-catalogus%7c1111692",
+            "titles": [
+                "Koken : het handboek",
+                "Koken : het handboek / Ter Duinen"
+            ],
+            "isbn": [
+                "=9789401411011"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=375158553&isbn=9789401411011&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/375158553&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Koen Hardeman",
+                "Heikki Verdurme",
+                "Koksijde Hotelschool Ter Duinen"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Koen Hardeman",
+                    "lastname": "Koen Hardeman",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Heikki Verdurme",
+                    "lastname": "Heikki Verdurme",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Koksijde Hotelschool Ter Duinen",
+                    "firstname": "Koksijde",
+                    "lastname": "Hotelschool Ter Duinen",
+                    "creatortype": "unknown"
+                }
+            ],
+            "year": "2014",
+            "publisher": [
+                "Lannoo, [Tielt], [2014]"
+            ],
+            "subject-topical": [
+                "Kookboeken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "479 pagina's",
+                "479 pagina's: foto's ; 30 cm"
+            ],
+            "note": "Met literatuuropgave, register",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken het handboek",
+                        "key2": "koen hardeman heikki verdurme koksijde hotelschool ter duinen",
+                        "cnt": "1",
+                        "value": "4A444B9EA1F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|615585",
+            "frabl": {
+                "key1": "ff koken",
+                "key2": "charlotte borggreve",
+                "cnt": "1",
+                "value": "143A70969FF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Charlotte-Borggreve/Ff-koken/Boek/?itemid=%7coba-catalogus%7c615585",
+            "titles": [
+                "Ff koken",
+                "Ff koken / Charlotte Borggreve, Gerda Hahn"
+            ],
+            "isbn": [
+                "9023011805"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=29618635X&isbn=9789023011804&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/29618635X&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Charlotte Borggreve",
+                "Gerda Hahn"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Charlotte Borggreve",
+                    "firstname": "Charlotte",
+                    "lastname": "Borggreve",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Gerda Hahn",
+                    "lastname": "Gerda Hahn",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2006",
+            "publisher": [
+                "Becht, Haarlem, cop. 2006"
+            ],
+            "subject-topical": [
+                "Kookboeken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "summaries": [
+                "Recepten uit allerlei landen, enigszins aan de Nederlandse situatie aangepast, van  'streetfood' en snelle hapjes worden stap voor stap uitgelegd.. - Recepten uit allerlei landen, enigszins aan de Nederlandse situatie aangepast, van  'streetfood' en snelle hapjes worden stap voor stap uitgelegd. Met veel kleurenfoto's. Vanaf ca. 14 jaar."
+            ],
+            "description": [
+                "142 p",
+                "142 p: ill ; 25×25 cm"
+            ],
+            "note": "Uitg. in samenw. met Oxfam Novib. - Met reg",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "ff koken",
+                        "key2": "charlotte borggreve",
+                        "cnt": "1",
+                        "value": "143A70969FF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "J629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1134454",
+            "frabl": {
+                "key1": "toen was koken heel gewoon",
+                "key2": "lisette bossert",
+                "cnt": "1",
+                "value": "71E3858009F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Lisette-Bossert/Toen-was-koken-heel-gewoon/Boek/?itemid=%7coba-catalogus%7c1134454",
+            "titles": [
+                "Toen was koken heel gewoon",
+                "Toen was koken heel gewoon / Lisette Bossert"
+            ],
+            "isbn": [
+                "=9789081764872"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=387175520&isbn=9789081764872&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/387175520&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Lisette Bossert",
+                "Saskia Lelieveld",
+                "Julie Tavernier",
+                "Marije Sietsma"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Lisette Bossert",
+                    "firstname": "Lisette",
+                    "lastname": "Bossert",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Saskia Lelieveld",
+                    "lastname": "Saskia Lelieveld",
+                    "localized-type": "Illustrator",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Julie Tavernier",
+                    "lastname": "Julie Tavernier",
+                    "localized-type": "Illustrator",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Marije Sietsma",
+                    "lastname": "Marije Sietsma",
+                    "localized-type": "Redacteur",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2015",
+            "publisher": [
+                "Loopvis, Groningen, [2015]"
+            ],
+            "subject-topical": [
+                "Koken",
+                "Bekende Nederlanders",
+                "Verhalen",
+                "Kookboeken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "summaries": [
+                "Interviews met tien mensen uit heel verschillende (eet)culturen die in de jaren vijftig/zestig opgroeiden over de rol van eten in hun leven, gevolgd door bijpassende recepten."
+            ],
+            "description": [
+                "94 pagina's",
+                "94 pagina's: illustraties ; 21 cm"
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "toen was koken heel gewoon",
+                        "key2": "lisette bossert",
+                        "cnt": "1",
+                        "value": "71E3858009F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|810880",
+            "frabl": {
+                "key1": "kokende vrouwen 52 openhartige gesprekken over koken en carriere met 200 verrassende recepten",
+                "key2": "henriette klautz erna van den berg eddy posthuma de boer marie louise monshouwer",
+                "cnt": "1",
+                "value": "311DFAC342F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Henriette-Klautz/Kokende-vrouwen-52-openhartige-gesprekken/Boek/?itemid=%7coba-catalogus%7c810880",
+            "titles": [
+                "Kokende vrouwen : 52 openhartige gesprekken over koken en carrière : met 200 verrassende recepten",
+                "Kokende vrouwen : 52 openhartige gesprekken over koken en carrière : met 200 verrassende recepten / [tekst] Henriette Klautz & Erna van den Berg"
+            ],
+            "isbn": [
+                "9789066119666"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=30926460X&isbn=9789066119666&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/30926460X&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Henriette Klautz",
+                "Erna van den Berg",
+                "Eddy Posthuma de Boer",
+                "Marie-Louise Monshouwer"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Henriette Klautz",
+                    "lastname": "Henriette Klautz",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Erna van den Berg",
+                    "lastname": "Erna van den Berg",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Eddy Posthuma de Boer",
+                    "lastname": "Eddy Posthuma de Boer",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Marie-Louise Monshouwer",
+                    "lastname": "Marie-Louise Monshouwer",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2008",
+            "publisher": [
+                "Inmerc, Wormer, cop. 2008"
+            ],
+            "subject-topical": [
+                "Koken",
+                "Verhalen"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "327 p",
+                "327 p: ill ; 25 cm"
+            ],
+            "note": "Met reg",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "kokende vrouwen 52 openhartige gesprekken over koken en carriere met 200 verrassende recepten",
+                        "key2": "henriette klautz erna van den berg eddy posthuma de boer marie louise monshouwer",
+                        "cnt": "1",
+                        "value": "311DFAC342F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1088379",
+            "frabl": {
+                "key1": "een pleidooi voor echt koken thuiskomen in de keuken",
+                "key2": "michael pollan",
+                "cnt": "1",
+                "value": "43A48E065CF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Michael-Pollan/Een-pleidooi-voor-echt-koken-thuiskomen-in/Boek/?itemid=%7coba-catalogus%7c1088379",
+            "titles": [
+                "Een pleidooi voor echt koken : thuiskomen in de keuken",
+                "Een pleidooi voor echt koken : thuiskomen in de keuken / Michael Pollan"
+            ],
+            "isbn": [
+                "9789029587143"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=352883154&isbn=9789029587143&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/352883154&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Michael Pollan",
+                "Henny Corver"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Michael Pollan",
+                    "firstname": "Michael",
+                    "lastname": "Pollan",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Henny Corver",
+                    "lastname": "Henny Corver",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2013",
+            "publisher": [
+                "Arbeiderspers, Utrecht [etc.], cop. 2013"
+            ],
+            "subject-topical": [
+                "Koken"
+            ],
+            "languages": [
+                "Nederlands",
+                "Engels"
+            ],
+            "summaries": [
+                "Pleidooi voor het zelf koken van voedsel om niet afhankelijk te worden van de voedingsindustrie."
+            ],
+            "description": [
+                "415 p",
+                "415 p ; 24 cm"
+            ],
+            "note": "Vert. van: Cooked , a natural history of transformation. - New York : The Penguin Group, cop. 2013",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "een pleidooi voor echt koken thuiskomen in de keuken",
+                        "key2": "michael pollan",
+                        "cnt": "1",
+                        "value": "43A48E065CF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1185538",
+            "frabl": {
+                "key1": "koken met kleur",
+                "key2": "joke boon",
+                "cnt": "1",
+                "value": "37562F7925F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Joke-Boon/Koken-met-kleur!/Boek/?itemid=%7coba-catalogus%7c1185538",
+            "titles": [
+                "Koken met kleur!",
+                "Koken met kleur! / Joke Boon"
+            ],
+            "isbn": [
+                "=9789046823590"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=413321665&isbn=9789046823590&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/413321665&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Joke Boon",
+                "Simone van den Berg"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Joke Boon",
+                    "firstname": "Joke",
+                    "lastname": "Boon",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Simone van den Berg",
+                    "lastname": "Simone van den Berg",
+                    "localized-type": "Illustrator",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2018",
+            "publisher": [
+                "NwA'DAM, [Amsterdam], [2018]"
+            ],
+            "subject-topical": [
+                "Kookboeken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "summaries": [
+                "Gerechten in (bijna) alle kleuren van de regenboog, met achtergrondinformatie over voedingsstoffen, gezondheid en groente- en fruitsoorten."
+            ],
+            "description": [
+                "224 pagina's",
+                "224 pagina's: illustraties ; 25 cm"
+            ],
+            "note": "Met literatuuropgave, register",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken met kleur",
+                        "key2": "joke boon",
+                        "cnt": "1",
+                        "value": "37562F7925F360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1237551",
+            "frabl": {
+                "key1": "de worsten van babel koken overal",
+                "key2": "jasper gottlieb",
+                "cnt": "1",
+                "value": "1A455BD70FF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Jasper-Gottlieb/De-worsten-van-Babel-koken-overal/Boek/?itemid=%7coba-catalogus%7c1237551",
+            "titles": [
+                "De worsten van Babel koken overal",
+                "De worsten van Babel koken overal / Jasper Gottlieb, Marius Gottlieb, Hugo Kennis"
+            ],
+            "isbn": [
+                "=9789038807720"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=424533537&isbn=9789038807720&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/424533537&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Jasper Gottlieb",
+                "Marius Gottlieb",
+                "Hugo Kennis",
+                "Milou Breunesse",
+                "Thomas Pelgrom"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Jasper Gottlieb",
+                    "firstname": "Jasper",
+                    "lastname": "Gottlieb",
+                    "localized-type": "Auteur",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Marius Gottlieb",
+                    "lastname": "Marius Gottlieb",
+                    "localized-type": "Auteur",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Hugo Kennis",
+                    "lastname": "Hugo Kennis",
+                    "localized-type": "Auteur",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Milou Breunesse",
+                    "lastname": "Milou Breunesse",
+                    "localized-type": "Redacteur",
+                    "creatortype": "organization"
+                },
+                {
+                    "full": "Thomas Pelgrom",
+                    "lastname": "Thomas Pelgrom",
+                    "localized-type": "Illustrator",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2020",
+            "publisher": [
+                "Nijgh & Van Ditmar, Amsterdam, [2020]"
+            ],
+            "subject-topical": [
+                "Kookboeken",
+                "Koken",
+                "Verhalen"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "description": [
+                "217 pagina's",
+                "217 pagina's: illustraties ; 27 cm"
+            ],
+            "note": "Met register",
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "de worsten van babel koken overal",
+                        "key2": "jasper gottlieb",
+                        "cnt": "1",
+                        "value": "1A455BD70FF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|1226746",
+            "frabl": {
+                "key1": "koken met kikker",
+                "key2": "max velthuijs",
+                "cnt": "1",
+                "value": "2B5BA1AB1CF360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Max-Velthuijs/Koken-met-Kikker/Boek/?itemid=%7coba-catalogus%7c1226746",
+            "titles": [
+                "Koken met Kikker",
+                "Koken met Kikker / naar Max Velthuijs"
+            ],
+            "isbn": [
+                "=9789025876500"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=418231168&isbn=9789025876500&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/418231168&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Max Velthuijs"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Max Velthuijs",
+                    "lastname": "Max Velthuijs",
+                    "localized-type": "Naar het werk van",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2019",
+            "publisher": [
+                "Leopold, Amsterdam, 2019"
+            ],
+            "subject-topical": [
+                "Kookboeken"
+            ],
+            "languages": [
+                "Nederlands"
+            ],
+            "summaries": [
+                "Kikker en zijn vriendjes zijn dol op eten en koken! Voor elk seizoen hebben ze lekkere recepten: van smoothies in de zomer tot een stamppot in de winter. Prentenboek met voorleesverhaaltjes, uitleg van recepten en eenvoudige, krachtige kleurenillustraties. Vanaf ca. 4 t/m 6 jaar."
+            ],
+            "description": [
+                "42 ongenummerde pagina's",
+                "42 ongenummerde pagina's: gekleurde illustraties ; 24 cm"
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "koken met kikker",
+                        "key2": "max velthuijs",
+                        "cnt": "1",
+                        "value": "2B5BA1AB1CF360A0"
+                    }
+                ]
+            },
+            "siso": [
+                "J629.2"
+            ]
+        },
+        {
+            "id": "|oba-catalogus|815070",
+            "frabl": {
+                "key1": "mijn heks wil niet heksen maar koken",
+                "key2": "hiawyn oram",
+                "cnt": "1",
+                "value": "59BF294C51F360A0"
+            },
+            "detailLink": "http://zoeken.oba.nl/detail/Hiawyn-Oram/Mijn-heks-wil-niet-heksen-maar-koken/Boek/?itemid=%7coba-catalogus%7c815070",
+            "titles": [
+                "Mijn heks wil niet heksen maar koken",
+                "Mijn heks wil niet heksen maar koken / Hiawyn Oram [tekst]"
+            ],
+            "isbn": [
+                "9789089190079",
+                "=9789054615965"
+            ],
+            "coverimages": [
+                "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=311823912&isbn=9789089190079&lid=&aut=&ti=&size=70",
+                "https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/311823912&token=c1322402"
+            ],
+            "formats": [
+                {
+                    "text": "Boek",
+                    "icon": "/assets/resources/img/mat/book.png?skin=oba&bld=20230613.234708"
+                }
+            ],
+            "authors": [
+                "Hiawyn Oram",
+                "Sarah Warburton"
+            ],
+            "authorsDetailed": [
+                {
+                    "full": "Hiawyn Oram",
+                    "firstname": "Hiawyn",
+                    "lastname": "Oram",
+                    "creatortype": "person"
+                },
+                {
+                    "full": "Sarah Warburton",
+                    "lastname": "Sarah Warburton",
+                    "creatortype": "organization"
+                }
+            ],
+            "year": "2008",
+            "publisher": [
+                "Ootmarsum",
+                "Randazzo & Bannier, Mechelen",
+                "Bakermat, cop. 2008"
+            ],
+            "subject-topical": [
+                "heksen",
+                "Koken"
+            ],
+            "genres": [
+                "Sprookjes"
+            ],
+            "languages": [
+                "Nederlands",
+                "Engels"
+            ],
+            "summaries": [
+                "Het hulpje van Heksje Wirwar, de kat Deughniet (ik-figuur), heeft een probleem. Zijn heksje wil niet heksen. Ze wil meedoen aan een kookprogramma op tv. Als de Geweldige Gewiekste Wicca's daar maar niet achterkomen. Vanaf ca. 7 jaar."
+            ],
+            "description": [
+                "88 p",
+                "88 p: ill., krt., plgr ; 19 cm"
+            ],
+            "note": "Vert. van: My unwilling witch gets cooking. - London : Orchard Books, cop. 2007. - (Rumblewick's diary)",
+            "series": [
+                {
+                    "text": "Deughniets dagboek"
+                }
+            ],
+            "undup": {
+                "alsoAvailableAsCount": "0",
+                "items": [
+                    {
+                        "key1": "mijn heks wil niet heksen maar koken",
+                        "key2": "hiawyn oram",
+                        "cnt": "1",
+                        "value": "59BF294C51F360A0"
+                    }
+                ]
+            }
+        }
+    ]
+}
