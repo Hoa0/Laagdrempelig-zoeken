@@ -14,16 +14,11 @@
 :root {
   font-family: "Avenir";
   --mainRed: #ff0000;
+  --lightGreen: rgba(70, 146, 125, 0.25);
+  --green: rgba(70, 146, 125);
 }
 
-svg {
-  width: 50%;
-}
-main {
-  padding-top: 3rem;
-  max-width: 90vw;
-}
-
+/* Nav styling */
 ul:first-of-type {
   display: flex;
   margin-bottom: 3rem;
@@ -41,29 +36,77 @@ li#titelLogo:first-of-type {
   margin-right: 5rem;
 }
 
-section:first-of-type {
-  display: flex;
+section#containerBud {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
 }
 
-img#buddy {
-  width: 20%;
-  height: 20%;
-  position: relative;
-  top: 10rem;
+/* svg animation */
+#hand,
+#arm {
+  animation-name: hand;
+  animation-duration: 4s;
+  transform-origin: 16.8em 22.5em;
+  animation-iteration-count: 4;
 }
+
+svg#svgHelp {
+  width: 30%;
+  margin-top: 1rem;
+}
+
+#content {
+  position: relative;
+  background: var(--green);
+  border-radius: 0.4em;
+  padding: 1rem;
+}
+
+#content > h3 {
+  color: #fff;
+}
+
+#content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 1.625em solid transparent;
+  border-top-color: var(--green);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -0.8125em;
+  margin-bottom: -1.625em;
+}
+
+/*container chat*/
+section#containerChat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* chat*/
 section#chat {
-  width: 40rem;
+  width: 30rem;
   height: 35rem;
-  background: #fffcf2;
+  background-color: var(--lightGreen);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+section#chat > h3 {
+  color: var(--green);
+}
 section#chat > ul {
   display: block;
   margin: 0 !important;
-  padding: 0.2em;
+  padding: 1rem;
   list-style-type: none;
   flex-grow: 2;
   width: 30rem;
@@ -119,6 +162,7 @@ section#chat form > button::after {
   content: "⇒";
 }
 
+/*show result*/
 .showResult {
   display: none;
 }
@@ -126,28 +170,47 @@ li.showResult {
   text-align: end;
 }
 
-.showResult p {
-  width: 40%;
-  font-size: 0.7em;
+/*********************/
+/*    WEBSITE MODE   */
+/*********************/
+@media (min-width: 40em) {
+  section#mainContent {
+    display: flex;
+    justify-content: center;
+  }
+
+  #containerBud {
+    position: relative;
+    flex-direction: row-reverse;
+  }
+  svg#svgHelp {
+    width: 50%;
+  }
+
+  #content {
+    margin: auto;
+    width: 60%;
+  }
 }
 
-.showResult h3 {
-  text-align: center;
-}
+@keyframes hand {
+  0% {
+    transform: rotate(10deg);
+    transform-origin: 14em 14em;
+  }
 
-.showResult ul {
-  margin-left: 1rem;
-}
+  20% {
+    transform: rotate(10deg);
+    transform-origin: 14em 14em;
+  }
 
-/* welcome text*/
-span#content {
-  width: 40%;
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-}
+  60% {
+    transform: rotate(-20deg);
+    transform-origin: 13em 12em;
+  }
 
-section > section:first-of-type {
-  position: relative;
+  100% {
+    transform: rotate(10deg);
+    transform-origin: 14em 14em;
+  }
 }

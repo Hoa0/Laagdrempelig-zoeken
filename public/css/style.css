@@ -14,6 +14,14 @@
 :root {
   font-family: "Avenir";
   --mainRed: #ff0000;
+  --lightGreen: rgba(70, 146, 125, 0.25);
+  --green: rgba(70, 146, 125);
+  --darkGreen: rgb(59, 88, 80);
+}
+
+/* main */
+main {
+  padding: 1rem;
 }
 
 /* Nav styling */
@@ -34,34 +42,30 @@ li#titelLogo:first-of-type {
   margin-right: 5rem;
 }
 
-section#containerBud {
-  text-align: center;
+/* svg the oba buddy */
+svg#svgObaFace {
+  position: absolute;
+  top: 10rem;
+  left: -10%;
+  width: 40%;
 }
-/* svg*/
-
-svg {
-  width: 50%;
-}
-
-/* welcome text*/
-#content {
+.svgHidden {
+  display: none;
 }
 
-/*container chat*/
-section#containerChat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /* chat*/
 section#chat {
-  width: 30rem;
+  width: 100%;
   height: 35rem;
-  background-color: rgba(70, 146, 125, 0.25);
+  background-color: var(--lightGreen);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+section#chat > h3 {
+  color: var(--green);
 }
 section#chat > ul {
   display: block;
@@ -69,7 +73,6 @@ section#chat > ul {
   padding: 1rem;
   list-style-type: none;
   flex-grow: 2;
-  width: 30rem;
   overflow-y: scroll;
   max-height: 30em;
   margin: 0.5em 0;
@@ -115,11 +118,36 @@ section#chat form > button {
   transition: 0.2s;
 }
 
+#chat p {
+  color: white;
+  font-weight: 500;
+}
+
 section#chat form > button > span {
   display: none;
 }
 section#chat form > button::after {
   content: "⇒";
+}
+
+/* Oba speech chat */
+
+.speechOba {
+  background: var(--green);
+}
+.speechUser {
+  background: var(--darkGreen);
+}
+.speechOba,
+.speechUser {
+  position: relative;
+  border-radius: 0.4em;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.4rem;
+  border-radius: 0.4rem;
 }
 
 /*show result*/
@@ -129,24 +157,58 @@ section#chat form > button::after {
 li.showResult {
   text-align: end;
 }
-
-/*********************/
-/*    WEBSITE MODE   */
-/*********************/
+/* svg animation */
+#hand,
+#arm {
+  animation-name: hand;
+  animation-duration: 4s;
+  transform-origin: 16.8em 22.5em;
+  animation-iteration-count: 4;
+}
 @media (min-width: 40em) {
-  section#mainContent {
+  svg#svgObaBud {
+    width: 20%;
+  }
+  .svgHidden {
+    display: block;
+  }
+  /* chat */
+  section#chat {
+    width: 60%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  #mainContent {
     display: flex;
     justify-content: center;
   }
 
-  #containerBud {
-    position: relative;
-    flex-direction: row-reverse;
+  #svgObaFace {
+    display: none;
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: rotate(10deg);
+    transform-origin: 14em 14em;
   }
 
-  #content {
+  20% {
+    transform: rotate(10deg);
+    transform-origin: 14em 14em;
   }
 
-  #svg-help {
+  60% {
+    transform: rotate(-20deg);
+    transform-origin: 13em 12em;
+  }
+
+  100% {
+    transform: rotate(10deg);
+    transform-origin: 14em 14em;
   }
 }
