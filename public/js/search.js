@@ -1,12 +1,14 @@
+import { loadingIsDone, uiState } from "./ui.js";
+
 const searchForm = document.getElementById("searchForm");
-const searchResults = document.getElementById("searchResults"); // Add this line
+const searchResults = document.getElementById("searchResults");
 
 searchForm.addEventListener("submit", async (event) => {
   event.preventDefault(); // Prevent default form submission
-
   const input = document.getElementById("query");
 
   try {
+    uiState("loading");
     const response = await fetch("/api/search", {
       method: "POST",
       headers: {
@@ -18,21 +20,11 @@ searchForm.addEventListener("submit", async (event) => {
     if (response.ok) {
       const responseData = await response.json();
 
-      // console.log(responseData.data)
-      // let crackdown = JSON.parse(JSON.stringify(responseData.data))
-      // let firstRemoval = crackdown.substring(1)
-
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
-      // const cleanSet = dirtySet.substring(1)
 
-      // Show books in the browser using responseData
-      // Clear previous results
       searchResults.innerHTML = "";
 
       if (await responseData.data) {
-        // let x = await responseData
-        // let remResponseData = JSON.parse(firstRemoval)
-
         /** @description removes the first string character. Reason for the function is that the dataset received is being tossed around between stringify and parse, adding an empty character within the body of the results key */
         function RemoveSpaceFromString(dataThatHasBeenStringified) {
           return dataThatHasBeenStringified.substring(1);
@@ -46,15 +38,30 @@ searchForm.addEventListener("submit", async (event) => {
           const author = result.authors
             ? result.authors[0]
             : "Onbekende auteur";
-          const img = result.coverimages[0];
+          const img =
+            result.coverimages[1] !== undefined
+              ? result.coverimages[1]
+              : "./img/placeholder.png";
+
+          const details = result.languages
 
           const resultItem = document.createElement("div");
-          resultItem.innerHTML = `<p>Titel: ${title}</p><p>Auteur: ${author}</p> <img src='${img}'>`;
+          resultItem.innerHTML = `<img src='${img}'> <p>Titel: ${title}</p><p>Auteur: ${author}</p>`;
+
+          resultItem.addEventListener("click", () => {
+            const newDiv = document.createElement("div");
+            newDiv.textContent = `${details}`;
+            searchResults.appendChild(newDiv);
+          });
 
           searchResults.appendChild(resultItem);
+          uiState("loading", input.value);
+          uiState("results", input.value);
+          loadingIsDone();
         });
       } else {
         console.log("No results found.");
+        uiState("noData");
       }
     } else {
       const errorMessage = await response.text();
