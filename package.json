@@ -2,7 +2,7 @@
   "name": "laagdrempelig-zoeken",
   "version": "1.0.0",
   "description": "Project Oba",
-  "main": "server.js", 
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,6 +23,7 @@
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "gsap": "^3.12.1",
     "node-fetch": "^2.6.9"
   },
   "devDependencies": {

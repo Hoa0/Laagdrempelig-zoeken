@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Set the port for the server to listen on
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3006;
 
 // Set up middleware to serve static files
 // Parse JSON bodies
