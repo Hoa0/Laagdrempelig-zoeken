@@ -1,9 +1,11 @@
 import { loadingIsDone, uiState } from "./ui.js";
 
 const searchForm = document.getElementById("searchForm");
-const searchResults = document.getElementById("searchResults");
 
 searchForm.addEventListener("submit", async (event) => {
+  const searchResults = document.getElementById("searchResults");
+  const itemDetailsDiv = document.getElementById("itemDetails");
+
   event.preventDefault(); // Prevent default form submission
   const input = document.getElementById("query");
 
@@ -42,16 +44,32 @@ searchForm.addEventListener("submit", async (event) => {
             result.coverimages[1] !== undefined
               ? result.coverimages[1]
               : "./img/placeholder.png";
-
-          const details = result.languages
+          const language = result.languages;
+          const publisher = result.publisher;
+          const summaries = result.summaries[0];
 
           const resultItem = document.createElement("div");
           resultItem.innerHTML = `<img src='${img}'> <p>Titel: ${title}</p><p>Auteur: ${author}</p>`;
 
           resultItem.addEventListener("click", () => {
-            const newDiv = document.createElement("div");
-            newDiv.textContent = `${details}`;
-            searchResults.appendChild(newDiv);
+            const itemDetails = [
+              { text: `Titel: ${title}` },
+              { text: `Auteur: ${author}` },
+              { text: `Samenvatting: ${summaries}` },
+              { text: `Talen: ${language}` },
+              { text: `Uitgever: ${publisher}` },
+            ];
+
+            const detailsDiv = document.createElement("div");
+
+            itemDetails.forEach((item) => {
+              const p = document.createElement("p");
+              p.textContent = item.text;
+              detailsDiv.appendChild(p);
+            });
+            
+
+            itemDetailsDiv.appendChild(detailsDiv);
           });
 
           searchResults.appendChild(resultItem);
