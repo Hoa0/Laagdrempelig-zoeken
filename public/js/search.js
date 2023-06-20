@@ -1,12 +1,12 @@
-import { loadingIsDone, uiState } from "./ui.js";
+import { uiState } from "./ui.js";
 
 const searchForm = document.getElementById("searchForm");
 
 searchForm.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Prevent default form submission
+
   const searchResults = document.getElementById("searchResults");
   const itemDetailsDiv = document.getElementById("itemDetails");
-
-  event.preventDefault(); // Prevent default form submission
   const input = document.getElementById("query");
 
   try {
@@ -36,21 +36,31 @@ searchForm.addEventListener("submit", async (event) => {
 
         // Display the search results
         responseDataSet.results.forEach((result) => {
-          const title = result.titles[0];
-          const author = result.authors
-            ? result.authors[0]
-            : "Onbekende auteur";
+          const title =
+            result.titles && result.titles.length > 0
+              ? result.titles[0]
+              : "Onbekende titel";
+          const author =
+            result.authors && result.authors.length > 0
+              ? result.authors[0]
+              : "Onbekende auteur";
           const img =
             result.coverimages[1] !== undefined
               ? result.coverimages[1]
               : "./img/placeholder.png";
           const language = result.languages;
           const publisher = result.publisher;
-          const summaries = result.summaries[0];
+          const summaries =
+            result.summaries && result.summaries.length > 0
+              ? result.summaries[0]
+              : "Niet beschikbaar";
 
           const resultItem = document.createElement("div");
           resultItem.innerHTML = `<img src='${img}'> <p>Titel: ${title}</p><p>Auteur: ${author}</p>`;
+          // Append the result item to the search results
+          searchResults.appendChild(resultItem);
 
+          
           resultItem.addEventListener("click", () => {
             const itemDetails = [
               { text: `Titel: ${title}` },
@@ -67,16 +77,13 @@ searchForm.addEventListener("submit", async (event) => {
               p.textContent = item.text;
               detailsDiv.appendChild(p);
             });
-            
 
             itemDetailsDiv.appendChild(detailsDiv);
           });
 
           searchResults.appendChild(resultItem);
-          uiState("loading", input.value);
-          uiState("results", input.value);
-          loadingIsDone();
         });
+        uiState("loading", input.value);
       } else {
         console.log("No results found.");
         uiState("noData");
@@ -87,5 +94,7 @@ searchForm.addEventListener("submit", async (event) => {
     }
   } catch (error) {
     console.error("Error:", error.message);
+  } finally {
+    uiState("hide", input.value);
   }
 });
