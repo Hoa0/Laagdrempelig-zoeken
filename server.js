@@ -3,6 +3,7 @@ import { createServer } from "http";
 import path from "path";
 import bodyParser from "body-parser";
 import router from "./routes/route.js";
+import catalogusRoute from './routes/catalogusRoute.js';
 
 const app = express();
 const http = createServer(app);
@@ -17,6 +18,7 @@ const port = process.env.PORT || 3006;
 // Parse JSON bodies
 app.use(express.static(path.resolve("public")));
 app.use("/api", router);
+app.use('/catalogus', catalogusRoute);
 
 // Set the view engine to ejs and set the views directory
 app.set("view engine", "ejs");

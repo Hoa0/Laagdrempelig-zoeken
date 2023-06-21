@@ -16,10 +16,11 @@
           </li>
           <li id="speechBtnCateg" class="speechOba">
             <p>Klik hieronder voor meer informatie uit de catalogus</p>
-            <button>Activiteiten</button>
-            <button>Boeken</button>
-            <button>Cursus</button>
-            <button>DvD's</button>
+            <button type="button" class="searchButton" id="activiteitenButton"
+              data-category="activiteiten">Activiteiten</button>
+            <button type="button" class="searchButton" id="bookButton" data-category="boeken">Boeken</button>
+            <button type="button" class="searchButton" id="randomDvdButton" data-category="dvds">DvD's</button>
+            <button type="button" class="searchButton" id="cursusButton" data-category="cursussen">Cursussen</button>
           </li>
           <li id="speechInfoQ" class="speechOba">
             <p>Stel een vraag, bijvoorbeeld:</p>
@@ -27,6 +28,26 @@
           </li>
           <li class="showResult speechUser">
             <p>Ik zoek een boek</p>
+          </li>
+          <li>
+            <div class="categories">
+              <div class="category-container" id="boekenContainer">
+                <h3>boeken</h3>
+                <div class="results-container" id="boekenResults"></div>
+              </div>
+              <div class="category-container" id="dvdsContainer">
+                <h3>dvd's</h3>
+                <div class="results-container" id="dvdsResults"></div>
+              </div>
+              <div class="category-container" id="activiteitenContainer">
+                <h3>activiteiten</h3>
+                <div class="results-container" id="activiteitenResults"></div>
+              </div>
+              <div class="category-container" id="cursussenContainer">
+                <h3>cursussen</h3>
+                <div class="results-container" id="cursussenResults"></div>
+              </div>
+            </div>
           </li>
         </ul>
         <span class="fallback"></span>
