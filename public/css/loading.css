@@ -447,6 +447,8 @@ section.loading ul li:nth-child(18) {
 
 .results-container {
   width: 100%;
+  display: grid;
+  gap: 1vh;
 }
 
 .results-container h1 {
@@ -462,12 +464,36 @@ section.loading ul li:nth-child(18) {
 
 #searchResults div {
   display: grid;
-  justify-items: center;
   align-items: center;
   gap: 1em;
-  background-color: var(--green);
+  background-color: var(--obaChat);
   padding: 1em;
   margin: 0.25em 1.25em;
-  border-radius: 0.4em;
+  border-radius: 0 1.5em 1.5em 1.5em;
+}  
+
+ul#chatMessages li {
+  display: grid;
+  gap: 1em;
+  max-width: 100%;
+  padding: 1em;
+  margin: 0.25em 1.25em;
+  border-radius: 1.5em 1.5em 0em 1.5em;
+  background-color: var(--obaLightBlue);
+  text-align: right;
 }
+
+
+/* itemDetails */
+#itemDetails div {
+  background-color: var(--obaChat);
+  padding: 1em;
+  margin: 0.25em 1.25em;
+  border-radius: 0 1.5em 1.5em 1.5em;
+}
+
+img {
+  width: 100%;
+}
+
 

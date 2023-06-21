@@ -1,4 +1,5 @@
 const loading = document.querySelector(".loading");
+const resultsContainer = document.querySelector(".results-container");
 
 // show loading animation
 export function showLoading() {
@@ -12,11 +13,13 @@ export function hideLoading() {
 
 // WIP states
 export function uiState(typeState, param = "") {
-  const h1Text = document.querySelector("h1");
+  const ul = document.createElement("ul");
+  const li = document.createElement("li");
 
   // when something is wrong with data/api
   if (typeState === "noData") {
-    h1Text.textContent = "Sorry, er ging iets mis. Kan resultaten niet ophalen.";
+    ul.textContent = "Sorry, er ging iets mis. Kan resultaten niet ophalen.";
+    resultsContainer.appendChild(ul);
     hideLoading();
   }
   // loading state
@@ -26,10 +29,13 @@ export function uiState(typeState, param = "") {
   // show/hide results
   else if (typeState === "hide") {
     if (param) {
-      h1Text.style.display = "block";
-      h1Text.textContent = `Gevonden resultaten voor ${param}`;
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Gevonden resultaten voor ${param}`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
     } else {
-      h1Text.style.display = "none";
+      ul.style.display = "none";
     }
     hideLoading();
   }

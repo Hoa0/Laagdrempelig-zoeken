@@ -1,13 +1,28 @@
 import { uiState } from "./ui.js";
 
 const searchForm = document.getElementById("searchForm");
+// Create the chatMessages element dynamically
+const chatMessages = document.createElement("ul");
+chatMessages.id = "chatMessages";
 
 searchForm.addEventListener("submit", async (event) => {
   event.preventDefault(); // Prevent default form submission
-
+  // TODO: scrolltop + scroll height
+  // const chatContainer = document.getElementById("chat");
+  // chatContainer.scrollTop = chatContainer.scrollHeight;
   const searchResults = document.getElementById("searchResults");
   const itemDetailsDiv = document.getElementById("itemDetails");
   const input = document.getElementById("query");
+  const userInput = input.value;
+
+  const message = document.createElement("li");
+  message.classList.add("message");
+  message.textContent = userInput;
+  chatMessages.appendChild(message);
+
+  const resultsContainer = document.querySelector(".results-container");
+  // Append the chatMessages element to the resultsContainer
+  resultsContainer.appendChild(chatMessages);
 
   try {
     uiState("loading");
@@ -16,7 +31,7 @@ searchForm.addEventListener("submit", async (event) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query: input.value }),
+      body: JSON.stringify({ query: userInput }),
     });
 
     if (response.ok) {
@@ -60,28 +75,35 @@ searchForm.addEventListener("submit", async (event) => {
           // Append the result item to the search results
           searchResults.appendChild(resultItem);
 
-          
           resultItem.addEventListener("click", () => {
             const itemDetails = [
+              { img: img },
               { text: `Titel: ${title}` },
               { text: `Auteur: ${author}` },
               { text: `Samenvatting: ${summaries}` },
               { text: `Talen: ${language}` },
               { text: `Uitgever: ${publisher}` },
             ];
-
+          
             const detailsDiv = document.createElement("div");
-
+          
             itemDetails.forEach((item) => {
-              const p = document.createElement("p");
-              p.textContent = item.text;
-              detailsDiv.appendChild(p);
+              if (item.img) {
+                const imgElement = document.createElement("img");
+                imgElement.src = item.img;
+                detailsDiv.appendChild(imgElement);
+              } else {
+                const p = document.createElement("p");
+                p.textContent = item.text;
+                detailsDiv.appendChild(p);
+              }
             });
-
+          
             itemDetailsDiv.appendChild(detailsDiv);
-          });
+          })          
 
           searchResults.appendChild(resultItem);
+          // resultsContainer.scrollTop = resultsContainer.scrollHeight;
         });
         uiState("loading", input.value);
       } else {
