@@ -25,10 +25,11 @@ main {
 }
 
 /* Nav styling */
-ul:first-of-type {
+ul#nav {
   display: flex;
   margin-bottom: 3rem;
   justify-content: center;
+  font-weight: bold;
 }
 li#titelLogo {
   display: flex;
@@ -40,17 +41,6 @@ li#titelLogo > #titelA {
 }
 li#titelLogo:first-of-type {
   margin-right: 5rem;
-}
-
-/* svg the oba buddy */
-svg#svgObaFace {
-  position: absolute;
-  top: 10rem;
-  left: -10%;
-  width: 40%;
-}
-.svgHidden {
-  display: none;
 }
 
 /* chat*/
@@ -132,17 +122,29 @@ section#chat form > button::after {
 
 /* Oba speech chat */
 
-.speechOba {
+.speechOba,
+.category-container {
   background: var(--green);
+  width: 90%;
+}
+.category-container h3 {
+  display: none;
 }
 .speechUser {
-  background: var(--darkGreen);
+  background: #fff;
+  width: 90%;
+  color: var(--darkGreen);
+  font-weight: 600;
+  text-align: end;
 }
 .speechOba,
 .speechUser {
   position: relative;
   border-radius: 0.4em;
   padding: 1rem;
+}
+#chatListUser {
+  display: none;
 }
 
 button {
@@ -157,21 +159,152 @@ button {
 li.showResult {
   text-align: end;
 }
-/* svg animation */
-#hand,
-#arm {
-  animation-name: hand;
-  animation-duration: 4s;
-  transform-origin: 16.8em 22.5em;
-  animation-iteration-count: 4;
+
+.category-container img {
+  width: 30%;
 }
+
+#titleContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em;
+}
+
+#titleContainer h3 {
+  width: 100%;
+  color: var(--darkGreen);
+}
+
+.searchButton {
+  align-items: center;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  justify-content: center;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 0.8rem;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .searchButton {
+    padding: 19px 32px;
+  }
+}
+
+.searchButton,
+.searchButton::after {
+  border-radius: 0.5rem;
+}
+
+.searchButton::before {
+  background-color: rgb(71 146 125);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+  border-radius: 0.5rem;
+}
+
+.searchButton:after {
+  background-color: initial;
+  background-image: linear-gradient(1deg, #7bb452 0, #6ba144 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.searchButton:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.searchButton:active:not(:disabled) {
+  color: #ccc;
+}
+
+.searchButton:active:not(:disabled):after {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.searchButton:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+#obaMedewerker {
+  background-color: transparent;
+  border: none;
+  margin-left: 1rem;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+}
+
+#obaMedewerker:hover {
+  color: var(--darkGreen);
+}
+
+#svgOba {
+  display: none;
+}
+
+#chat li {
+  width: fit-content;
+}
+
+#chatListUser {
+  margin-left: auto;
+}
+
 @media (min-width: 40em) {
-  svg#svgObaBud {
-    width: 20%;
-  }
-  .svgHidden {
-    display: block;
-  }
   /* chat */
   section#chat {
     width: 60%;
@@ -184,31 +317,5 @@ li.showResult {
   #mainContent {
     display: flex;
     justify-content: center;
-  }
-
-  #svgObaFace {
-    display: none;
-  }
-}
-
-@keyframes hand {
-  0% {
-    transform: rotate(10deg);
-    transform-origin: 14em 14em;
-  }
-
-  20% {
-    transform: rotate(10deg);
-    transform-origin: 14em 14em;
-  }
-
-  60% {
-    transform: rotate(-20deg);
-    transform-origin: 13em 12em;
-  }
-
-  100% {
-    transform: rotate(10deg);
-    transform-origin: 14em 14em;
   }
 }
