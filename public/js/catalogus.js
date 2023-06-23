@@ -1,5 +1,6 @@
-const searchButtons = document.querySelectorAll(".searchButton");
-searchButtons.forEach((button) => {
+const catalogusBtn = document.querySelectorAll(".catalogusButton");
+
+catalogusBtn.forEach((button) => {
     button.addEventListener("click", async () => {
         const category = button.dataset.category;
         const facet = getCategoryFacet(category);
