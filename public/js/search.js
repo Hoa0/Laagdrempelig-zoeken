@@ -71,15 +71,15 @@ searchForm.addEventListener("submit", async (event) => {
               : "Niet beschikbaar";
 
           const resultItem = document.createElement("div");
-          resultItem.innerHTML = `<img src='${img}'> <p>Titel: ${title}</p><p>Auteur: ${author}</p>`;
+          resultItem.innerHTML = `<img src='${img}'> <p>${title}</p><p>${author}</p>`;
           // Append the result item to the search results
           searchResults.appendChild(resultItem);
 
           resultItem.addEventListener("click", () => {
             const itemDetails = [
               { img: img },
-              { text: `Titel: ${title}` },
-              { text: `Auteur: ${author}` },
+              { text: `${title}` },
+              { text: `${author}` },
               { text: `Samenvatting: ${summaries}` },
               { text: `Talen: ${language}` },
               { text: `Uitgever: ${publisher}` },
