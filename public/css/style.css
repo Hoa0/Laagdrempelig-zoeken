@@ -23,6 +23,7 @@
   --grey: rgb(248 249 249);
   --textColor: white;
   --obaChat: #f0f0f0;
+  font-size: large;
 }
 
 /* main */
@@ -73,7 +74,7 @@ section#chat {
   overflow-y: scroll;
 }
 section#chat > h3 {
-  color: var(--green);
+  margin: 1em;
 }
 section#chat > ul {
   display: block;
@@ -89,7 +90,7 @@ section#chat > ul > li {
   margin-bottom: 2rem;
 }
 
-section#chat form {
+form {
   display: flex;
   width: 100%;
   background-color: var(--obaLightBlue);
@@ -128,6 +129,11 @@ section#chat form > button > span {
   background: var(--obaChat);
   border-radius: 1.5em 1.5em 1.5em 0;
 }
+
+ul.speechOba:nth-last-of-type() {
+  scroll-behavior: smooth;
+}
+
 .speechUser {
   background: var(--obaLightBlue);
 }
@@ -165,20 +171,9 @@ li.showResult {
   .svgHidden {
     display: block;
   }
-  /* chat */
-  section#chat {
-    width: 60%;
-  }
-
   button {
     cursor: pointer;
   }
-
-  #mainContent {
-    display: flex;
-    justify-content: center;
-  }
-
   #svgObaFace {
     display: none;
   }
@@ -204,4 +199,14 @@ li.showResult {
     transform: rotate(10deg);
     transform-origin: 14em 14em;
   }
+}
+
+button {
+  padding: 1em;
+  font-size: 1em;
+}
+
+button:focus{
+  background-color: var(--obaLightBlue);
+  color: white;
 }
