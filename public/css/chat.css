@@ -130,7 +130,7 @@ ul li.speechOba button {
 
 /* Search results */
 .results-container {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   gap: 1vh;
   margin: 0.25em 1.25em;
