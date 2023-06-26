@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Zoeken</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Collectie</a></li>
+        <li><a href="locaties.html">Locaties</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="bot.html">bot</a></li>
+        <li><a href="datavis.html">datavis</a></li>
+      </ul>
+    </nav>
+    <img src="oba-logo.png" alt="OBA Logo" id="oba-logo" />
+  </header>
+  <div class="main-container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="chat-message bot">
+          <span>Welkom bij de OBA. Je spreekt met Catbot, bij mij kan je zoeken in de collectie en activiteiten. Zoek
+            hier op titel of thema. Voor dit prototype eerst <a
+              href="https://cors-anywhere.herokuapp.com/corsdemo">CORS</a> activeren
+        </div>
+      </div>
+      <div class="chat-body">
+        <div class="chat-messages" id="chatMessages"></div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="searchTerm" placeholder="Typ hier je vraag of zoekterm..." />
+        <button type="button" id="searchButton">Zoeken</button>
+      </div>
+    </div>
+    <div class="categories">
+      <div class="category-container" id="boekenContainer">
+        <h3>boeken</h3>
+        <div class="results-container" id="boekenResults"></div>
+      </div>
+      <div class="category-container" id="dvdsContainer">
+        <h3>dvd's</h3>
+        <div class="results-container" id="dvdsResults"></div>
+      </div>
+      <div class="category-container" id="activiteitenContainer">
+        <h3>activiteiten</h3>
+        <div class="results-container" id="activiteitenResults"></div>
+      </div>
+      <div class="category-container" id="cursussenContainer">
+        <h3>cursussen</h3>
+        <div class="results-container" id="cursussenResults"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

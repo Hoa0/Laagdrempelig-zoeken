@@ -91,14 +91,14 @@ animation();
 //
 
 
-obaMedewerkerBtn.addEventListener('click', function () {
-    if (isHidden) {
-        svgHead.style.display = 'none';
-        svgOba.style.display = 'none';
-        isHidden = false;
-    } else {
-        svgHead.style.display = 'block';
-        svgOba.style.display = 'block';
-        isHidden = true;
-    }
-});
+// obaMedewerkerBtn.addEventListener('click', function () {
+//     if (isHidden) {
+//         svgHead.style.display = 'none';
+//         svgOba.style.display = 'none';
+//         isHidden = false;
+//     } else {
+//         svgHead.style.display = 'block';
+//         svgOba.style.display = 'block';
+//         isHidden = true;
+//     }
+// });

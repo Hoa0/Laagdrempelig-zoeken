@@ -1,49 +1,17 @@
+const message = document.getElementById("chatMessages");
 const catalogusBtn = document.querySelectorAll(".catalogusButton");
-
-catalogusBtn.forEach((button) => {
-    button.addEventListener("click", async () => {
-        const category = button.dataset.category;
-        const facet = getCategoryFacet(category);
-        const searchTerm = "*"; // Voer hier de gewenste zoekterm in
-
-        const response = await fetch(`/catalogus/search/${searchTerm}/${facet}`);
-        const results = await response.json();
-        console.log(results);
-
-        if (results.length > 0) {
-            showResults(category, results);
-            document.getElementById(category + "Container").style.display = "block";
-
-            // Voeg de titel (h3) toe aan de category-container
-            const containerTitle = document.createElement("h3");
-            containerTitle.textContent = category;
-            document.getElementById(category + "Container").prepend(containerTitle);
-
-            // Geef de reden waarom de gebruiker heeft geklikt weer in de chat
-            const chatMessagesUser = document.getElementById("chatListUser");
-            const chatMessage = document.createElement("li");
-            chatMessagesUser.style.display = "block";
-            chatMessage.className = "chat-message user";
-            chatMessage.innerHTML = '<span>Ik wil informatie vinden over: ' + category + "</span>";
-            chatMessagesUser.appendChild(chatMessage);
-        } else {
-            document.getElementById(category + "Container").style.display = "none";
-            console.log("No results found");
-        }
-    });
-    // chatMessagesUl.scrollTop = chatMessagesUl.scrollHeight;
-});
-
-function getCategoryFacet(category) {
-    const foundCategory = categories.find(
-        (catalogus) => catalogus.name === category
-    );
-    return foundCategory ? foundCategory.facet : "";
-}
+let categories = [
+    { name: "boeken", facet: "&facet=type(book)&refine=true" },
+    { name: "dvds", facet: "&facet=type(movie)&refine=true" },
+    { name: "activiteiten", facet: "%20table:Activiteiten&refine=true" },
+    { name: "cursussen", facet: "%20table:jsonsrc&refine=true" },
+];
 
 function showResults(category, results) {
-    const resultsContainer = document.getElementById(category + "Results");
-    resultsContainer.innerHTML = "";
+    // Titel boven de resultaten
+    const title = document.createElement("h2");
+    title.textContent = category;
+    message.appendChild(title);
 
     results.forEach((result) => {
         const img = document.createElement("img");
@@ -71,18 +39,39 @@ function showResults(category, results) {
         author.textContent = result.authors ? result.authors[0] : "Unknown Author";
 
         const item = document.createElement("div");
-        item.className = "result-item";
+        item.className = "result-item bot";
         item.appendChild(title);
         item.appendChild(author);
         item.appendChild(img);
 
-        resultsContainer.appendChild(item);
+        message.appendChild(item);
     });
 }
 
-let categories = [
-    { name: "boeken", facet: "&facet=type(book)&refine=true" },
-    { name: "dvds", facet: "&facet=type(movie)&refine=true" },
-    { name: "activiteiten", facet: "%20table:Activiteiten&refine=true" },
-    { name: "cursussen", facet: "%20table:jsonsrc&refine=true" },
-];
+catalogusBtn.forEach((button) => {
+    button.addEventListener("click", async () => {
+        const category = button.dataset.category;
+        const facet = getCategoryFacet(category);
+        const searchTerm = "*";
+
+        const response = await fetch(`/catalogus/search/${searchTerm}/${facet}`);
+        const results = await response.json();
+        console.log(results);
+
+        // Resultaten weergeven
+        if (results.length > 0) {
+            message.innerHTML
+                += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor ' + category + ' kan ik nog iets voor je zoeken?</span></div>';
+            // Resultaten weergeven met titel bovenaan
+            showResults(category, results);
+        } else {
+            console.log("No results found");
+        }
+
+    });
+});
+
+function getCategoryFacet(category) {
+    const foundCategory = categories.find((catalogus) => catalogus.name === category);
+    return foundCategory ? foundCategory.facet : "";
+}
