@@ -1,4 +1,4 @@
-section.loading {
+div.loading {
   --color: #cb8f32;
   --duration: 6.8s;
   width: 2em;
@@ -7,10 +7,12 @@ section.loading {
   margin: 2em 0 0 0;
   left: 50%;
   bottom: 0;
+  top: 7em;
   display: none;
+  z-index: 1;
 }
 
-section.loading div:nth-child(1) {
+div.loading div:nth-child(1) {
   width: 2em;
   height: 0.75em;
   position: relative;
@@ -19,8 +21,8 @@ section.loading div:nth-child(1) {
   animation: boek var(--duration) ease infinite;
 }
 
-section.loading div:nth-of-type(1) div:nth-of-type(1),
-section.loading div:nth-of-type(1) div:nth-of-type(3) {
+div.loading div:nth-of-type(1) div:nth-of-type(1),
+div.loading div:nth-of-type(1) div:nth-of-type(3) {
   width: 3.75em;
   height: 0.25em;
   top: 0;
@@ -29,8 +31,8 @@ section.loading div:nth-of-type(1) div:nth-of-type(3) {
   position: absolute;
 }
 
-section.loading div:nth-of-type(1) div:nth-of-type(1):before,
-section.loading div:nth-of-type(1) div:nth-of-type(3):before {
+div.loading div:nth-of-type(1) div:nth-of-type(1):before,
+div.loading div:nth-of-type(1) div:nth-of-type(3):before {
   content: "";
   width: 3em;
   height: 0.25em;
@@ -41,21 +43,21 @@ section.loading div:nth-of-type(1) div:nth-of-type(3):before {
   left: 0.375em;
 }
 
-section.loading div:nth-of-type(1) div:nth-of-type(1) {
+div.loading div:nth-of-type(1) div:nth-of-type(1) {
   right: 1.75em;
   transform-origin: 3.625em 0.125em;
   transform: rotateZ(90deg);
   animation: links var(--duration) ease infinite;
 }
 
-section.loading div:nth-of-type(1) div:nth-of-type(3) {
+div.loading div:nth-of-type(1) div:nth-of-type(3) {
   left: 1.75em;
   transform-origin: 0.125em 0.125em;
   transform: rotateZ(-90deg);
   animation: rechts var(--duration) ease infinite;
 }
 
-section.loading div:nth-of-type(1) div:nth-of-type(2) {
+div.loading div:nth-of-type(1) div:nth-of-type(2) {
   width: 2em;
   height: 0.75em;
   border: 0.25em solid var(--color);
@@ -64,7 +66,7 @@ section.loading div:nth-of-type(1) div:nth-of-type(2) {
   transform: translateY(0.125em);
 }
 
-section.loading ul {
+div.loading ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -73,7 +75,7 @@ section.loading ul {
   top: 0;
 }
 
-section.loading ul li {
+div.loading ul li {
   height: 0.25em;
   border-radius: 0.125em;
   transform-origin: 100% 0.125em;
@@ -88,58 +90,58 @@ section.loading ul li {
   animation-iteration-count: infinite;
 }
 
-section.loading ul li:nth-child(1) {
+div.loading ul li:nth-child(1) {
   animation-name: page-1;
 }
-section.loading ul li:nth-child(2) {
+div.loading ul li:nth-child(2) {
   animation-name: page-2;
 }
-section.loading ul li:nth-child(3) {
+div.loading ul li:nth-child(3) {
   animation-name: page-3;
 }
-section.loading ul li:nth-child(4) {
+div.loading ul li:nth-child(4) {
   animation-name: page-4;
 }
-section.loading ul li:nth-child(5) {
+div.loading ul li:nth-child(5) {
   animation-name: page-5;
 }
-section.loading ul li:nth-child(6) {
+div.loading ul li:nth-child(6) {
   animation-name: page-6;
 }
-section.loading ul li:nth-child(7) {
+div.loading ul li:nth-child(7) {
   animation-name: page-7;
 }
-section.loading ul li:nth-child(8) {
+div.loading ul li:nth-child(8) {
   animation-name: page-8;
 }
-section.loading ul li:nth-child(9) {
+div.loading ul li:nth-child(9) {
   animation-name: page-9;
 }
-section ul li:nth-child(10) {
+div ul li:nth-child(10) {
   animation-name: page-10;
 }
-section.loading ul li:nth-child(11) {
+div.loading ul li:nth-child(11) {
   animation-name: page-11;
 }
-section.loading ul li:nth-child(12) {
+div.loading ul li:nth-child(12) {
   animation-name: page-12;
 }
-section.loading ul li:nth-child(13) {
+div.loading ul li:nth-child(13) {
   animation-name: page-13;
 }
-section.loading ul li:nth-child(14) {
+div.loading ul li:nth-child(14) {
   animation-name: page-14;
 }
-section.loading ul li:nth-child(15) {
+div.loading ul li:nth-child(15) {
   animation-name: page-15;
 }
-section.loading ul li:nth-child(16) {
+div.loading ul li:nth-child(16) {
   animation-name: page-16;
 }
 section.loading ul li:nth-child(17) {
   animation-name: page-17;
 }
-section.loading ul li:nth-child(18) {
+div.loading ul li:nth-child(18) {
   animation-name: page-18;
 }
 
@@ -446,7 +448,6 @@ section.loading ul li:nth-child(18) {
     transform: rotateZ(-90deg);
   }
 }
-
 
 button#loadMoreButton {
   display: none;

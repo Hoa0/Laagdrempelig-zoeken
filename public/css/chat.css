@@ -6,7 +6,6 @@
   padding: 0;
   list-style: none;
   font-family: "Avenir";
-  overflow: hidden;
 }
 
 /*********************/
@@ -45,8 +44,8 @@ nav ul li img {
   border-radius: 1em;
 }
 
-/* inside section#chat */
-section#chat h1 {
+/* inside nav h1 */
+nav h1 {
   text-align: center;
   margin: 0.5em 0.5em 0 0.5em;
   color: var(--mainRed);
@@ -134,6 +133,7 @@ ul li.speechOba button {
   width: 100%;
   display: grid;
   gap: 1vh;
+  margin: 0.25em 1.25em;
 }
 
 .results-container h1 {
@@ -147,7 +147,7 @@ ul li.speechOba button {
   gap: 1em;
 }
 
-#searchResults div {
+#searchResults article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,16 +160,16 @@ ul li.speechOba button {
   box-shadow: var(--shadow-down-light);
 }
 
-#searchResults div:hover {
+#searchResults article:hover {
   border: var(--green) 0.2em solid;
   cursor: pointer;
 }
 
-#searchResults div:focus {
+#searchResults article:focus {
   background-color: var(--obaLightGreen);
 }
 
-#searchResults div p:nth-of-type(1) {
+#searchResults article p:nth-of-type(1) {
   font-weight: bold;
 }
 
@@ -179,38 +179,37 @@ ul li.speechOba button {
   gap: 0.5em;
 }
 
-#itemDetails div {
+#itemDetails article {
   background-color: #ffffff;
   padding: 1em;
-  margin: 0.25em 1.25em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
 }
 
 /* Select item Titel */
-#itemDetails div p:nth-of-type(1) {
+#itemDetails article h2 {
   font-weight: bold;
   margin: 1em 0 0 0;
 }
 
 /* Select auteur */
-#itemDetails div p:nth-of-type(2) {
+#itemDetails article h3 {
   font-style: italic;
 }
 
 /* Selecte item samenvatting */
-#itemDetails div p:nth-of-type(3) {
+#itemDetails article p:nth-of-type(1) {
   margin: 1em 0;
 }
 
-#itemDetails div img {
+#itemDetails article img {
   max-width: fit-content;
   float: left;
   margin-right: 1rem;
 }
 
 @media (min-width: 60em) {
-  #itemDetails div {
+  #itemDetails article {
     width: fit-content;
     max-width: 47em;
   }
