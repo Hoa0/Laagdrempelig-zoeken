@@ -71,7 +71,6 @@ const createResultItem = (result) => {
         }
       }
     });
-    
 
     itemDetailsDiv.appendChild(detailsDiv);
   });
