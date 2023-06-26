@@ -34,8 +34,8 @@ const createResultItem = (result) => {
   const summariesText = summaries && summaries.length > 0 ? summaries[0] : "Niet beschikbaar";
 
   // Create the result item element
-  const resultItem = document.createElement("div");
-  resultItem.innerHTML = `<img src='${img}'> <p>${title}</p><p>${author}</p>`;
+  const resultItem = document.createElement("article");
+  resultItem.innerHTML = `<img src='${img}'> <h2>${title}</h2><h3>${author}</h3>`;
 
   // Add click event listener to show item details
   resultItem.addEventListener("click", () => {
@@ -48,19 +48,30 @@ const createResultItem = (result) => {
       { text: `Uitgever: ${publisher}` },
     ];
 
-    const detailsDiv = document.createElement("div");
+    const detailsDiv = document.createElement("article");
 
-    itemDetails.forEach((item) => {
+    itemDetails.forEach((item, index) => {
       if (item.img) {
         const imgElement = document.createElement("img");
         imgElement.src = item.img;
         detailsDiv.appendChild(imgElement);
       } else {
-        const p = document.createElement("p");
-        p.textContent = item.text;
-        detailsDiv.appendChild(p);
+        if (index === 1) {
+          const h2 = document.createElement("h2");
+          h2.textContent = item.text;
+          detailsDiv.appendChild(h2);
+        } else if (index === 2) {
+          const h3 = document.createElement("h3");
+          h3.textContent = item.text;
+          detailsDiv.appendChild(h3);
+        } else {
+          const p = document.createElement("p");
+          p.textContent = item.text;
+          detailsDiv.appendChild(p);
+        }
       }
     });
+    
 
     itemDetailsDiv.appendChild(detailsDiv);
   });
