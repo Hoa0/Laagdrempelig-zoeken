@@ -30,7 +30,7 @@ nav ul {
   justify-content: center;
 }
 
-nav ul li img{
+nav ul li img {
   width: 50%;
 }
 
@@ -203,12 +203,14 @@ ul li.speechOba button {
   margin: 1em 0;
 }
 
-img {
+#itemDetails div img {
   max-width: fit-content;
+  float: left;
+  margin-right: 1rem;
 }
 
 @media (min-width: 60em) {
-  #itemDetails div{
+  #itemDetails div {
     width: fit-content;
     max-width: 47em;
   }
