@@ -6,6 +6,7 @@
   padding: 0;
   list-style: none;
   font-family: "Avenir";
+  overflow: hidden;
 }
 
 /*********************/
@@ -28,17 +29,9 @@ nav ul {
   margin-bottom: 3rem;
   justify-content: center;
 }
-li#titelLogo {
-  display: flex;
-  color: var(--mainRed);
-}
 
-li#titelLogo > #titelA {
-  transform: rotate(-90deg);
-}
-
-li#titelLogo:first-of-type {
-  margin-right: 5rem;
+nav ul li img{
+  width: 50%;
 }
 
 /* div#mainContent */
@@ -53,7 +46,7 @@ li#titelLogo:first-of-type {
 }
 
 /* inside section#chat */
-section#chat h3 {
+section#chat h1 {
   text-align: center;
   margin: 0.5em 0.5em 0 0.5em;
   color: var(--mainRed);
@@ -124,10 +117,11 @@ ul li.speechOba button {
   display: inline-block;
   outline: 0;
   border: 0;
+  font-weight: bold;
   cursor: pointer;
   color: var(--green);
   border-radius: 0.25em;
-  border: 0.02em solid var(--green);
+  border: 0.1em solid var(--green);
   padding: 0.5em 1em;
   line-height: 1.625em;
   margin: 0.2em;
@@ -150,7 +144,7 @@ ul li.speechOba button {
 #searchResults {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 0.5em;
+  gap: 1em;
 }
 
 #searchResults div {
@@ -162,7 +156,6 @@ ul li.speechOba button {
   gap: 1em;
   background-color: #ffffff;
   padding: 1em;
-  margin: 0.25em 1.25em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
 }
@@ -217,7 +210,7 @@ img {
 @media (min-width: 60em) {
   #itemDetails div{
     width: fit-content;
-    max-width: 75%;
+    max-width: 47em;
   }
 }
 

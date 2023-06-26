@@ -2,12 +2,12 @@
 
 <section id="mainContent">
   <section id="chat">
-    <h3>obaAssistent chat</h3>
+    <h1>obaAssistent chat</h1>
     <ul>
       <li class="speechOba">
         <p>
           Welkom, ik ben obaAssistent. Graag help ik je verder met het vinden
-          van informatie
+          van informatie.
         </p>
       </li>
       <li class="speechOba fallbackTyping">
@@ -29,9 +29,9 @@
     <div class="results-container">
       <h1></h1>
       <div id="searchResults"></div>
+      <button id="loadMoreButton">meer resultaten laden</button>
       <div id="itemDetails"></div>
     </div>
-    <button id="loadMoreButton">meer resultaten laden</button>
     <%- include('partials/loading'); %>
   </section>
   <form id="searchForm">
@@ -41,7 +41,7 @@
       placeholder="Waar ben je naar op zoek?"
       id="query"
     />
-    <button type="submit" id="searchButton">send</button>
+    <button type="submit" id="searchButton" class="fa">&#xf1d9;</button>
   </form>
   <%- include('partials/footer'); %>
 </section>
