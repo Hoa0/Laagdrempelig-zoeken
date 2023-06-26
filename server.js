@@ -3,10 +3,12 @@ import { createServer } from "http";
 import path from "path";
 import bodyParser from "body-parser";
 import router from "./routes/route.js";
+import cors from "cors"
 
 const app = express();
 const http = createServer(app);
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
