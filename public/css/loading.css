@@ -448,4 +448,13 @@ section.loading ul li:nth-child(18) {
 }
 
 
+button#loadMoreButton {
+  display: none;
+  text-align: center;
+  text-decoration: underline;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 
