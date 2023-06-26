@@ -3,33 +3,46 @@
   <h2>Results</h2>
   <%- include('partials/nav'); %>
 
-
-
-    <section class="chat-container">
-
-      <section class="chat-header">
-        <article class="chat-message bot">
-          <span>Welkom bij de OBA. Je spreekt met Catbot, bij mij kan je zoeken in de collectie en activiteiten. Zoek
-            hier op titel of thema.
-        </article>
-        <article>
-          <%- include('partials/catalogusBtns'); %>
-        </article>
-      </section>
-
-      <section class="chat-body">
-        <section class="chat-messages" id="chatMessages">
-
-
+    <section id="mainContent">
+      <section id="chat">
+        <section id="containerTitle">
+          <%- include('partials/botHead'); %>
+            <%- include('partials/obaMedeSvg'); %>
+              <h3>Stel een vraag</h3>
         </section>
+        <ul id="chatList">
+          <li class="speechOba">
+            <p>Welkom, ik ben obaAssistent.
+              Graag help ik je verder met het vinden van informatie</p>
+            <a href="https://cors-anywhere.herokuapp.com/corsdemo">CORS</a> activeren
+          </li>
+          <li class="speechOba fallbackTyping">
+            <p>obaAssistent is aan het typen</p>
+          </li>
+          <li id="speechBtnCateg" class="speechOba">
+            <%- include('partials/catalogusBtns'); %>
+          </li>
+          <!-- <li id="speechInfoQ" class="speechOba">
+            <p>Stel een vraag, bijvoorbeeld:</p>
+            <button type="button" id="btnBook" class="searchButton">Ik zoek een boek</button>
+          </li> -->
+          <li class="showResult speechUser">
+            <p>Ik zoek een boek</p>
+          </li>
+          <li id="chatListUser" class="speechUser"></li>
+          <li>
+            <%- include('partials/categoriesList'); %>
+          </li>
+          <li>
+            <div id="searchResults"></div>
+          </li>
+        </ul>
+        <span class="fallback"></span>
+        <form id="searchForm">
+          <input type="text" name="query" placeholder="bv: ik zoek een boek" id="query" />
+          <button type="submit" id="searchButton"></button>
+        </form>
+        <%- include('partials/loading'); %>
+
       </section>
-
-      <form class="chat-input">
-        <input type="text" id="searchTerm" placeholder="Typ hier je vraag of zoekterm..." />
-        <button type="button" id="searchButton">Zoeken</button>
-      </form>
-
-    </section>
-
-
-    <%- include('partials/footer'); %>
+      <%- include('partials/footer'); %>

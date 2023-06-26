@@ -1,4 +1,5 @@
-const message = document.getElementById("chatMessages");
+// const message = document.getElementById("chatMessages");
+const message = document.getElementById("searchResults");
 const catalogusBtn = document.querySelectorAll(".catalogusButton");
 let categories = [
     { name: "boeken", facet: "&facet=type(book)&refine=true" },
@@ -46,7 +47,13 @@ function showResults(category, results) {
 
         message.appendChild(item);
     });
+
+    // Scroll naar de onderkant van de resultaten
+    const lastResult = message.lastElementChild;
+    lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
 }
+
+
 
 catalogusBtn.forEach((button) => {
     button.addEventListener("click", async () => {

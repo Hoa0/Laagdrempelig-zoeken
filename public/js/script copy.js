@@ -22,6 +22,8 @@ searchForm.addEventListener("submit", async (event) => {
 
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
 
+      searchResults.innerHTML = "";
+
       if (responseData.data) {
         /** @description removes leading and trailing whitespace characters from the JSON string */
         function RemoveSpaceFromString(dataThatHasBeenStringified) {
@@ -30,12 +32,6 @@ searchForm.addEventListener("submit", async (event) => {
 
         const responseDataSet = JSON.parse(RemoveSpaceFromString(dirtySet));
         console.log(responseDataSet);
-
-        // Clear previous search results
-        if (!input.dataset.searched) {
-          searchResults.innerHTML = "";
-          input.dataset.searched = true;
-        }
 
         // Display the search results
         responseDataSet.results.forEach((result) => {
@@ -47,17 +43,9 @@ searchForm.addEventListener("submit", async (event) => {
           resultItem.innerHTML = `<p>Titel: ${title}</p><p>Auteur: ${author}</p> <img src='${img}'>`;
 
           searchResults.appendChild(resultItem);
+          uiState("loading", input.value);
+          loadingIsDone();
         });
-
-        uiState("loading", input.value);
-        loadingIsDone();
-
-        // Scroll to the last search result
-        const lastResult = searchResults.lastElementChild;
-        lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
-
-        // Clear the input field
-        input.value = "";
       } else {
         console.log("No results found.");
         uiState("noData");

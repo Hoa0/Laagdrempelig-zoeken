@@ -1,0 +1,35 @@
+<%- include('partials/head'); %>
+  <h1>test</h1>
+  <h2>Results</h2>
+  <%- include('partials/nav'); %>
+
+
+
+    <section class="chat-container">
+
+      <section class="chat-header">
+        <article class="chat-message bot">
+          <span>Welkom bij de OBA. Je spreekt met Catbot, bij mij kan je zoeken in de collectie en activiteiten. Zoek
+            hier op titel of thema.
+        </article>
+        <article>
+          <%- include('partials/catalogusBtns'); %>
+        </article>
+      </section>
+
+      <section class="chat-body">
+        <section class="chat-messages" id="chatMessages">
+
+
+        </section>
+      </section>
+
+      <form class="chat-input">
+        <input type="text" id="searchTerm" placeholder="Typ hier je vraag of zoekterm..." />
+        <button type="button" id="searchButton">Zoeken</button>
+      </form>
+
+    </section>
+
+
+    <%- include('partials/footer'); %>
