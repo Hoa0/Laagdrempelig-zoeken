@@ -20,7 +20,7 @@
   --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
   --alabaster: #f8f8f8;
   --mainRed: #ff0000;
-  --black:#000;
+  --black:#434343;
 }
 
 /* Nav styling */
@@ -29,6 +29,7 @@ nav ul {
   margin: 1rem 0 2rem;
   justify-content: start;
   align-items: center;
+  box-shadow: 0px 2px 0px rgb(237 236 236);
 }
 
 nav ul li img {
@@ -148,7 +149,7 @@ li.speechOba button {
   /* font-family: sans-serif; */
   font-weight: 500;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.5rem;
   color: var(--green);
   border: 0.15em solid var(--green);
   border-radius: 1.5rem;
@@ -195,14 +196,14 @@ li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba 
   display: none;
   margin: 1em;
 }
-
+/* -------------------------------check*/
 /* #searchResults {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
-} */
+} 
 
-/* #searchResults article {
+ #searchResults article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +219,12 @@ li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba 
 #searchResults article:hover {
   border: var(--green) 0.2em solid;
   cursor: pointer;
+}
+#searchResults article p:nth-of-type(1) {
+  font-weight: bold;
 } */
+/*--------------------- tot check*/
+
 
 input:focus,
 button:focus,
@@ -229,9 +235,7 @@ button:focus,
   border: solid var(--green) 0.3em;
 }
 
-/* #searchResults article p:nth-of-type(1) {
-  font-weight: bold;
-} */
+
 
 /* itemDetails */
 #itemDetails {
@@ -285,6 +289,12 @@ button:focus,
   ul li.speechOba {
     width: fit-content;
     max-width: 47em;
+  }
+  #mainContent{
+    padding:0;
+  }
+  li.speechOba button{
+    padding: 0.5rem 1rem;
   }
 }
 

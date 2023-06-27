@@ -30,6 +30,7 @@
 #chatTitleContainer {
   display: flex;
   justify-content: center;
+  margin-bottom:0.5rem;
 }
 /*svg bot head*/
 #botSvg {
@@ -104,14 +105,14 @@
     box-shadow: var(--shadow-down-light);
 }
 
-#searchResultsItems{
+.searchResultsItems{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
 }
 
-#searchResultsItems img{
-  max-width: 100%;
+.searchResultsItems img{
+      max-width: 100%;
 }
 
 @media (min-width: 60em) {
