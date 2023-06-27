@@ -165,8 +165,12 @@ ul li.speechOba button {
   cursor: pointer;
 }
 
-#searchResults article:focus {
-  background-color: var(--obaLightGreen);
+input:focus, button:focus,
+.buttonContainer button:focus,
+#searchResults article:focus,
+#itemDetails article:focus,
+#itemDetails article button:focus {
+  border: solid var(--mainRed) .3em;
 }
 
 #searchResults article p:nth-of-type(1) {
@@ -186,6 +190,17 @@ ul li.speechOba button {
   box-shadow: var(--shadow-down-light);
 }
 
+#itemDetails article button {
+  display: flex;
+  flex-direction: column-reverse;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green);
+  margin: 1em;
+  padding: 1em;
+}
+
 /* Select item Titel */
 #itemDetails article h2 {
   font-weight: bold;
@@ -193,7 +208,7 @@ ul li.speechOba button {
 }
 
 /* Select auteur */
-#itemDetails article h3 {
+#searchResults article h3, #itemDetails article h3 {
   font-style: italic;
 }
 
