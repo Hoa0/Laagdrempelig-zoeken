@@ -24,14 +24,26 @@ const createMessage = (text) => {
 // Function to create a search result item element
 const createResultItem = (result) => {
   // Destructure properties from the result object
-  const { titles, authors, coverimages, languages, publisher, summaries } = result;
-  
+  const {
+    titles,
+    authors,
+    coverimages,
+    languages,
+    publisher,
+    summaries,
+    detailLink,
+  } = result;
+
   // Assign default values if properties are undefined or empty
   const title = titles && titles.length > 0 ? titles[0] : "Onbekende titel";
-  const author = authors && authors.length > 0 ? authors[0] : "Onbekende auteur";
-  const img = coverimages[1] !== undefined ? coverimages[1] : "./img/placeholder.png";
+  const author =
+    authors && authors.length > 0 ? authors[0] : "Onbekende auteur";
+  const img =
+    coverimages[1] !== undefined ? coverimages[1] : "./img/placeholder.png";
   const language = languages;
-  const summariesText = summaries && summaries.length > 0 ? summaries[0] : "Niet beschikbaar";
+  const summariesText =
+    summaries && summaries.length > 0 ? summaries[0] : "Niet beschikbaar";
+  const detailLinks = detailLink;
 
   // Create the result item element
   const resultItem = document.createElement("article");
@@ -46,6 +58,7 @@ const createResultItem = (result) => {
       { text: `Samenvatting: ${summariesText}` },
       { text: `Talen: ${language}` },
       { text: `Uitgever: ${publisher}` },
+      { text: "Delen", link: detailLinks },
     ];
 
     const detailsDiv = document.createElement("article");
@@ -55,6 +68,24 @@ const createResultItem = (result) => {
         const imgElement = document.createElement("img");
         imgElement.src = item.img;
         detailsDiv.appendChild(imgElement);
+      } else if (item.link) {
+        const button = document.createElement("button");
+        button.textContent = item.text;
+        button.addEventListener("click", () => {
+          navigator.clipboard
+            .writeText(item.link)
+            .then(() => {
+              console.log("Link copied to clipboard:", item.link);
+              uiState("copied");
+              // Optionally, provide user feedback or perform other actions after successful copy
+            })
+            .catch((error) => {
+              console.error("Failed to copy link:", error);
+              uiState("noLink");
+              // Optionally, handle the error or provide user feedback
+            });
+        });
+        detailsDiv.appendChild(button);
       } else {
         if (index === 1) {
           const h2 = document.createElement("h2");
@@ -138,7 +169,10 @@ const handleSearchFormSubmit = async (event) => {
         }
         responseDataSet = JSON.parse(removeSpaceFromString(dirtySet));
 
-        localStorage.setItem("responseDataSet", JSON.stringify(responseDataSet));
+        localStorage.setItem(
+          "responseDataSet",
+          JSON.stringify(responseDataSet)
+        );
 
         // Load and display the items
         loadItems();
