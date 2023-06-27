@@ -17,9 +17,9 @@
   --lightGreen: rgba(70, 146, 125, 0.25);
   --green: rgba(70, 146, 125);
   --darkGreen: rgb(59, 88, 80);
-  --obaBlue: rgb(0,100,200);
-  --obaLightBlue: rgb(0,150,230);
-  --obaLightGreen: rgb(180,200,0);
+  --obaBlue: rgb(0, 100, 200);
+  --obaLightBlue: rgb(0, 150, 230);
+  --obaLightGreen: rgb(180, 200, 0);
   --grey: rgb(248 249 249);
   --textColor: white;
   --obaChat: #f0f0f0;
@@ -30,7 +30,6 @@
 main {
   padding: 1rem;
 }
-
 /* Nav styling */
 nav ul {
   display: flex;
@@ -109,15 +108,14 @@ form input[type="text"] {
 
 section#chat form > button {
   background: var(--obaBlue);
-    color: var(--textColor);
-    border: none;
-    cursor: pointer;
+  color: var(--textColor);
+  border: none;
+  cursor: pointer;
 }
 
-section#chat form > button:hover{
+section#chat form > button:hover {
   background-color: var(--obaBlue);
 }
-
 
 section#chat form > button > span {
   display: none;
@@ -156,57 +154,14 @@ button {
 li.showResult {
   text-align: end;
 }
-/* svg animation */
-#hand,
-#arm {
-  animation-name: hand;
-  animation-duration: 4s;
-  transform-origin: 16.8em 22.5em;
-  animation-iteration-count: 4;
-}
-@media (min-width: 40em) {
-  svg#svgObaBud {
-    width: 20%;
-  }
-  .svgHidden {
-    display: block;
-  }
-  button {
-    cursor: pointer;
-  }
-  #svgObaFace {
-    display: none;
-  }
-}
-
-@keyframes hand {
-  0% {
-    transform: rotate(10deg);
-    transform-origin: 14em 14em;
-  }
-
-  20% {
-    transform: rotate(10deg);
-    transform-origin: 14em 14em;
-  }
-
-  60% {
-    transform: rotate(-20deg);
-    transform-origin: 13em 12em;
-  }
-
-  100% {
-    transform: rotate(10deg);
-    transform-origin: 14em 14em;
-  }
-}
 
 button {
   padding: 1em;
   font-size: 1em;
+  cursor: pointer;
 }
 
-button:focus{
+button:focus {
   background-color: var(--obaLightBlue);
   color: white;
 }

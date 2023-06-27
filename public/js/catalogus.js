@@ -1,11 +1,42 @@
+//catalogus script
+const api_url_base = "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/api/v1/search/?q=";
+const api_key = "&authorization=d7519ea81ad4e06ab5e5dac46ddeb63a";
+const api_output = "&output=json";
+const api_pagesize = "&pagesize=5";
 const message = document.getElementById("searchResults");
-const catalogusBtn = document.querySelectorAll(".catalogusButton");
+// const catalogusBtn = document.querySelectorAll(".catalogusButton");
 let categories = [
     { name: "boeken", facet: "&facet=type(book)&refine=true" },
     { name: "dvds", facet: "&facet=type(movie)&refine=true" },
     { name: "activiteiten", facet: "%20table:Activiteiten&refine=true" },
     { name: "cursussen", facet: "%20table:jsonsrc&refine=true" },
 ];
+
+async function getResults(searchTerm, facet = "") {
+    const api_url = api_url_base + searchTerm + facet + api_pagesize + api_key + api_output;
+
+    try {
+        const response = await fetch(api_url, {
+            headers: {
+                "X-Requested-With": "XMLHttpRequest",
+            },
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            return data.results;
+        } else {
+            console.error("Error fetching data:", response.status, response.statusText);
+            return [];
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return [];
+    }
+}
+
+
+
 
 function showResults(category, results) {
     // Titel boven de resultaten
@@ -20,7 +51,7 @@ function showResults(category, results) {
         if (result.coverimages && result.coverimages[1]) {
             imageUrl = result.coverimages[1];
         } else if (result.coverimages && result.coverimages[0]) {
-            imageUrl = result.coverimages[0].replace("{0}", "1");
+            imageUrl = result.coverimages[0].replace("{0}", "l");
         } else {
             imageUrl = "fallback.png";
         }
@@ -46,34 +77,40 @@ function showResults(category, results) {
 
         message.appendChild(item);
     });
-
     // Scroll naar de onderkant van de resultaten
     const lastResult = message.lastElementChild;
     lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
 
+//buttons catalogus
+// const categoryContainers = document.querySelectorAll(".category-container");
+// categoryContainers.forEach((container) => {
+//     container.style.display = "none";
+// });
 
-catalogusBtn.forEach((button) => {
-    button.addEventListener("click", async () => {
-        const category = button.dataset.category;
-        const facet = getCategoryFacet(category);
-        const searchTerm = "*";
+document.addEventListener("DOMContentLoaded", () => {
+    const searchButtons = document.querySelectorAll(".catalogusButton");
 
-        const response = await fetch(`/catalogus/search/${searchTerm}/${facet}`);
-        const results = await response.json();
-        console.log(results);
+    searchButtons.forEach((button) => {
+        button.addEventListener("click", async () => {
+            const category = button.dataset.category;
+            const facet = getCategoryFacet(category);
+            const searchTerm = "*"; // Voer hier de gewenste zoekterm in
 
-        // Resultaten weergeven
-        if (results.length > 0) {
-            message.innerHTML
-                += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor ' + category + ' kan ik nog iets voor je zoeken?</span></div>';
-            // Resultaten weergeven met titel bovenaan
-            showResults(category, results);
-        } else {
-            console.log("No results found");
-        }
+            const results = await getResults(searchTerm, facet);
+            console.log(await results);
 
+            if (results.length > 0) {
+                message.innerHTML
+                    += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor ' + category + ' kan ik nog iets voor je zoeken?</span></div>';
+                // Resultaten weergeven met titel bovenaan
+                showResults(category, results);
+
+            } else {
+                console.log("No results found");
+            }
+        });
     });
 });
 
