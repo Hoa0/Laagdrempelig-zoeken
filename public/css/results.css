@@ -59,6 +59,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
+  margin-top:1em;
 }
 
 .searchResultsItems {

@@ -138,13 +138,23 @@ const loadItems = () => {
     currentIndex + itemsPerLoad
   );
 
+  //container for grid elements
+  const resultContainer = document.createElement("div");
+  resultContainer.classList.add("searchResultsItems");
+
   itemsToLoad.forEach((result, index) => {
     const resultItem = createResultItem(result);
     // resultItem.setAttribute('tabindex', currentIndex + index + 1); // Assign tabindex based on the current index
-    searchResults.appendChild(resultItem);
+    resultContainer.appendChild(resultItem);
     loadMoreButton.style.display = "block";
   });
 
+  searchResults.appendChild(resultContainer);
+
+  //scroll animation
+  const lastResult = searchResults.lastElementChild;
+  lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
+  
   currentIndex += itemsPerLoad;
 
   // Hide the "Load More" button if all items have been loaded
@@ -183,7 +193,8 @@ const handleSearchFormSubmit = async (event) => {
     if (response.ok) {
       const responseData = await response.json();
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
-      searchResults.innerHTML = "";
+      // searchResults.innerHTML = "";
+      input.value = "";
 
       if (responseData.data) {
         // Clean up and store the response data for later use
