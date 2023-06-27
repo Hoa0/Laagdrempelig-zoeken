@@ -97,7 +97,7 @@
 .message{
     background-color: var(--green);
     color: var(--alabaster);
-    margin: 1em;
+    margin: 3em 1em;
     margin-left: auto;
     width: fit-content;
     padding: 0.75em;

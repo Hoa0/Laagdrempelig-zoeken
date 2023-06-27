@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
            if (results.length > 0) {
                searchResults.innerHTML
-                   += '<article class="message"><p>' + category + '</p></article>';
+                   += '<div class="message"><p>' + category + '</p></div>';
 
                searchResults.innerHTML
-                   += '<article class="speechOba"><p>Hier zijn de resultaten van je zoekvraag voor ' + category + ', kan ik nog iets voor je zoeken?</p></article>';
+                   += '<div class="speechOba"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' + category + '. Kan ik nog iets voor je zoeken?</p></div>';
                // Resultaten weergeven met titel bovenaan
                showResults(category, results);
 

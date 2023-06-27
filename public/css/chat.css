@@ -286,7 +286,7 @@ button:focus,
 
 @media (min-width: 60em) {
   #itemDetails article,
-  ul li.speechOba {
+ .speechOba {
     width: fit-content;
     max-width: 47em;
   }
