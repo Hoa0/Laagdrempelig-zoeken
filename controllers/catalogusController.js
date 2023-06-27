@@ -1,11 +1,11 @@
 // controller/catalogusController.js
 import fetch from "node-fetch";
-const api_url_base = "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/api/v1/search/?q=";
-const api_key = "&authorization=d7519ea81ad4e06ab5e5dac46ddeb63a";
-const api_output = "&output=json";
-const api_pagesize = "&pagesize=5";
 
 export async function getResults(searchTerm, facet = "") {
+    const api_url_base = "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/api/v1/search/?q=";
+    const api_key = "&authorization=d7519ea81ad4e06ab5e5dac46ddeb63a";
+    const api_output = "&output=json";
+    const api_pagesize = "&pagesize=5";
     const api_url = api_url_base + searchTerm + facet + api_pagesize + api_key + api_output;
 
     try {
