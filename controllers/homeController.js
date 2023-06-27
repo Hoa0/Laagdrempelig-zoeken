@@ -9,7 +9,6 @@ export const fetchData = async (req, res) => {
   const outputParam = "&output=json";
 
   const apiUrlWithParams = apiUrl + publicKeyParam + outputParam;
-  const corsProxy = "https://cors-anywhere.herokuapp.com/";
   const corsApiUrl = apiUrlWithParams;
   console.log(corsApiUrl);
 

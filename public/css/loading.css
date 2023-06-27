@@ -456,6 +456,8 @@ button#loadMoreButton {
   border: none;
   background: none;
   cursor: pointer;
+  font-size: larger;
+  padding: 3em;
 }
 
 
