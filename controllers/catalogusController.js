@@ -16,8 +16,8 @@ export async function getResults(searchTerm, facet = "") {
         });
 
         if (response.ok) {
-            const data = await response.text();
-            console.log(await JSON.parse(data))
+            const data = await response.json();
+            console.log(await response.json())
             return data.results;
         } else {
             console.error("Error fetching data:", response.status, response.statusText);

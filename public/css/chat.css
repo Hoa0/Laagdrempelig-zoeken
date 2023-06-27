@@ -25,8 +25,13 @@
 /* Nav styling */
 nav ul {
   display: flex;
-  margin-bottom: 3rem;
-  justify-content: center;
+  margin: 3rem 0;
+  justify-content: start;
+  align-items: center;
+}
+
+nav > ul li {
+  margin-left: 1.5rem;
 }
 
 nav ul li img {
@@ -38,10 +43,20 @@ nav ul li img {
   display: grid;
   grid-template-rows: 90% 10%;
   height: 100vh;
-  max-height: 90vh;
-  width: 100vw;
+  max-height: 85vh;
   padding: 1em;
   border-radius: 1em;
+  margin: auto;
+}
+
+/*chat title container*/
+#chatTitleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#botSvg {
+  max-width: 4rem;
 }
 
 /* inside nav h1 */
@@ -49,6 +64,8 @@ nav h1 {
   text-align: center;
   margin: 0.5em 0.5em 0 0.5em;
   color: var(--mainRed);
+  align-items: center;
+  display: flex;
 }
 
 section#chat {
@@ -212,6 +229,12 @@ ul li.speechOba button {
   #itemDetails article {
     width: fit-content;
     max-width: 47em;
+  }
+
+  .max-widthGeneral {
+    max-width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
