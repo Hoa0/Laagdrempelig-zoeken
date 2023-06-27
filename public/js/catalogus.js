@@ -36,7 +36,6 @@ async function getResults(searchTerm, facet = "") {
 
 function showResults(category, results) {
    const article = document.createElement("article"); // Maak een nieuw 'article'-element
-
    const title = document.createElement("h2");
    title.textContent = category;
    title.classList.add("catalogTitle");
@@ -65,6 +64,7 @@ function showResults(category, results) {
        };
 
        const resultItem = document.createElement("article"); // Maak een 'article'-element voor elk resultaat
+       resultItem.tabIndex = 0;
        const resultTitle = document.createElement("h2"); // Gebruik 'h2' voor de titel van elk resultaat
        resultTitle.textContent = result.titles[0];
 
@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
            if (results.length > 0) {
                searchResults.innerHTML
-                   += '<div class="message"><p>' + category + '</p></div>';
+                   += '<div class="message" tabindex="0"><p>' + category + '</p></div>';
 
                searchResults.innerHTML
-                   += '<div class="speechOba"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' + category + '. Kan ik nog iets voor je zoeken?</p></div>';
+                   += '<div class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' + category + '. Kan ik nog iets voor je zoeken?</p></div>';
                // Resultaten weergeven met titel bovenaan
                showResults(category, results);
 
