@@ -4,12 +4,12 @@ const api_key = "&authorization=d7519ea81ad4e06ab5e5dac46ddeb63a";
 const api_output = "&output=json";
 const api_pagesize = "&pagesize=5";
 const message = document.getElementById("searchResults");
-// const catalogusBtn = document.querySelectorAll(".catalogusButton");
+
 let categories = [
-    { name: "boeken", facet: "&facet=type(book)&refine=true" },
-    { name: "dvds", facet: "&facet=type(movie)&refine=true" },
-    { name: "activiteiten", facet: "%20table:Activiteiten&refine=true" },
-    { name: "cursussen", facet: "%20table:jsonsrc&refine=true" },
+    { name: "Boeken", facet: "&facet=type(book)&refine=true" },
+    { name: "Dvds", facet: "&facet=type(movie)&refine=true" },
+    { name: "Activiteiten", facet: "%20table:Activiteiten&refine=true" },
+    { name: "Cursussen", facet: "%20table:jsonsrc&refine=true" },
 ];
 
 async function getResults(searchTerm, facet = "") {
@@ -35,14 +35,16 @@ async function getResults(searchTerm, facet = "") {
     }
 }
 
-
-
-
 function showResults(category, results) {
-    // Titel boven de resultaten
+    const article = document.createElement("article"); // Maak een nieuw 'article'-element
+
     const title = document.createElement("h2");
     title.textContent = category;
-    message.appendChild(title);
+    title.classList.add("catalogTitle");
+    article.appendChild(title);
+
+    const resultContainer = document.createElement("div"); // Maak een 'div'-element voor de resultaten
+    resultContainer.classList.add("searchResults");
 
     results.forEach((result) => {
         const img = document.createElement("img");
@@ -63,31 +65,26 @@ function showResults(category, results) {
             this.src = "fallback.png";
         };
 
-        const title = document.createElement("p");
-        title.textContent = result.titles[0];
+        const resultItem = document.createElement("article"); // Maak een 'div'-element voor elk resultaat
 
-        const author = document.createElement("p");
-        author.textContent = result.authors ? result.authors[0] : "Unknown Author";
+        const resultTitle = document.createElement("h2"); // Gebruik 'h2' voor de titel van elk resultaat
+        resultTitle.textContent = result.titles[0];
 
-        const item = document.createElement("div");
-        item.className = "result-item bot";
-        item.appendChild(title);
-        item.appendChild(author);
-        item.appendChild(img);
+        const author = document.createElement("h3"); // Gebruik 'h3' voor de auteur van elk resultaat
+        author.textContent = result.authors ? result.authors[0] : "";
 
-        message.appendChild(item);
+        resultContainer.appendChild(resultItem);
+        resultItem.appendChild(img);
+        resultItem.appendChild(resultTitle);
+        resultItem.appendChild(author);
     });
-    // Scroll naar de onderkant van de resultaten
+
+    article.appendChild(resultContainer);
+    message.appendChild(article);
     const lastResult = message.lastElementChild;
     lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
-
-//buttons catalogus
-// const categoryContainers = document.querySelectorAll(".category-container");
-// categoryContainers.forEach((container) => {
-//     container.style.display = "none";
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchButtons = document.querySelectorAll(".catalogusButton");
@@ -103,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (results.length > 0) {
                 message.innerHTML
-                    += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor ' + category + ' kan ik nog iets voor je zoeken?</span></div>';
+                    += '<article class="speechOba"><p>Hier zijn de resultaten van je zoekvraag voor ' + category + ', kan ik nog iets voor je zoeken?</p></article>';
                 // Resultaten weergeven met titel bovenaan
                 showResults(category, results);
 

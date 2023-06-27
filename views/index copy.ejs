@@ -2,7 +2,6 @@
 
     <section id="mainContent" class="max-widthGeneral">
       <section id="chat">
-        <!-- content message -->
         <ul>
           <li class="speechOba">
             <p>
@@ -17,24 +16,17 @@
             <%- include('partials/catalogusBtns'); %>
           </li>
         </ul>
-
         <span class="fallback"></span>
-
         <div class="results-container">
-
           <div id="searchResults"></div>
           <button id="loadMoreButton">meer resultaten laden</button>
           <div id="itemDetails"></div>
         </div>
-
         <%- include('partials/loading'); %>
       </section>
-
-      <!-- search input -->
       <form id="searchForm">
         <input type="text" name="query" placeholder="Waar ben je naar op zoek?" id="query" />
         <button type="submit" id="searchButton" class="fa">&#xf1d9;</button>
       </form>
-
       <%- include('partials/footer'); %>
     </section>
