@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Avenir";
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  --grey: rgb(248 249 249);
+  --inputBackground: #f5f7fb;
+  --obaLightGreen: rgb(180, 200, 0);
+  --green: rgba(70, 146, 125);
+  --textColor: white;
+  --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
+  --alabaster: #f8f8f8;
+  --mainRed: #ff0000;
+}
+
+/* Nav styling */
+nav ul {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+nav ul li img {
+  width: 50%;
+}
+
+/* div#mainContent */
+#mainContent {
+  display: grid;
+  grid-template-rows: 90% 10%;
+  height: 100vh;
+  max-height: 90vh;
+  width: 100vw;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+/* inside nav h1 */
+nav h1 {
+  text-align: center;
+  margin: 0.5em 0.5em 0 0.5em;
+  color: var(--mainRed);
+}
+
+section#chat {
+  overflow: scroll;
+  /* margin: 0.5em 0.5em 0 0.5em; */
+  background-color: var(--alabaster);
+}
+
+/* Form input user */
+form#searchForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  /* margin: 0.5em 0.5em 0 0.5em; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--alabaster);
+  border-top: 0.25em solid var(--green);
+}
+
+form#searchForm input {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 1em 3rem 1em 1em;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5em 0 0 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+form#searchForm input::placeholder {
+  color: var(--colour-text-lighter);
+  font-size: 0.9rem;
+}
+
+/* Search button */
+#searchButton {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--green);
+  border-radius: 0 0.5em 0.5em 0;
+  padding: 0.75em;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  line-height: 1.625em;
+}
+
+/* Oba assistent text chat */
+ul li.speechOba {
+  background-color: #ffffff;
+  margin: 1em;
+  width: fit-content;
+  padding: 0.75em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+/* speech buttons */
+ul li.speechOba button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--green);
+  border-radius: 0.25em;
+  border: 0.1em solid var(--green);
+  padding: 0.5em 1em;
+  line-height: 1.625em;
+  margin: 0.2em;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-down-light);
+}
+
+/* Search results */
+.results-container {
+  /* width: 100%; */
+  display: grid;
+  gap: 1vh;
+  margin: 0.25em 1.25em;
+}
+
+.results-container h1 {
+  display: none;
+  margin: 1em;
+}
+
+#searchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+#searchResults article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+#searchResults article:hover {
+  border: var(--green) 0.2em solid;
+  cursor: pointer;
+}
+
+input:focus,
+button:focus,
+.buttonContainer button:focus,
+#searchResults article:focus,
+#itemDetails article:focus,
+#itemDetails article button:focus {
+  border: solid var(--green) 0.3em;
+}
+
+#searchResults article p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+/* itemDetails */
+#itemDetails {
+  display: grid;
+  gap: 0.5em;
+}
+
+#itemDetails article {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+#itemDetails article button {
+  display: flex;
+  flex-direction: column-reverse;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green);
+  margin: 1em;
+  padding: 1em;
+}
+
+/* Select item Titel */
+#itemDetails article h2 {
+  font-weight: bold;
+  margin: 1em 0 0 0;
+}
+
+/* Select auteur */
+#searchResults article h3,
+#itemDetails article h3 {
+  font-style: italic;
+}
+
+/* Selecte item samenvatting */
+#itemDetails article p:nth-of-type(1) {
+  margin: 1em 0;
+}
+
+#itemDetails article img {
+  max-width: fit-content;
+  float: left;
+  margin-right: 1rem;
+}
+
+@media (min-width: 60em) {
+  #itemDetails article,
+  ul li.speechOba {
+    width: fit-content;
+    max-width: 47em;
+  }
+}
+
+ul#chatMessages li {
+  background-color: var(--green);
+  color: var(--alabaster);
+  margin: 1em;
+  margin-left: auto;
+  width: fit-content;
+  padding: 0.75em;
+  border-radius: 0.5em 0 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}

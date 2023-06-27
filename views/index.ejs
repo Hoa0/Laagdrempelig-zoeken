@@ -1,3 +1,60 @@
-<%- include('partials/head'); %>
-    <h2>Hi project oba</h2>
-    <%- include('partials/footer'); %>
+<%- include('partials/head'); %> <%- include('partials/nav'); %>
+
+<section id="mainContent">
+  <section id="chat">
+    <ul>
+      <li class="speechOba">
+        <p>
+          Hallo! Ik ben de obaAssistent en ik help je met verschillende dingen in de
+          OBA (Openbare Bibliotheek Amsterdam). Ik kan je helpen om boeken,
+          tijdschriften, films, muziek en nog veel meer te vinden. Ik gebruik de
+          OBA API, waardoor ik toegang heb tot veel informatie. Of je nu een
+          bepaald boek zoekt, wilt weten welke films er zijn, of nieuwsgierig
+          bent naar recente tijdschriften, ik kan je helpen om te vinden wat je
+          zoekt. Ik ben eigenlijk een virtuele gids die je door de grote
+          collectie van de OBA kan leiden. Dus als je iets wilt weten of iets
+          speciaals zoekt, aarzel dan niet om mij te vragen!
+        </p>
+      </li>
+      <li class="speechOba fallbackTyping">
+        <p>obaAssistent is aan het typen . . .</p>
+      </li>
+      <li id="speechBtnCateg" class="speechOba">
+        <p>Klik hieronder voor meer informatie uit ons overzicht.</p>
+        <div class="buttonContainer">
+          <button tabindex="0">Activiteiten</button>
+          <button tabindex="0">Boeken</button>
+          <button tabindex="0">Cursus</button>
+          <button tabindex="0">DvD's</button>
+        </div>
+      </li>
+      <li id="speechInfoQ" class="speechOba">
+        <p>Stel een vraag, zoals bijvoorbeeld:</p>
+        <div class="buttonContainer">
+          <button tabindex="0" id="btnBook">Ik zoek een boek</button>
+        </div>
+      </li>
+    </ul>
+    <span class="fallback"></span>
+    <div class="results-container">
+      <div id="searchResults"></div>
+      <button id="loadMoreButton">Laad meer resultaten</button>
+      <div id="itemDetails"></div>
+    </div>
+    <%- include('partials/loading'); %>
+  </section>
+  <form id="searchForm">
+    <input
+      type="text"
+      name="query"
+      placeholder="Waar ben je naar op zoek?"
+      id="query"
+    />
+    <div class="buttonContainer">
+      <button tabindex="0" type="submit" id="searchButton" class="fa">
+        &#xf1d9;
+      </button>
+    </div>
+  </form>
+  <%- include('partials/footer'); %>
+</section>
