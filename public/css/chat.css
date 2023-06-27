@@ -240,6 +240,10 @@ form#searchForm input::placeholder {
   margin-right: 1rem;
 }
 
+#searchResults img {
+  max-width: 80%;
+}
+
 @media (min-width: 60em) {
   #itemDetails article {
     width: fit-content;
