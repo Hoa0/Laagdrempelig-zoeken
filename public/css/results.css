@@ -93,6 +93,27 @@
   font-weight: bold;
 }
 
+.message{
+    background-color: var(--green);
+    color: var(--alabaster);
+    margin: 1em;
+    margin-left: auto;
+    width: fit-content;
+    padding: 0.75em;
+    border-radius: 0.5em 0 0.5em 0.5em;
+    box-shadow: var(--shadow-down-light);
+}
+
+#searchResultsItems{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+#searchResultsItems img{
+  max-width: 100%;
+}
+
 @media (min-width: 60em) {
   .max-widthGeneral {
     max-width: 80vw;
