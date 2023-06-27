@@ -38,5 +38,17 @@ export function uiState(typeState, param = "") {
       ul.style.display = "none";
     }
     hideLoading();
+  } else if (typeState === "noLink") {
+    ul.style.display = "block";
+    li.classList.add("speechOba");
+    li.textContent = `Sorry, link kan niet worden gekopieerd.`;
+    ul.appendChild(li);
+    resultsContainer.appendChild(ul);
+  } else if (typeState === "copied") {
+    ul.style.display = "block";
+    li.classList.add("speechOba");
+    li.textContent = `Link gekopieerd!`;
+    ul.appendChild(li);
+    resultsContainer.appendChild(ul);
   }
 }
