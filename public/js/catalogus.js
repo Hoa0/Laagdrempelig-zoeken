@@ -44,7 +44,7 @@ function showResults(category, results) {
     article.appendChild(title);
 
     const resultContainer = document.createElement("div"); // Maak een 'div'-element voor de resultaten
-    resultContainer.classList.add("searchResults");
+    resultContainer.classList.add("searchResultsItems");
 
     results.forEach((result) => {
         const img = document.createElement("img");

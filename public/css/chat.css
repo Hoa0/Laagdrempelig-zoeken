@@ -167,19 +167,19 @@ form#searchForm input::placeholder {
   display: none;
   margin: 1em;
 }
-.searchResults {
+.searchResultsItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
 }
 
-.searchResults {
+.searchResultsItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
 }
 
-.searchResults article {
+.searchResultsItems article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,16 +192,16 @@ form#searchForm input::placeholder {
   box-shadow: var(--shadow-down-light);
 }
 
-.searchResults article:hover {
+.searchResultsItems article:hover {
   border: var(--green) 0.2em solid;
   cursor: pointer;
 }
 
-.searchResults article:focus {
+.searchResultsItems article:focus {
   background-color: var(--obaLightGreen);
 }
 
-.searchResults article p:nth-of-type(1) {
+.searchResultsItems article p:nth-of-type(1) {
   font-weight: bold;
 }
 
