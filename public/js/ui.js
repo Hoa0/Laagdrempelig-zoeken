@@ -1,37 +1,32 @@
 const loading = document.querySelector(".loading");
 const resultsContainer = document.querySelector(".results-container");
 
-// show loading animation
+// Show loading animation
 export function showLoading() {
   loading.style.display = "block";
 }
 
-// hide loading animation
+// Hide loading animation
 export function hideLoading() {
   loading.style.display = "none";
 }
 
-// WIP states
+// Handle UI states
 export function uiState(typeState, param = "") {
   const ul = document.createElement("ul");
   const li = document.createElement("li");
 
-  // when something is wrong with data/api
   if (typeState === "noData") {
-    ul.textContent = "Sorry, er ging iets mis. Kan resultaten niet ophalen.";
+    ul.textContent = "Oeps, er is iets fout gegaan. Ik kan de resultaten niet ophalen.";
     resultsContainer.appendChild(ul);
     hideLoading();
-  }
-  // loading state
-  else if (typeState === "loading") {
+  } else if (typeState === "loading") {
     showLoading();
-  }
-  // show/hide results
-  else if (typeState === "hide") {
+  } else if (typeState === "hide") {
     if (param) {
       ul.style.display = "block";
       li.classList.add("speechOba");
-      li.textContent = `Gevonden resultaten voor ${param}`;
+      li.textContent = `Ik heb resultaten gevonden voor ${param}`;
       ul.appendChild(li);
       resultsContainer.appendChild(ul);
     } else {
@@ -41,13 +36,13 @@ export function uiState(typeState, param = "") {
   } else if (typeState === "noLink") {
     ul.style.display = "block";
     li.classList.add("speechOba");
-    li.textContent = `Sorry, link kan niet worden gekopieerd.`;
+    li.textContent = `Sorry, het is niet mogelijk om de link te kopiëren.`;
     ul.appendChild(li);
     resultsContainer.appendChild(ul);
   } else if (typeState === "copied") {
     ul.style.display = "block";
     li.classList.add("speechOba");
-    li.textContent = `Link gekopieerd!`;
+    li.textContent = `De link is gekopieerd!`;
     ul.appendChild(li);
     resultsContainer.appendChild(ul);
   }
