@@ -123,7 +123,7 @@ form#searchForm input::placeholder {
 }
 
 /* speech buttons */
-ul li.speechOba button {
+/* ul li.speechOba button {
   display: inline-block;
   outline: 0;
   border: 0;
@@ -137,6 +137,50 @@ ul li.speechOba button {
   margin: 1rem 1rem 0 0;
   background-color: #ffffff;
   box-shadow: var(--shadow-down-light);
+} */
+
+li.speechOba button {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  /* font-family: sans-serif; */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: var(--green);
+  border: 0.15em solid var(--green);
+  border-radius: 1.5rem;
+  transition: 4s;
+  margin: 1rem 0.5rem 0 0;
+}
+li.speechOba button::before, li.speechOba button::after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  z-index: -1;
+  width: 200%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 40%;
+  background-color: rgba(0, 0, 255, 0.25);
+  transition: 4s;
+}
+li.speechOba button::before {
+  left: -80%;
+  transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+li.speechOba button::after {
+  right: -80%;
+  transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+li.speechOba button:hover, li.speechOba button:focus {
+  color: var(--textColor);
+}
+li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba button:focus:before, li.speechOba button:focus:after {
+  transform: none;
+  background-color: var(--green);
 }
 
 /* Search results */
