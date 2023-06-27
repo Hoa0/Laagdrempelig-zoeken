@@ -20,18 +20,25 @@
   --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
   --alabaster: #f8f8f8;
   --mainRed: #ff0000;
+  --black: #000;
 }
 
 /* Nav styling */
 nav ul {
   display: flex;
-  margin: 3rem 0;
+  margin: 1rem 0 2rem;
   justify-content: start;
   align-items: center;
 }
 
 nav > ul li {
   margin-left: 1.5rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+nav ul li img {
+  width: 50%;
 }
 
 /* div#mainContent */
@@ -115,7 +122,7 @@ form#searchForm input::placeholder {
 }
 
 /* Oba assistent text chat */
-ul li.speechOba {
+.speechOba {
   background-color: #ffffff;
   margin: 1em;
   width: fit-content;
@@ -125,7 +132,7 @@ ul li.speechOba {
 }
 
 /* speech buttons */
-ul li.speechOba button {
+.speechOba button {
   display: inline-block;
   outline: 0;
   border: 0;
@@ -136,9 +143,16 @@ ul li.speechOba button {
   border: 0.1em solid var(--green);
   padding: 0.5em 1em;
   line-height: 1.625em;
-  margin: 0.2em;
+  margin: 1em 0;
   background-color: #ffffff;
   box-shadow: var(--shadow-down-light);
+}
+
+/*catalogus title*/
+.catalogTitle {
+  text-align: start;
+  margin: 2rem 0;
+  color: var(--green);
 }
 
 /* Search results */
@@ -153,14 +167,19 @@ ul li.speechOba button {
   display: none;
   margin: 1em;
 }
-
-#searchResults {
+.searchResultsItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
 }
 
-#searchResults article {
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+.searchResultsItems article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,18 +190,19 @@ ul li.speechOba button {
   padding: 1em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
+  max-width: 20em;
 }
 
-#searchResults article:hover {
+.searchResultsItems article:hover {
   border: var(--green) 0.2em solid;
   cursor: pointer;
 }
 
-#searchResults article:focus {
+.searchResultsItems article:focus {
   background-color: var(--obaLightGreen);
 }
 
-#searchResults article p:nth-of-type(1) {
+.searchResultsItems article p:nth-of-type(1) {
   font-weight: bold;
 }
 
@@ -221,6 +241,10 @@ ul li.speechOba button {
   margin-right: 1rem;
 }
 
+#searchResults img {
+  max-width: 80%;
+}
+
 @media (min-width: 60em) {
   #itemDetails article {
     width: fit-content;
@@ -234,7 +258,8 @@ ul li.speechOba button {
   }
 }
 
-ul#chatMessages li {
+ul#chatMessages li,
+.message {
   background-color: var(--green);
   color: var(--alabaster);
   margin: 1em;

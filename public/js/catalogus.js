@@ -3,7 +3,7 @@ const api_url_base = "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/
 const api_key = "&authorization=d7519ea81ad4e06ab5e5dac46ddeb63a";
 const api_output = "&output=json";
 const api_pagesize = "&pagesize=5";
-const message = document.getElementById("searchResults");
+const searchResults = document.getElementById("searchResults");
 
 let categories = [
     { name: "Boeken", facet: "&facet=type(book)&refine=true" },
@@ -43,7 +43,7 @@ function showResults(category, results) {
     title.classList.add("catalogTitle");
     article.appendChild(title);
 
-    const resultContainer = document.createElement("div"); // Maak een 'div'-element voor de resultaten
+    const resultContainer = document.createElement("div"); // Maak een 'div'-element voor de resultaten, alle resultaten weergaven kom hierin te staan
     resultContainer.classList.add("searchResultsItems");
 
     results.forEach((result) => {
@@ -80,8 +80,8 @@ function showResults(category, results) {
     });
 
     article.appendChild(resultContainer);
-    message.appendChild(article);
-    const lastResult = message.lastElementChild;
+    searchResults.appendChild(article);
+    const lastResult = searchResults.lastElementChild;
     lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
@@ -99,10 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(await results);
 
             if (results.length > 0) {
-                message.innerHTML
+                searchResults.innerHTML
                     += '<article class="message"><p>' + category + '</p></article>';
 
-                message.innerHTML
+                searchResults.innerHTML
                     += '<article class="speechOba"><p>Hier zijn de resultaten van je zoekvraag voor ' + category + ', kan ik nog iets voor je zoeken?</p></article>';
                 // Resultaten weergeven met titel bovenaan
                 showResults(category, results);

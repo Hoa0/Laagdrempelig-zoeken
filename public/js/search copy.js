@@ -87,11 +87,7 @@ const loadItems = () => {
 
   itemsToLoad.forEach((result) => {
     const resultItem = createResultItem(result);
-    // Maak een 'div'-element voor de resultaten, alle resultaten weergaven kom hierin te staan
-    const resultContainer = document.createElement("div");
-    resultContainer.classList.add("searchResultsItems");
-    resultContainer.appendChild(resultItem);//
-    searchResults.appendChild(resultContainer);//
+    searchResults.appendChild(resultItem);
     loadMoreButton.style.display = "block";
   });
 
@@ -133,8 +129,7 @@ const handleSearchFormSubmit = async (event) => {
     if (response.ok) {
       const responseData = await response.json();
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
-      // searchResults.innerHTML = "";
-      input.value = "";
+      searchResults.innerHTML = "";
 
       if (responseData.data) {
         // Clean up and store the response data for later use
