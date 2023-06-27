@@ -20,6 +20,7 @@
   --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
   --alabaster: #f8f8f8;
   --mainRed: #ff0000;
+  --black: #000;
 }
 
 /* Nav styling */
@@ -32,6 +33,8 @@ nav ul {
 
 nav > ul li {
   margin-left: 1.5rem;
+  font-weight: bold;
+  color: var(--black);
 }
 
 nav ul li img {
@@ -140,7 +143,7 @@ form#searchForm input::placeholder {
   border: 0.1em solid var(--green);
   padding: 0.5em 1em;
   line-height: 1.625em;
-  margin: 0.2em;
+  margin: 1em 0;
   background-color: #ffffff;
   box-shadow: var(--shadow-down-light);
 }
@@ -250,7 +253,8 @@ form#searchForm input::placeholder {
   }
 }
 
-ul#chatMessages li {
+ul#chatMessages li,
+.message {
   background-color: var(--green);
   color: var(--alabaster);
   margin: 1em;

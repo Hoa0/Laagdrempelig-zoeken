@@ -65,7 +65,7 @@ function showResults(category, results) {
             this.src = "fallback.png";
         };
 
-        const resultItem = document.createElement("article"); // Maak een 'div'-element voor elk resultaat
+        const resultItem = document.createElement("article"); // Maak een 'article'-element voor elk resultaat
 
         const resultTitle = document.createElement("h2"); // Gebruik 'h2' voor de titel van elk resultaat
         resultTitle.textContent = result.titles[0];
@@ -99,6 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(await results);
 
             if (results.length > 0) {
+                message.innerHTML
+                    += '<article class="message"><p>' + category + '</p></article>';
+
                 message.innerHTML
                     += '<article class="speechOba"><p>Hier zijn de resultaten van je zoekvraag voor ' + category + ', kan ik nog iets voor je zoeken?</p></article>';
                 // Resultaten weergeven met titel bovenaan
