@@ -1,29 +1,27 @@
-/* eslint-disable no-undef */
+//GSAP animation script
 const typing = document.getElementsByClassName("fallbackTyping");
 const categorieBtn = document.getElementById("speechBtnCateg");
-
 const texts = document.getElementsByClassName("showResult");
-
 const nav = document.getElementsByTagName("nav")
 const titleChat = document.getElementById("chatTitleContainer");
 const contentChat = document.getElementById("chat");
 const showResults = document.getElementById("searchResults")
 
-// Elementen standaard verbergen met CSS
+// Hiding elements by default with CSS
 gsap.set(typing, { opacity: 0 });
 gsap.set(categorieBtn, { opacity: 0 });
 
-// Animatie voor het "typing" element
+// Animatie for "typing" element
 gsap.to(typing, {
-    duration: 0.5, // animatieduur voor verschijnen
-    delay: 3, // vertraging van 3 seconden voor verschijnen
-    opacity: 1, // doelwaarde voor dekking (verschijnen)
+    duration: 0.5,
+    delay: 3,
+    opacity: 1,
     onComplete: function () {
         // Na 4 seconden de onComplete-functie uitvoeren (blijven staan)
         gsap.to(typing, {
-            duration: 0.5, // animatieduur voor verdwijnen
-            delay: 4, // vertraging van 4 seconden voor verdwijnen
-            opacity: 0, // doelwaarde voor dekking (verdwijnen)
+            duration: 0.5,
+            delay: 4,
+            opacity: 0,
             display: "none"
         });
     }
@@ -31,9 +29,9 @@ gsap.to(typing, {
 
 // Animatie voor het "categorieBtn" element
 gsap.to(categorieBtn, {
-    duration: 0.5, // animatieduur voor verschijnen
-    delay: 7, // vertraging van 7 seconden voor verschijnen
-    opacity: 1 // doelwaarde voor dekking (verschijnen)
+    duration: 0.5,
+    delay: 7,
+    opacity: 1
 });
 
 
