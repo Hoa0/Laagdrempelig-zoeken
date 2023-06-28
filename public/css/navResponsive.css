@@ -1,0 +1,182 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Avenir";
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  --grey: rgb(248 249 249);
+  --inputBackground: #f5f7fb;
+  --obaLightGreen: rgb(180, 200, 0);
+  --green: rgba(70, 146, 125);
+  --textColor: white;
+  --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
+  --alabaster: #f8f8f8;
+  --mainRed: #ff0000;
+  --black: #434343;
+}
+
+/* oba logo img */
+header img {
+  width: 25%;
+  margin: 1rem;
+}
+
+.header input {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 0.1em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.3em;
+}
+
+/* header - navigation menu*/
+header {
+  /* position: sticky; */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+header section#nav-m {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* menu icon - hamburger */
+
+header label {
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+span.label-lines {
+  background-color: var(--black);
+  display: block;
+  height: 0.3rem;
+  position: relative;
+  width: 2rem;
+  border-radius: 0.3em;
+}
+
+span.label-lines::before,
+span.label-lines::after {
+  background-color: var(--black);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  border-radius: 0.3em;
+}
+
+span.label-lines::before {
+  top: 0.5em;
+}
+
+span.label-lines::after {
+  top: -0.5em;
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  background-color: var(--textColor);
+}
+
+nav ul.menu a {
+  margin-left: 1.5rem;
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+}
+
+nav ul.menu li {
+  text-align: center;
+  border-bottom: 0.1em solid var(--gray);
+  margin: 0 1.5em;
+}
+
+nav ul.menu li:last-of-type {
+  margin-right: 0;
+}
+
+/* toggle menu icon */
+
+.side-menu:checked ~ .nav-menu {
+  max-height: 100%;
+  z-index: 5;
+}
+
+.side-menu:checked ~ section label span.label-lines {
+  background-color: transparent;
+}
+
+.side-menu:checked ~ section label span.label-lines::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked ~ section label span.label-lines::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/*---- WEBSITE MODE ----*/
+
+@media (min-width: 60em) {
+  header img {
+    width: 50%;
+  }
+  header #nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header section#nav-m {
+    padding: 0;
+  }
+
+  header nav {
+    position: relative;
+    width: fit-content;
+    max-height: none;
+    background-color: transparent;
+  }
+
+  header ul.menu li {
+    float: left;
+    margin-right: 0.5em !important;
+    border-bottom: none !important;
+  }
+
+  header ul.menu li a {
+    padding: 0;
+  }
+
+  header ul.menu a:hover {
+    background-color: transparent;
+    color: yellowgreen;
+  }
+
+  header label {
+    display: none;
+  }
+}
