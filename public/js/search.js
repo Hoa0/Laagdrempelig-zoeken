@@ -241,4 +241,3 @@ const handleLoadMoreButtonClick = () => {
 // Add event listeners
 searchForm.addEventListener("submit", handleSearchFormSubmit);
 loadMoreButton.addEventListener("click", handleLoadMoreButtonClick);
-F
