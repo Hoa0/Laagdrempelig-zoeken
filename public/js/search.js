@@ -126,6 +126,9 @@ const createResultItem = (result) => {
       }
     });
     itemDetailsDiv.appendChild(detailsDiv);
+    //scroll animation
+  const lastResult = itemDetailsDiv.lastElementChild;
+  lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
   });
 
   return resultItem;
