@@ -14,12 +14,18 @@ let categories = [
   { name: "Cursussen", facet: "%20table:jsonsrc&refine=true" },
 ];
 
+/**
+ * Function to fetch search results from the API
+ * @param {string} searchTerm 
+ * @param {string} facet 
+ * @returns 
+ */
 async function getResults(searchTerm, facet = "") {
   const api_url =
     api_url_base + searchTerm + facet + api_pagesize + api_key + api_output;
 
   try {
-    uiState("loading")
+    uiState("loading") // Set UI state to "loading"
     const response = await fetch(api_url, {
       headers: {
         "X-Requested-With": "XMLHttpRequest",
@@ -44,6 +50,7 @@ async function getResults(searchTerm, facet = "") {
   }
 }
 
+// Function to display search results in the UI
 function showResults(category, results) {
   const article = document.createElement("article");
   const title = document.createElement("h2");
@@ -54,7 +61,8 @@ function showResults(category, results) {
   const resultContainer = document.createElement("div");
   resultContainer.classList.add("searchResultsItems");
 
-  const itemDetailsContainer = document.createElement("div"); // Container for item details
+  // Container for item details
+  const itemDetailsContainer = document.createElement("div");
   itemDetailsContainer.classList.add("detailsCatalogus");
 
   results.forEach((result) => {
@@ -108,11 +116,10 @@ function showResults(category, results) {
         { text: `${result.titles[0]}` },
         { text: `${result.authors ? result.authors[0] : "Onbekend"}` },
         {
-          text: `Samenvatting: ${
-            result.summaries && result.summaries.length > 0
-              ? result.summaries[0]
-              : "Niet beschikbaar"
-          }`,
+          text: `Samenvatting: ${result.summaries && result.summaries.length > 0
+            ? result.summaries[0]
+            : "Niet beschikbaar"
+            }`,
         },
         { text: `Talen: ${result.languages}` },
         { text: `Uitgever: ${result.publisher}` },
@@ -183,6 +190,11 @@ function showResults(category, results) {
   lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
+/**
+ * This code adds a click event listener to each element with the class "catalogusButton" 
+ * and performs a search based on the selected category when the button is clicked. 
+ * If search results are found, they are displayed and additional HTML elements are appended to the page
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const searchButtons = document.querySelectorAll(".catalogusButton");
 
@@ -190,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", async () => {
       const category = button.dataset.category;
       const facet = getCategoryFacet(category);
-      const searchTerm = "*"; // Voer hier de gewenste zoekterm in
+      const searchTerm = "*"; // Enter desired search term here
 
       const results = await getResults(searchTerm, facet);
       console.log(await results);
@@ -212,6 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Function to get facet for the given category
 function getCategoryFacet(category) {
   const foundCategory = categories.find(
     (catalogus) => catalogus.name === category
