@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* font-family: Helvetica, Arial, sans-serif; */
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  font-family: "Avenir";
+  --mainRed: #ff0000;
+  --lightGreen: rgba(70, 146, 125, 0.25);
+  --green: rgba(70, 146, 125);
+  --darkGreen: rgb(59, 88, 80);
+  --obaBlue: rgb(0, 100, 200);
+  --obaLightBlue: rgb(0, 150, 230);
+  --obaLightGreen: rgb(180, 200, 0);
+  --grey: rgb(248 249 249);
+  --textColor: white;
+  --obaChat: #f0f0f0;
+  font-size: large;
+}
+
+/*chat title container*/
+#chatTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom:0.5rem;
+}
+/*svg bot head*/
+#botSvg {
+  max-width: 4rem;
+}
+
+/*catalogus title*/
+.catalogTitle {
+  text-align: start;
+  margin: 2rem 0;
+  color: var(--green);
+}
+/* Search results */
+.results-container {
+  /* width: 100%; */
+  display: grid;
+  gap: 1vh;
+  margin: 0.25em 1.25em;
+}
+
+.results-container h1 {
+  display: none;
+  margin: 1em;
+}
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+  margin-top:1em;
+  margin-bottom: 1em;
+}
+
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+.searchResultsItems article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+  /* max-width: 20em; */
+}
+
+.searchResultsItems article:hover {
+  border: var(--green) 0.2em solid;
+  cursor: pointer;
+}
+
+.searchResultsItems article:focus {
+  background-color: var(--obaLightGreen);
+}
+
+.searchResultsItems article p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.message{
+    background-color: var(--green);
+    color: var(--alabaster);
+    margin: 3em 1em;
+    margin-left: auto;
+    width: fit-content;
+    padding: 0.75em;
+    border-radius: 0.5em 0 0.5em 0.5em;
+    box-shadow: var(--shadow-down-light);
+}
+
+.searchResultsItems{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+.searchResultsItems img{
+      max-width: 100%;
+}
+
+@media (min-width: 60em) {
+  .max-widthGeneral {
+    max-width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

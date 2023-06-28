@@ -1,0 +1,17 @@
+<button tabindex="0" type="button" class="catalogusButton" id="activiteitenButton"
+    data-category="Activiteiten">Activiteiten</button>
+<button tabindex="0" type="button" class="catalogusButton" id="bookButton" data-category="Boeken">Boeken</button>
+<button tabindex="0" type="button" class="catalogusButton" id="cursusButton"
+    data-category="Cursussen">Cursussen</button>
+<button tabindex="0" type="button" class="catalogusButton" id="randomDvdButton" data-category="Dvd's">DvD's</button>
+
+<form id="formInfo">
+    <input type="checkbox" id="corsInfo" value="Cors bug oplossen om catalogus resultaten te zien">
+    <label for="corsInfo"><%- include('infoSvg'); %>
+    </label>
+    <div id="corsLink" class="corsLinkHide">
+        <p>Er is momenteel een bug voor deze knoppen klik hier:</p><a
+            href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">Cors activeren</a> om mij toegang te
+        geven en dan help ik je verder</p>
+    </div>
+</form>
