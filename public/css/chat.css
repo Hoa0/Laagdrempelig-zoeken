@@ -183,6 +183,7 @@ li.speechOba button::after {
 
 li.speechOba button:hover, li.speechOba button:focus {
   color: var(--textColor);
+  cursor: pointer;
 }
 
 li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba button:focus:before, li.speechOba button:focus:after {
@@ -203,36 +204,14 @@ li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba 
   margin: 1em;
 }
 
-/* #searchResults {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 1em;
-}
-
-#searchResults article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 1em;
-  background-color: #ffffff;
-  padding: 1em;
-  border-radius: 0 0.5em 0.5em 0.5em;
-  box-shadow: var(--shadow-down-light);
-}
-
-#searchResults article:hover {
-  border: var(--green) 0.2em solid;
-  cursor: pointer;
-} */
-
 input:focus,
 button:focus,
 .buttonContainer button:focus,
 #searchResults article:focus,
 #itemDetails article:focus,
-#itemDetails article button:focus {
+#itemDetails article button:focus,
+article.itemDetailCatalogus:focus,
+article.itemDetailCatalogus button:focus {
   border: solid var(--green) 0.3em;
 }
 
@@ -241,19 +220,21 @@ button:focus,
 }
 
 /* itemDetails */
-#itemDetails {
+#itemDetails, .detailsCatalogus {
   display: grid;
   gap: 0.5em;
 }
 
-#itemDetails article {
+#itemDetails article,
+article.itemDetailCatalogus {
   background-color: #ffffff;
   padding: 1em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
 }
 
-#itemDetails article button {
+#itemDetails article button,
+article.itemDetailCatalogus button {
   display: flex;
   flex-direction: column-reverse;
   background: none;
@@ -277,11 +258,13 @@ button:focus,
 }
 
 /* Selecte item samenvatting */
-#itemDetails article p:nth-of-type(1) {
+#itemDetails article p:nth-of-type(1),
+.itemDetailCatalogus p:nth-of-type(1) {
   margin: 1em 0;
 }
 
-#itemDetails article img {
+#itemDetails article img,
+.itemDetailCatalogus img {
   max-width: fit-content;
   float: left;
   margin-right: 1rem;
@@ -289,7 +272,7 @@ button:focus,
 
 @media (min-width: 60em) {
   #itemDetails article,
-  ul li.speechOba, .speechOba {
+  ul li.speechOba, .speechOba, .itemDetailCatalogus {
     width: fit-content;
     max-width: 47em;
   }
@@ -310,4 +293,8 @@ ul#chatMessages li {
   padding: 0.75em;
   border-radius: 0.5em 0 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
+}
+
+.detailsCatalogus .itemDetailCatalogus p {
+  font-weight: 100 !important; 
 }
