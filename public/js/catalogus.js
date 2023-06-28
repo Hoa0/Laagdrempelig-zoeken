@@ -19,6 +19,7 @@ async function getResults(searchTerm, facet = "") {
     api_url_base + searchTerm + facet + api_pagesize + api_key + api_output;
 
   try {
+    uiState("loading")
     const response = await fetch(api_url, {
       headers: {
         "X-Requested-With": "XMLHttpRequest",
@@ -26,6 +27,7 @@ async function getResults(searchTerm, facet = "") {
     });
 
     if (response.ok) {
+      uiState("hide")
       const data = await response.json();
       return data.results;
     } else {
@@ -53,7 +55,7 @@ function showResults(category, results) {
   resultContainer.classList.add("searchResultsItems");
 
   const itemDetailsContainer = document.createElement("div"); // Container for item details
-  itemDetailsContainer.classList.add("itemDetailsContainer");
+  itemDetailsContainer.classList.add("detailsCatalogus");
 
   results.forEach((result) => {
     const img = document.createElement("img");
@@ -89,12 +91,12 @@ function showResults(category, results) {
 
     // Add click event listener to show item details
     resultItem.addEventListener("click", () => {
-      let detailsArticle = resultItem.querySelector("article.itemDetails");
+      let detailsArticle = resultItem.querySelector("article.itemDetailCatalogus");
 
       // Create item details article if it doesn't exist
       if (!detailsArticle) {
         detailsArticle = document.createElement("article");
-        detailsArticle.classList.add("itemDetails");
+        detailsArticle.classList.add("itemDetailCatalogus");
         itemDetailsContainer.appendChild(detailsArticle);
       }
 
