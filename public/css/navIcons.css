@@ -135,3 +135,33 @@
 .favorite:hover::before {
   background-color: var(--darkGreen);
 }
+
+/* Information cors bug catalogus*/
+#formInfo {
+  margin-top: 1rem;
+}
+#corsLink a {
+  margin: 0;
+}
+input#corsInfo {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 0.1em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.3em;
+}
+
+#corsLink {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  transition: 4s;
+}
+
+body:has(#corsInfo:checked) #corsLink {
+  visibility: visible;
+  position: static;
+  transition: 4s;
+}
