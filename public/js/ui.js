@@ -16,34 +16,47 @@ export function uiState(typeState, param = "") {
   const ul = document.createElement("ul");
   const li = document.createElement("li");
 
-  if (typeState === "noData") {
-    ul.textContent = "Oeps, er is iets fout gegaan. Ik kan de resultaten niet ophalen.";
-    resultsContainer.appendChild(ul);
-    hideLoading();
-  } else if (typeState === "loading") {
-    showLoading();
-  } else if (typeState === "hide") {
-    if (param) {
+  switch (typeState) {
+    case "noData":
       ul.style.display = "block";
       li.classList.add("speechOba");
-      li.textContent = `Ik heb resultaten gevonden voor ${param}`;
+      li.textContent =
+        "Oeps! Er is iets misgegaan. Ik kan de resultaten niet ophalen. Probeer iets anders.";
       ul.appendChild(li);
       resultsContainer.appendChild(ul);
-    } else {
-      ul.style.display = "none";
-    }
-    hideLoading();
-  } else if (typeState === "noLink") {
-    ul.style.display = "block";
-    li.classList.add("speechOba");
-    li.textContent = `Sorry, het is niet mogelijk om de link te kopiëren.`;
-    ul.appendChild(li);
-    resultsContainer.appendChild(ul);
-  } else if (typeState === "copied") {
-    ul.style.display = "block";
-    li.classList.add("speechOba");
-    li.textContent = `De link is gekopieerd!`;
-    ul.appendChild(li);
-    resultsContainer.appendChild(ul);
+      hideLoading();
+      break;
+
+    case "loading":
+      showLoading();
+      break;
+
+    case "hide":
+      ul.style.display = param ? "block" : "none";
+      li.classList.add("speechOba");
+      li.textContent = param
+        ? `
+      Ik heb resultaten gevonden voor ${param}.`
+        : "";
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      hideLoading();
+      break;
+
+    case "noLink":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Sorry, het is niet mogelijk om de link te kopiëren.`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      break;
+
+    case "copied":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `De link is gekopieerd! Je kan het nu delen.`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      break;
   }
 }
