@@ -27,6 +27,10 @@
   --black: #434343;
 }
 
+nav ul > li,
+.selectbox1 {
+  cursor: pointer;
+}
 .s-hidden {
   visibility: hidden;
   padding-right: 10px;
