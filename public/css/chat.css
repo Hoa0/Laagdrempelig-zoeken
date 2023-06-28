@@ -48,7 +48,7 @@ nav>ul li, li a{
   display: grid;
   grid-template-rows: 90% 10%;
   height: 100vh;
-  max-height: 80vh;
+  max-height: 90vh;
   width: 100vw;
   padding: 1em;
   border-radius: 1em;
@@ -114,7 +114,7 @@ form#searchForm input::placeholder {
 }
 
 /* Oba assistent text chat */
-.speechOba {
+ul li.speechOba, .speechOba {
   background-color: #ffffff;
   margin: 1em;
   width: fit-content;
@@ -135,11 +135,12 @@ form#searchForm input::placeholder {
   border: 0.1em solid var(--green);
   padding: 0.5em 1em;
   line-height: 1.625em;
-  margin: 1rem 1rem 0 0;
+  margin: 0.2em;
   background-color: #ffffff;
   box-shadow: var(--shadow-down-light);
 } */
 
+/* Catalogus btns*/
 li.speechOba button {
   display: inline-block;
   position: relative;
@@ -156,6 +157,7 @@ li.speechOba button {
   transition: 4s;
   margin: 1rem 0.5rem 0 0;
 }
+
 li.speechOba button::before, li.speechOba button::after {
   content: "";
   position: absolute;
@@ -168,17 +170,21 @@ li.speechOba button::before, li.speechOba button::after {
   background-color: rgba(0, 0, 255, 0.25);
   transition: 4s;
 }
+
 li.speechOba button::before {
   left: -80%;
   transform: translate3d(0, 5em, 0) rotate(-340deg);
 }
+
 li.speechOba button::after {
   right: -80%;
   transform: translate3d(0, 5em, 0) rotate(390deg);
 }
+
 li.speechOba button:hover, li.speechOba button:focus {
   color: var(--textColor);
 }
+
 li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba button:focus:before, li.speechOba button:focus:after {
   transform: none;
   background-color: var(--green);
@@ -196,14 +202,14 @@ li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba 
   display: none;
   margin: 1em;
 }
-/* -------------------------------check*/
+
 /* #searchResults {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1em;
-} 
+}
 
- #searchResults article {
+#searchResults article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,12 +225,7 @@ li.speechOba button:hover:before, li.speechOba button:hover:after, li.speechOba 
 #searchResults article:hover {
   border: var(--green) 0.2em solid;
   cursor: pointer;
-}
-#searchResults article p:nth-of-type(1) {
-  font-weight: bold;
 } */
-/*--------------------- tot check*/
-
 
 input:focus,
 button:focus,
@@ -235,7 +236,9 @@ button:focus,
   border: solid var(--green) 0.3em;
 }
 
-
+#searchResults article p:nth-of-type(1) {
+  font-weight: bold;
+}
 
 /* itemDetails */
 #itemDetails {
@@ -286,7 +289,7 @@ button:focus,
 
 @media (min-width: 60em) {
   #itemDetails article,
- .speechOba {
+  ul li.speechOba, .speechOba {
     width: fit-content;
     max-width: 47em;
   }

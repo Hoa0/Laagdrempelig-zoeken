@@ -139,17 +139,17 @@ const loadItems = () => {
   );
 
   //container for grid elements
-  const resultContainer = document.createElement("div");
-  resultContainer.classList.add("searchResultsItems");
+  const divResultContainer = document.createElement("div");
+  divResultContainer.classList.add("searchResultsItems");
 
   itemsToLoad.forEach((result, index) => {
     const resultItem = createResultItem(result);
     // resultItem.setAttribute('tabindex', currentIndex + index + 1); // Assign tabindex based on the current index
-    resultContainer.appendChild(resultItem);
+    divResultContainer.appendChild(resultItem);
     loadMoreButton.style.display = "block";
   });
 
-  searchResults.appendChild(resultContainer);
+  searchResults.appendChild(divResultContainer);
 
   //scroll animation
   const lastResult = searchResults.lastElementChild;
@@ -193,8 +193,7 @@ const handleSearchFormSubmit = async (event) => {
     if (response.ok) {
       const responseData = await response.json();
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
-      // searchResults.innerHTML = "";
-      input.value = "";
+      // searchResults.innerHTML = "";// bug, nieuwe items worden niet onder elkaar gezet
 
       if (responseData.data) {
         // Clean up and store the response data for later use
@@ -239,3 +238,4 @@ const handleLoadMoreButtonClick = () => {
 // Add event listeners
 searchForm.addEventListener("submit", handleSearchFormSubmit);
 loadMoreButton.addEventListener("click", handleLoadMoreButtonClick);
+F
