@@ -127,8 +127,8 @@ const createResultItem = (result) => {
     });
     itemDetailsDiv.appendChild(detailsDiv);
     //scroll animation
-  const lastResult = itemDetailsDiv.lastElementChild;
-  lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
+    const lastResult = itemDetailsDiv.lastElementChild;
+    lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
   });
 
   return resultItem;
@@ -157,7 +157,7 @@ const loadItems = () => {
   //scroll animation
   const lastResult = searchResults.lastElementChild;
   lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
-  
+
   currentIndex += itemsPerLoad;
 
   // Hide the "Load More" button if all items have been loaded
@@ -172,6 +172,8 @@ const loadItems = () => {
 const handleSearchFormSubmit = async (event) => {
   event.preventDefault();
   currentIndex = 0;
+
+  // Get user input from the query input field
   const input = document.getElementById("query");
   const userInput = input.value;
 
@@ -179,11 +181,14 @@ const handleSearchFormSubmit = async (event) => {
   const message = createMessage(userInput);
   chatMessages.appendChild(message);
 
+  // Append chat messages container to results container
   const resultsContainer = document.querySelector(".results-container");
   resultsContainer.appendChild(chatMessages);
 
   try {
+    // Set UI state to loading
     uiState("loading");
+
     // Send search query to the server
     const response = await fetch("/api/search", {
       method: "POST",
@@ -194,17 +199,25 @@ const handleSearchFormSubmit = async (event) => {
     });
 
     if (response.ok) {
+      // Parse the response data
       const responseData = await response.json();
+
+      // Make a deep copy of the response data
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
-      // searchResults.innerHTML = "";// bug, nieuwe items worden niet onder elkaar gezet
 
-      if (responseData.data) {
-        // Clean up and store the response data for later use
-        function removeSpaceFromString(dataThatHasBeenStringified) {
-          return dataThatHasBeenStringified.substring(1);
-        }
-        responseDataSet = JSON.parse(removeSpaceFromString(dirtySet));
+      // Remove leading space and parse the cleaned data
+      responseDataSet = JSON.parse(dirtySet.substring(1));
 
+      // Get the length of the response data
+      const responseDataLength = responseDataSet.results.length;
+      console.log(responseDataSet);
+
+      if (responseDataLength === 0) {
+        // Set UI state to show "no data" message
+        uiState("noData");
+        console.log("Length of responseDataSet:", responseDataLength);
+      } else {
+        // Store the response data in local storage
         localStorage.setItem(
           "responseDataSet",
           JSON.stringify(responseDataSet)
@@ -212,19 +225,21 @@ const handleSearchFormSubmit = async (event) => {
 
         // Load and display the items
         loadItems();
+
+        // Set UI state to loading with the user input value
         uiState("loading", input.value);
-      } else {
-        console.log("No results found.");
-        uiState("noData");
+
+        // Hide UI elements with the user input value
+        uiState("hide", input.value);
       }
     } else {
+      // Handle server response error
       const errorMessage = await response.text();
       console.error(errorMessage);
     }
   } catch (error) {
+    // Handle any other errors
     console.error("Error:", error.message);
-  } finally {
-    uiState("hide", input.value);
   }
 };
 
