@@ -39,6 +39,9 @@ header img {
   width: 0.3em;
 }
 
+.nav-container {
+  box-shadow: 0px 2px 0px rgb(237 236 236);
+}
 /* header - navigation menu*/
 header {
   /* position: sticky; */
@@ -57,7 +60,7 @@ header section#nav-m {
 
 header label {
   cursor: pointer;
-  margin-top: 1.5em;
+  margin: 1.5em 1rem 0 0;
 }
 
 span.label-lines {
@@ -107,12 +110,6 @@ nav ul.menu a {
   display: block;
 }
 
-nav ul.menu li {
-  text-align: center;
-  border-bottom: 0.1em solid var(--gray);
-  margin: 0 1.5em;
-}
-
 nav ul.menu li:last-of-type {
   margin-right: 0;
 }
@@ -143,6 +140,7 @@ nav ul.menu li:last-of-type {
 @media (min-width: 60em) {
   header img {
     width: 50%;
+    margin: 0;
   }
   header #nav-container {
     display: flex;
@@ -163,8 +161,9 @@ nav ul.menu li:last-of-type {
 
   header ul.menu li {
     float: left;
-    margin-right: 0.5em !important;
+    margin-right: 0 !important;
     border-bottom: none !important;
+    /* font-size: 0.8em; */
   }
 
   header ul.menu li a {
