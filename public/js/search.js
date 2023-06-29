@@ -231,6 +231,8 @@ const handleSearchFormSubmit = async (event) => {
 
         // Hide UI elements with the user input value
         uiState("hide", input.value);
+        uiState("tryAgain");
+        uiState("contactOba");
       }
     } else {
       // Handle server response error
