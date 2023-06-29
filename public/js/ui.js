@@ -36,7 +36,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.textContent = param
         ? `
-      Ik heb resultaten gevonden voor ${param}.`
+      Ik heb resultaten gevonden voor ${param}. Scroll naar boven voor de resultaten.`
         : "";
       ul.appendChild(li);
       resultsContainer.appendChild(ul);
@@ -55,6 +55,30 @@ export function uiState(typeState, param = "") {
       ul.style.display = "block";
       li.classList.add("speechOba");
       li.textContent = `De link is gekopieerd! Je kan het nu delen.`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      break;
+
+    case "useChat":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Je kan ook meteen beginnen met typen in chat.`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      break;
+
+    case "contactOba":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.innerHTML = `Liever chatten met een OBA medewerker?<a href="https://www.oba.nl/service/contact/chatmetdeoba.html" target="_blank"> Klik hier</a>`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      break;
+
+    case "tryAgain":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Niet gevonden wat je zocht? Probeer het nog een keer.`;
       ul.appendChild(li);
       resultsContainer.appendChild(ul);
       break;
