@@ -1,49 +1,48 @@
 <%- include('partials/head'); %>
-  <div class="main-container">
-    <div class="chat-container">
-      <div class="chat-header">
-        <div class="chat-message bot">
-          <span>Welkom, ik ben obaAssistent.
-            Graag help ik je verder met het vinden van informatie.
-            <!-- add buttons-->
-            <span>Neem een kijkje uit de catalogus:</span>
-            <button type="button" class="searchButton" id="activiteitenButton"
-              data-category="activiteiten">Activiteiten</button>
-            <button type="button" class="searchButton" id="bookButton" data-category="boeken">Boeken</button>
-            <button type="button" class="searchButton" id="randomDvdButton" data-category="dvds">DvD's</button>
-            <button type="button" class="searchButton" id="cursusButton" data-category="cursussen">Cursussen</button>
+  <h1>test</h1>
+  <h2>Results</h2>
+  <%- include('partials/nav'); %>
+
+    <section id="mainContent">
+      <section id="chat">
+        <section id="containerTitle">
+          <%- include('partials/botHead'); %>
+            <%- include('partials/obaMedeSvg'); %>
+              <h3>Stel een vraag</h3>
+        </section>
+        <ul id="chatList">
+          <li class="speechOba">
+            <p>Welkom, ik ben obaAssistent.
+              Graag help ik je verder met het vinden van informatie</p>
             <a href="https://cors-anywhere.herokuapp.com/corsdemo">CORS</a> activeren
-        </div>
-      </div>
-      <div class="chat-body">
-        <div class="chat-messages" id="chatMessages"></div>
-      </div>
-      <!-- add suggestion input-->
-      <section id="containerInput">
-        <ul id="suggestionsList"></ul>
-        <div class="chat-input">
-          <input type="text" id="searchTerm" placeholder="Typ hier je vraag of zoekterm..." />
-          <button type="button" id="searchButton">Zoeken</button>
-        </div>
+          </li>
+          <li class="speechOba fallbackTyping">
+            <p>obaAssistent is aan het typen</p>
+          </li>
+          <li id="speechBtnCateg" class="speechOba">
+            <%- include('partials/catalogusBtns'); %>
+          </li>
+          <!-- <li id="speechInfoQ" class="speechOba">
+            <p>Stel een vraag, bijvoorbeeld:</p>
+            <button type="button" id="btnBook" class="searchButton">Ik zoek een boek</button>
+          </li> -->
+          <li class="showResult speechUser">
+            <p>Ik zoek een boek</p>
+          </li>
+          <li id="chatListUser" class="speechUser"></li>
+          <li>
+            <%- include('partials/categoriesList'); %>
+          </li>
+          <li>
+            <div id="searchResults"></div>
+          </li>
+        </ul>
+        <span class="fallback"></span>
+        <form id="searchForm">
+          <input type="text" name="query" placeholder="bv: ik zoek een boek" id="query" />
+          <button type="submit" id="searchButton"></button>
+        </form>
+        <%- include('partials/loading'); %>
+
       </section>
-    </div>
-    <div class="categories">
-      <div class="category-container" id="boekenContainer">
-        <h3>boeken</h3>
-        <div class="results-container" id="boekenResults"></div>
-      </div>
-      <div class="category-container" id="dvdsContainer">
-        <h3>dvd's</h3>
-        <div class="results-container" id="dvdsResults"></div>
-      </div>
-      <div class="category-container" id="activiteitenContainer">
-        <h3>activiteiten</h3>
-        <div class="results-container" id="activiteitenResults"></div>
-      </div>
-      <div class="category-container" id="cursussenContainer">
-        <h3>cursussen</h3>
-        <div class="results-container" id="cursussenResults"></div>
-      </div>
-    </div>
-  </div>
-  <%- include('partials/footer'); %>
+      <%- include('partials/footer'); %>
