@@ -40,6 +40,34 @@ Documentatie kan je vinden in de [wiki](https://github.com/Hoa0/Laagdrempelig-zo
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
 - [nodemon](https://www.npmjs.com/package/nodemon)
 
+# Installatie
+
+Clone het project
+
+```bash
+  git clone https://github.com/Hoa0/Laagdrempelig-zoeken.git
+```
+
+Installeer dependencies
+
+```bash
+  npm install
+```
+
+Start de server
+
+```bash
+  npm run start
+```
+
+Start als dev
+
+```bash
+  npm run dev
+```
+
+
+
 
 
 
