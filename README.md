@@ -85,7 +85,15 @@ De OBA API vereist een API-sleutel voor authenticatie. Voor het verkrijgen van e
 | `q` | `string` | **Vereist**. De zoek query |
 
 
+# Authors
 
+- [@Hoa0](https://github.com/Hoa0)
+- [@AllyssaA](https://github.com/AllyssaA)
+
+
+# License
+
+[MIT](https://github.com/Hoa0/Laagdrempelig-zoeken/blob/main/LICENSE)
 
 
 
