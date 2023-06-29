@@ -51,9 +51,11 @@ header {
   background-color: white;
 }
 
+/* navigation menu for mobile*/
 header section#nav-m {
   display: flex;
   justify-content: space-between;
+  padding: 1em;
 }
 
 /* menu icon - hamburger */
@@ -142,10 +144,13 @@ nav ul.menu li:last-of-type {
     width: 50%;
     margin: 0;
   }
+
+  /* navigation oba logo and menu web*/
   header #nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 2px 0px rgb(237 236 236);
   }
 
   header section#nav-m {
@@ -155,8 +160,10 @@ nav ul.menu li:last-of-type {
   header nav {
     position: relative;
     width: fit-content;
-    max-height: none;
-    background-color: transparent;
+    background-color: var(--textColor);
+    max-height: 4rem;
+    display: flex;
+    align-items: center;
   }
 
   header ul.menu li {
