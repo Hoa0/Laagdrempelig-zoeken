@@ -16,16 +16,16 @@ let categories = [
 
 /**
  * Function to fetch search results from the API
- * @param {string} searchTerm 
- * @param {string} facet 
- * @returns 
+ * @param {string} searchTerm
+ * @param {string} facet
+ * @returns
  */
 async function getResults(searchTerm, facet = "") {
   const api_url =
     api_url_base + searchTerm + facet + api_pagesize + api_key + api_output;
 
   try {
-    uiState("loading") // Set UI state to "loading"
+    uiState("loading"); // Set UI state to "loading"
     const response = await fetch(api_url, {
       headers: {
         "X-Requested-With": "XMLHttpRequest",
@@ -33,7 +33,7 @@ async function getResults(searchTerm, facet = "") {
     });
 
     if (response.ok) {
-      uiState("hide")
+      uiState("hide");
       const data = await response.json();
       return data.results;
     } else {
@@ -99,7 +99,9 @@ function showResults(category, results) {
 
     // Add click event listener to show item details
     resultItem.addEventListener("click", () => {
-      let detailsArticle = resultItem.querySelector("article.itemDetailCatalogus");
+      let detailsArticle = resultItem.querySelector(
+        "article.itemDetailCatalogus"
+      );
 
       // Create item details article if it doesn't exist
       if (!detailsArticle) {
@@ -116,10 +118,11 @@ function showResults(category, results) {
         { text: `${result.titles[0]}` },
         { text: `${result.authors ? result.authors[0] : "Onbekend"}` },
         {
-          text: `Samenvatting: ${result.summaries && result.summaries.length > 0
-            ? result.summaries[0]
-            : "Niet beschikbaar"
-            }`,
+          text: `Samenvatting: ${
+            result.summaries && result.summaries.length > 0
+              ? result.summaries[0]
+              : "Niet beschikbaar"
+          }`,
         },
         { text: `Talen: ${result.languages}` },
         { text: `Uitgever: ${result.publisher}` },
@@ -191,8 +194,8 @@ function showResults(category, results) {
 }
 
 /**
- * This code adds a click event listener to each element with the class "catalogusButton" 
- * and performs a search based on the selected category when the button is clicked. 
+ * This code adds a click event listener to each element with the class "catalogusButton"
+ * and performs a search based on the selected category when the button is clicked.
  * If search results are found, they are displayed and additional HTML elements are appended to the page
  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -209,12 +212,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (results.length > 0) {
         searchResults.innerHTML +=
-          '<div class="message" tabindex="0"><p>' + category + "</p></div>";
+          '<ul class="message" tabindex="0"><p>' + category + "</p></ul>";
 
         searchResults.innerHTML +=
-          '<div class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
+          '<li class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
           category +
-          ". Kan ik nog iets voor je zoeken?</p></div>";
+          ". Kan ik nog iets voor je zoeken?</p></li>";
         // Resultaten weergeven met titel bovenaan
         showResults(category, results);
       } else {
@@ -229,5 +232,7 @@ function getCategoryFacet(category) {
   const foundCategory = categories.find(
     (catalogus) => catalogus.name === category
   );
+  uiState("tryAgain");
+  uiState("contactOba");
   return foundCategory ? foundCategory.facet : "";
 }
