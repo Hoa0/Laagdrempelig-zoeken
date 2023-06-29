@@ -66,6 +66,26 @@ Start als dev
   npm run dev
 ```
 
+# API Reference
+De OBA API geeft toegang tot de database van de Openbare Bibliotheek Amsterdam, zodat je gegevens kunt ophalen met betrekking tot boeken, auteurs en meer.
+
+## Authenticatie
+De OBA API vereist een API-sleutel voor authenticatie. Voor het verkrijgen van een API-sleutel, ga naar de [OBA API-documentatie](https://zoeken.oba.nl/api/v1/).
+
+
+#### Get search results
+
+```http
+  GET /search/?q={query}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `apiURL` | `string` | https://zoeken.oba.nl/api/v1/search/? |
+| `q` | `string` | **Vereist**. De zoek query |
+
+
+
 
 
 
