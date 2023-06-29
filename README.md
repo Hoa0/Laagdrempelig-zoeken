@@ -12,6 +12,25 @@ Het doel van dit project is om de digitale inclusie in Amsterdam te vergroten do
 - Als gebruiker van de zoekinterface van de OBA, wil ik een omgeving waarin ik op 1 plek de digitale conversatie aangaat met de OBA, zodat ik zowel zoeken, vragen als chat in 1 omgeving kan doen (conversational model)
 - Als gebruiker van de zoekinterface van de OBA, wil ik een webinterface die goed aansluit bij een conversatie beleving zowel voor het vragen als de antwoorden en resultaten
 
+# Documentatie
+
+Documentatie kan je vinden in de [wiki](https://github.com/Hoa0/Laagdrempelig-zoeken/wiki/Design-Rationale) van deze repository. 
+
+
+# Features
+
+- Resultaten weergeven vanuit catalogus
+- Gebruikersinterface feedback
+- Zoeken door de OBA API
+- Interactie met zoekresultaten
+- Zoekresultaten delen
+
+
+# Demo
+
+[Link naar demo](https://laagdrempelig-zoeken.adaptable.app/)
+
+
 
 
 
