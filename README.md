@@ -30,6 +30,19 @@ Documentatie kan je vinden in de [wiki](https://github.com/Hoa0/Laagdrempelig-zo
 
 [Link naar demo](https://laagdrempelig-zoeken.adaptable.app/)
 
+# Tools
+
+- [body-parser](https://www.npmjs.com/package/body-parser)
+- [cors](https://www.npmjs.com/package/cors)
+- [ejs](https://www.npmjs.com/package/ejs)
+- [express](https://www.npmjs.com/package/express)
+- [gsap](https://www.npmjs.com/package/gsap)
+- [node-fetch](https://www.npmjs.com/package/node-fetch)
+- [nodemon](https://www.npmjs.com/package/nodemon)
+
+
+
+
 
 
 
