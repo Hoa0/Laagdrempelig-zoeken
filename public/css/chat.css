@@ -261,6 +261,10 @@ article.itemDetailCatalogus button {
 }
 
 @media (min-width: 60em) {
+  header nav > ul li:hover,
+  header nav > ul li > a:hover {
+    color: var(--green);
+  }
   #itemDetails article,
   ul li.speechOba,
   .speechOba,
