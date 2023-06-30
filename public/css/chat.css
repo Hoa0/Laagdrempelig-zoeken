@@ -44,7 +44,7 @@ li a {
   grid-template-rows: 90% 10%;
   max-height: 75vh;
   width: 100vw;
-  padding: 1em;
+  /* padding: 1em; */
   border-radius: 1em;
 }
 
