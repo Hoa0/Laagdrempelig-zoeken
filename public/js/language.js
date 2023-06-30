@@ -7,7 +7,7 @@ function initializeStyledSelects() {
         let numberOfOptions = selectElement.children.length;
 
         // Hides the select element
-        selectElement.classList.add("s-hidden");
+        selectElement.classList.add("selectHidden");
 
         // Wrap the select element in a div
         let selectWrapper = document.createElement("div");

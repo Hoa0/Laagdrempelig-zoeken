@@ -24,7 +24,7 @@
 }
 
 /* Nav styling */
-nav.nav-menu ul {
+nav.navMenu ul {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -32,18 +32,17 @@ nav.nav-menu ul {
 
 nav > ul li,
 li a {
-  margin-left: 1.5rem;
   font-weight: bold;
   color: var(--black);
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* div#mainContent */
 #mainContent {
   display: grid;
   grid-template-rows: 90% 10%;
-  height: 100vh;
-  max-height: 90vh;
+  max-height: 75vh;
   width: 100vw;
   padding: 1em;
   border-radius: 1em;
@@ -56,6 +55,7 @@ li a {
   color: var(--mainRed);
   align-items: center;
   display: flex;
+  font-size: 1.2rem;
 }
 
 section#chat {
@@ -75,6 +75,7 @@ form#searchForm {
   position: relative;
   background-color: var(--alabaster);
   border-top: 0.25em solid var(--green);
+  height: 5rem;
 }
 
 form#searchForm input {
@@ -85,6 +86,7 @@ form#searchForm input {
   border: none;
   border-radius: 0.5em 0 0 0.5em;
   box-shadow: var(--shadow-down-light);
+  height: 4rem;
 }
 
 form#searchForm input::placeholder {
@@ -93,7 +95,7 @@ form#searchForm input::placeholder {
 }
 
 /* Search button */
-#searchButton {
+button#searchButton {
   display: inline-block;
   outline: 0;
   border: 0;
@@ -105,17 +107,21 @@ form#searchForm input::placeholder {
   font-weight: 700;
   color: white;
   line-height: 1.625em;
+  height: 4rem;
 }
 
 /* Oba assistent text chat */
 ul li.speechOba,
 .speechOba {
   background-color: #ffffff;
-  margin: 1em;
   width: fit-content;
   padding: 0.75em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
+}
+
+#chat > ul:nth-of-type(1) li.speechOba {
+  margin: 1em;
 }
 
 /* Catalogus btns*/
@@ -268,8 +274,14 @@ article.itemDetailCatalogus button {
   li.speechOba button {
     padding: 0.5rem 1rem;
   }
-}
 
+  .results-container ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+ul#chatMessages {
+  margin-right: -1rem;
+}
 ul#chatMessages li {
   background-color: var(--green);
   color: var(--alabaster);

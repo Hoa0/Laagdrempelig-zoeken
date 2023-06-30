@@ -34,7 +34,7 @@
 }
 /*svg bot head*/
 #botSvg {
-  max-width: 4rem;
+  max-width: 3rem;
 }
 
 /*catalogus title*/
@@ -94,17 +94,6 @@
 
 .searchResultsItems article p:nth-of-type(1) {
   font-weight: bold;
-}
-
-.message {
-  background-color: var(--green);
-  color: var(--alabaster);
-  margin: 3em 1em;
-  margin-left: auto;
-  width: fit-content;
-  padding: 0.75em;
-  border-radius: 0.5em 0 0.5em 0.5em;
-  box-shadow: var(--shadow-down-light);
 }
 
 .searchResultsItems {

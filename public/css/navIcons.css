@@ -27,22 +27,12 @@
   --black: #434343;
 }
 
-nav ul > li,
-.selectbox1 {
+select {
   cursor: pointer;
 }
-.s-hidden {
+.selectHidden {
   visibility: hidden;
-  padding-right: 10px;
-}
-
-.select {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font: normal 0.6875em/ 1.375em;
-  color: black;
-  border: 0.0625em solid #ccc;
+  padding-right: 0.625em;
 }
 
 .styledSelect {
@@ -101,45 +91,9 @@ nav ul > li,
 }
 
 /*-----favorite icon-----*/
-.favoriteContainer {
-  /* min-height:100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.favoriteContainer span {
+  color: var(--black);
 }
-/*right side heart*/
-.favorite {
-  position: relative;
-  height: 6.25em;
-  width: 3.75em;
-  background: var(--black);
-  border-radius: 6.25em 6.25em 0 0;
-  transform: scale(0.2) rotate(45deg);
-  transition: all 0.5s;
-  cursor: pointer;
-}
-/*left side heart*/
-.favorite::before {
-  content: "";
-  position: absolute;
-  background: var(--black);
-  height: 6.25em;
-  width: 3.75em;
-  transform: rotate(-90deg);
-  border-radius: 6.25em 6.25em 0 0;
-  left: -1.25em;
-  top: 1.25em;
-  transition: all 0.5s;
-}
-
-.favorite:hover {
-  background: var(--darkGreen);
-}
-
-.favorite:hover::before {
-  background-color: var(--darkGreen);
-}
-
 /* Information cors bug catalogus*/
 #formInfo {
   margin-top: 1rem;
@@ -147,7 +101,8 @@ nav ul > li,
 #corsLink a {
   margin: 0;
 }
-input#corsInfo {
+input#corsInfo,
+.hiddenInfo {
   clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   height: 0.1em;

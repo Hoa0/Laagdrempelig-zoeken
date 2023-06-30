@@ -39,20 +39,16 @@ header img {
   width: 0.3em;
 }
 
-.nav-container {
-  box-shadow: 0px 2px 0px rgb(237 236 236);
-}
 /* header - navigation menu*/
 header {
-  /* position: sticky; */
   top: 0;
-  width: 100%;
   z-index: 1000;
   background-color: white;
+  margin: 1em;
 }
 
 /* navigation menu for mobile*/
-header section#nav-m {
+header section#navMobile {
   display: flex;
   justify-content: space-between;
   padding: 1em;
@@ -65,7 +61,7 @@ header label {
   margin: 1.5em 1rem 0 0;
 }
 
-span.label-lines {
+span.labelLines {
   background-color: var(--black);
   display: block;
   height: 0.3rem;
@@ -74,8 +70,8 @@ span.label-lines {
   border-radius: 0.3em;
 }
 
-span.label-lines::before,
-span.label-lines::after {
+span.labelLines::before,
+span.labelLines::after {
   background-color: var(--black);
   content: "";
   display: block;
@@ -86,11 +82,11 @@ span.label-lines::after {
   border-radius: 0.3em;
 }
 
-span.label-lines::before {
+span.labelLines::before {
   top: 0.5em;
 }
 
-span.label-lines::after {
+span.labelLines::after {
   top: -0.5em;
 }
 
@@ -118,21 +114,21 @@ nav ul.menu li:last-of-type {
 
 /* toggle menu icon */
 
-.side-menu:checked ~ .nav-menu {
+.sideMenu:checked ~ .navMenu {
   max-height: 100%;
   z-index: 5;
 }
 
-.side-menu:checked ~ section label span.label-lines {
+.sideMenu:checked ~ section label span.labelLines {
   background-color: transparent;
 }
 
-.side-menu:checked ~ section label span.label-lines::before {
+.sideMenu:checked ~ section label span.labelLines::before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.side-menu:checked ~ section label span.label-lines::after {
+.sideMenu:checked ~ section label span.labelLines::after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -146,14 +142,14 @@ nav ul.menu li:last-of-type {
   }
 
   /* navigation oba logo and menu web*/
-  header #nav-container {
+  header #navContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 0px rgb(237 236 236);
   }
 
-  header section#nav-m {
+  header section#navMobile {
     padding: 0;
   }
 
@@ -168,18 +164,12 @@ nav ul.menu li:last-of-type {
 
   header ul.menu li {
     float: left;
-    margin-right: 0 !important;
     border-bottom: none !important;
-    /* font-size: 0.8em; */
+    margin-right: 1rem;
   }
 
-  header ul.menu li a {
-    padding: 0;
-  }
-
-  header ul.menu a:hover {
-    background-color: transparent;
-    color: yellowgreen;
+  header ul.menu li > a {
+    padding-top: 0.12rem;
   }
 
   header label {

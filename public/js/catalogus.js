@@ -118,11 +118,10 @@ function showResults(category, results) {
         { text: `${result.titles[0]}` },
         { text: `${result.authors ? result.authors[0] : "Onbekend"}` },
         {
-          text: `Samenvatting: ${
-            result.summaries && result.summaries.length > 0
-              ? result.summaries[0]
-              : "Niet beschikbaar"
-          }`,
+          text: `Samenvatting: ${result.summaries && result.summaries.length > 0
+            ? result.summaries[0]
+            : "Niet beschikbaar"
+            }`,
         },
         { text: `Talen: ${result.languages}` },
         { text: `Uitgever: ${result.publisher}` },
@@ -212,12 +211,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (results.length > 0) {
         searchResults.innerHTML +=
-          '<ul class="message" tabindex="0"><p>' + category + "</p></ul>";
+          '<ul id="chatMessages" tabindex="0"><li class="message"><p>' + category + "</p></li></ul>";
 
         searchResults.innerHTML +=
-          '<li class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
+          '<ul><li class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
           category +
-          ". Kan ik nog iets voor je zoeken?</p></li>";
+          ". Kan ik nog iets voor je zoeken?</p></li></ul>";
         // Resultaten weergeven met titel bovenaan
         showResults(category, results);
       } else {
