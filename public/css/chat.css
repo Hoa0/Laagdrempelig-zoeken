@@ -152,7 +152,7 @@ li.speechOba button::after {
   aspect-ratio: 1;
   border: none;
   border-radius: 40%;
-  background-color: rgba(0, 0, 255, 0.25);
+  background-color: var(--green);
   transition: 4s;
 }
 
