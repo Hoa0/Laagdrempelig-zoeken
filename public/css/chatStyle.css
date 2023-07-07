@@ -1,0 +1,336 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  font-family: "Avenir";
+  --mainRed: #ff0000;
+  --lightGreen: rgba(70, 146, 125, 0.25);
+  --green: rgba(70, 146, 125);
+  --darkGreen: rgb(59, 88, 80);
+  --obaBlue: rgb(0, 100, 200);
+  --obaLightBlue: rgb(0, 150, 230);
+  --obaLightGreen: rgb(180, 200, 0);
+  --grey: rgb(248 249 249);
+  --textColor: white;
+  --obaChat: #f0f0f0;
+  font-size: large;
+  --black: #434343;
+  --alabaster: #f8f8f8;
+  --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
+}
+
+
+#chat {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--alabaster);
+}
+
+#chatMessage {
+  margin: 0;
+  padding: 1rem;
+  list-style-type: none;
+  flex-grow: 2;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin: 0.5em 0;
+}
+
+#chat ul#chatMessage li {
+  width: fit-content;
+}
+
+form#searchForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--alabaster);
+  border-top: 0.25em solid var(--green);
+  height: 5rem;
+}
+
+form#searchForm input {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 1em 3rem 1em 1em;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5em 0 0 0.5em;
+  box-shadow: var(--shadow-down-light);
+  height: 4rem;
+}
+
+button#searchButton {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--green);
+  border-radius: 0 0.5em 0.5em 0;
+  padding: 0.75em;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  line-height: 1.625em;
+  height: 4rem;
+}
+
+
+/*----- Catalogus btns ----*/
+button.catalogusButton {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  color: var(--green);
+  border: 0.15em solid var(--green);
+  border-radius: 1.5rem;
+  transition: 4s;
+  margin: 1rem 0.5rem 0 0;
+}
+
+button.catalogusButton::before,
+button.catalogusButton::after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  z-index: -1;
+  width: 200%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 40%;
+  background-color: var(--green);
+  transition: 4s;
+}
+
+button.catalogusButton::before {
+  left: -80%;
+  transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+button.catalogusButton::after {
+  right: -80%;
+  transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+button.catalogusButton:hover,
+button.catalogusButton:focus {
+  color: var(--textColor);
+  cursor: pointer;
+}
+
+button.catalogusButton:hover:before,
+button.catalogusButton:hover:after,
+button.catalogusButton:focus:before,
+button.catalogusButton:focus:after {
+  transform: none;
+  background-color: var(--green);
+}
+
+/* results styling*/
+
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+.searchResultsItems article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+  /* max-width: 20em; */
+}
+
+.searchResultsItems article:hover {
+  border: var(--green) 0.2em solid;
+  cursor: pointer;
+}
+
+.searchResultsItems article:focus {
+  background-color: var(--obaLightGreen);
+}
+
+.searchResultsItems article p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+.searchResultsItems img {
+  max-width: 100%;
+}
+
+/* message from user input */
+.message {
+  background-color: var(--green);
+  color: var(--alabaster);
+  margin-left: auto;
+  width: fit-content;
+  padding: 0.75em;
+  border-radius: 0.5em 0 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+/* detail hidden and show */
+.itemDetailsDiv {
+  /* Standaard stijl voor itemDetailsDiv */
+  display: none;
+  /* Verberg standaard alle itemDetailsDiv */
+}
+
+.itemDetailsDiv.active {
+  /* Stijl voor actieve itemDetailsDiv */
+  display: block;
+  /* Toon de actieve itemDetailsDiv */
+}
+
+/* focus */
+input:focus,
+button:focus,
+.buttonContainer button:focus,
+#searchResults article:focus,
+#itemDetails article:focus,
+#itemDetails article button:focus,
+article.itemDetailCatalogus:focus,
+article.itemDetailCatalogus button:focus {
+  border: solid var(--green) 0.3em;
+}
+
+/* details styling */
+/* itemDetails */
+#itemDetails,
+.detailsCatalogus {
+  display: grid;
+  gap: 0.5em;
+}
+
+/* styling details container */
+#itemDetails article,
+article.itemDetailCatalogus {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+  display: grid;
+}
+
+#itemDetails article button,
+article.itemDetailCatalogus button {
+  display: flex;
+  flex-direction: column-reverse;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green);
+  margin: 1em;
+  padding: 1em;
+}
+
+/* Select item Titel */
+#itemDetails article h2 {
+  font-weight: bold;
+  margin: 1em 0 0 0;
+}
+
+/* Select auteur */
+#searchResults article h3,
+#itemDetails article h3 {
+  font-style: italic;
+}
+
+/* Selecte item samenvatting */
+#itemDetails article p:nth-of-type(1),
+.itemDetailCatalogus p:nth-of-type(1) {
+  margin: 1em 0;
+}
+
+#itemDetails article img,
+.itemDetailCatalogus img {
+  max-width: fit-content;
+  float: left;
+  margin-right: 1rem;
+}
+
+/* Oba bot styling */
+.speechOba{
+  background-color: #ffffff;
+  width: fit-content;
+  padding: 0.75em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+p.speechOba{
+ margin:1rem 0;
+}
+
+.speechOba a{
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.speechOba a:hover{
+  color: var(--green);
+}
+
+/*********************/
+/*   WEBSITE MODE    */
+/*********************/
+@media (min-width: 60em) {
+
+  #itemDetails article,
+  ul li.speechOba,
+  .speechOba,
+  .itemDetailCatalogus {
+    width: fit-content;
+    max-width: 47em;
+  }
+
+  /* styling details container */
+#itemDetails article,
+article.itemDetailCatalogus {
+  display: block;
+}
+}

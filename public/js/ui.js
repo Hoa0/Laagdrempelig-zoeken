@@ -1,5 +1,5 @@
 const loading = document.querySelector(".loading");
-const resultsContainer = document.querySelector(".results-container");
+const resultsContainer = document.querySelector("#chatMessage");
 
 // Show loading animation
 export function showLoading() {
@@ -13,8 +13,8 @@ export function hideLoading() {
 
 // Handle UI states
 export function uiState(typeState, param = "") {
-  const ul = document.createElement("ul");
-  const li = document.createElement("li");
+  const ul = document.createElement("div");
+  const li = document.createElement("p");
 
   switch (typeState) {
     case "noData":

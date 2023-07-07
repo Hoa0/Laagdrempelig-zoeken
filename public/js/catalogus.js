@@ -1,5 +1,4 @@
 import { uiState } from "./ui.js";
-
 //catalogus script
 const api_url_base =
   "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/api/v1/search/?q=";
@@ -98,7 +97,8 @@ function showResults(category, results) {
     resultItem.appendChild(author);
 
     // Add click event listener to show item details
-    resultItem.addEventListener("click", () => {
+    resultItem.addEventListener("click", () => { 
+
       let detailsArticle = resultItem.querySelector(
         "article.itemDetailCatalogus"
       );
@@ -211,12 +211,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (results.length > 0) {
         searchResults.innerHTML +=
-          '<ul id="chatMessages" tabindex="0"><li class="message"><p>' + category + "</p></li></ul>";
+          '<div class="message" tabindex="0"><p>' + category + "</p></div>";
 
         searchResults.innerHTML +=
-          '<ul><li class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
+          '<div><p class="speechOba" tabindex="0"> Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
           category +
-          ". Kan ik nog iets voor je zoeken?</p></li></ul>";
+          ". Kan ik nog iets voor je zoeken?</p></div>";
         // Resultaten weergeven met titel bovenaan
         showResults(category, results);
       } else {
