@@ -123,6 +123,21 @@ button#searchButton {
   content: 'Lees minder';
 }
 
+.readMoreWrap p{
+ margin: 1rem 0;
+}
+
+/* intro "lees meer "*/
+label.readMoreTrigger{
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+label.readMoreTrigger:hover{
+  color: var(--green);
+}
+
 
 /*----- Catalogus btns ----*/
 button.catalogusButton {
