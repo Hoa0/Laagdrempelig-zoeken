@@ -2,12 +2,40 @@
   <%- include('partials/nav'); %>
 
     <section id="chat" class="max-widthGeneral">
-
+      <h2 class="hiddenInfo">Hier staat de chat content en waar de resultaten worden weergeven</h2>
       <div id="chatMessage">
-          <div id="searchResults"></div>
-          <button id="loadMoreButton">Laad meer resultaten</button>
-          <div id="itemDetails"></div>
+
+        <div class="speechOba">
+          <form>
+            <input type="checkbox" class="readMoreStateIntro" id="obaInfo" />
+            <div class="readMoreWrap">
+              <p>Hallo! Ik ben de obaAssistent en ik help je met verschillende dingen
+                in de OBA (Openbare Bibliotheek Amsterdam).</p>
+              <div class="readMoreTarget">
+                <p>Ik kan je helpen om boeken, tijdschriften, films, muziek en nog veel meer te vinden. Ik
+                  gebruik de OBA API, waardoor ik toegang heb tot veel informatie. Of je
+                  nu een bepaald boek zoekt, wilt weten welke films er zijn, of
+                  nieuwsgierig bent naar recente tijdschriften, ik kan je helpen om te
+                  vinden wat je zoekt. Ik ben eigenlijk een virtuele gids die je door de
+                  grote collectie van de OBA kan leiden. Dus als je iets wilt weten of
+                  iets speciaals zoekt, aarzel dan niet om mij te vragen!
+                </p>
+              </div>
+            </div>
+            <label for="obaInfo" class="readMoreTrigger"></label>
+          </form>
         </div>
+
+        <div id="speechBtnCateg" class="buttonContainer speechOba">
+          <p>Bijvoorbeeld, klik hieronder voor meer informatie uit ons overzicht.</p>
+          <!-- catalogus buttons -->
+          <%- include('partials/catalogusBtns'); %>
+        </div>
+
+        <div id="searchResults"></div>
+        <button id="loadMoreButton">Laad meer resultaten</button>
+        <div id="itemDetails"></div>
+      </div>
 
       <%- include('partials/loading'); %>
         <form id="searchForm">

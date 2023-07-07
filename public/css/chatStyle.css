@@ -28,6 +28,17 @@
   --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
 }
 
+/* Hidden information or elements */
+.hiddenInfo, input#obaInfo{
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 0.1em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.3em;
+}
+
 
 #chat {
   height: 80vh;
@@ -89,6 +100,27 @@ button#searchButton {
   color: white;
   line-height: 1.625em;
   height: 4rem;
+}
+
+/* Oba introduction show more and less*/
+.readMoreTarget {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+.readMoreStateIntro:checked ~ .readMoreWrap .readMoreTarget{
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.readMoreStateIntro ~ .readMoreTrigger:before {
+  content: 'Lees meer';
+}
+
+.readMoreStateIntro:checked ~ .readMoreTrigger:before {
+  content: 'Lees minder';
 }
 
 
@@ -298,6 +330,7 @@ article.itemDetailCatalogus button {
   padding: 0.75em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
+  margin: 1rem 0;
 }
 
 p.speechOba{
