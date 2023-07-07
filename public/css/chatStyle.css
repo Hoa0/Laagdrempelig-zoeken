@@ -29,7 +29,7 @@
 }
 
 /* Hidden information or elements */
-.hiddenInfo, input#obaInfo{
+.hiddenInfo, input#obaInfo {
   clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   height: 0.1em;
@@ -109,35 +109,45 @@ button#searchButton {
   font-size: 0;
   transition: .25s ease;
 }
-.readMoreStateIntro:checked ~ .readMoreWrap .readMoreTarget{
+
+.readMoreStateIntro:checked~.readMoreWrap .readMoreTarget {
   opacity: 1;
   font-size: inherit;
   max-height: 999em;
 }
 
-.readMoreStateIntro ~ .readMoreTrigger:before {
+.readMoreStateIntro~.readMoreTrigger:before {
   content: 'Lees meer';
 }
 
-.readMoreStateIntro:checked ~ .readMoreTrigger:before {
+.readMoreStateIntro:checked~.readMoreTrigger:before {
   content: 'Lees minder';
 }
 
-.readMoreWrap p{
- margin: 1rem 0;
+.readMoreWrap p {
+  margin: 1rem 0;
 }
 
 /* intro "lees meer "*/
-label.readMoreTrigger{
+label.readMoreTrigger {
   font-weight: bold;
   color: var(--black);
   text-decoration: underline;
 }
 
-label.readMoreTrigger:hover{
+label.readMoreTrigger:hover {
   color: var(--green);
 }
 
+/* search input introduction for user */
+#searchIntroduction {
+  border-radius: 1rem;
+  background-color: rgb(180 200 0 / 40%);
+  width: 25rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+}
 
 /*----- Catalogus btns ----*/
 button.catalogusButton {
@@ -339,7 +349,7 @@ article.itemDetailCatalogus button {
 }
 
 /* Oba bot styling */
-.speechOba{
+.speechOba {
   background-color: #ffffff;
   width: fit-content;
   padding: 0.75em;
@@ -348,18 +358,18 @@ article.itemDetailCatalogus button {
   margin: 1rem 0;
 }
 
-p.speechOba{
- margin:1rem 0;
+p.speechOba {
+  margin: 1rem 0;
 }
 
-.speechOba a{
+.speechOba a {
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
   color: var(--black);
 }
 
-.speechOba a:hover{
+.speechOba a:hover {
   color: var(--green);
 }
 
@@ -377,8 +387,8 @@ p.speechOba{
   }
 
   /* styling details container */
-#itemDetails article,
-article.itemDetailCatalogus {
-  display: block;
-}
+  #itemDetails article,
+  article.itemDetailCatalogus {
+    display: block;
+  }
 }
