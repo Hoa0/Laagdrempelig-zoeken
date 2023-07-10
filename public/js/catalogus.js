@@ -97,7 +97,7 @@ function showResults(category, results) {
     resultItem.appendChild(author);
 
     // Add click event listener to show item details
-    resultItem.addEventListener("click", () => { 
+    resultItem.addEventListener("click", () => {
 
       let detailsArticle = resultItem.querySelector(
         "article.itemDetailCatalogus"
@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchButtons.forEach((button) => {
     button.addEventListener("click", async () => {
+      button.style.fontWeight = "bold";
       const category = button.dataset.category;
       const facet = getCategoryFacet(category);
       const searchTerm = "*"; // Enter desired search term here

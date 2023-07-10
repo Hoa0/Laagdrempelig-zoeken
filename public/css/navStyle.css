@@ -1,44 +1,45 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-    font-family: "Avenir";
-    --mainRed: #ff0000;
-    --lightGreen: rgba(70, 146, 125, 0.25);
-    --green: rgba(70, 146, 125);
-    --darkGreen: rgb(59, 88, 80);
-    --obaBlue: rgb(0, 100, 200);
-    --obaLightBlue: rgb(0, 150, 230);
-    --obaLightGreen: rgb(180, 200, 0);
-    --grey: rgb(248 249 249);
-    --textColor: white;
-    --obaChat: #f0f0f0;
-    font-size: large;
-    --black: #434343;
-    --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
-    --nav-shadow: 0px 2px 0px rgb(237 236 236);
+  font-family: "Avenir";
+  --mainRed: #ff0000;
+  --lightGreen: rgba(70, 146, 125, 0.25);
+  --green: rgba(70, 146, 125);
+  --darkGreen: rgb(59, 88, 80);
+  --obaBlue: rgb(0, 100, 200);
+  --obaLightBlue: rgb(0, 150, 230);
+  --obaLightGreen: rgb(180, 200, 0);
+  --grey: rgb(248 249 249);
+  --textColor: white;
+  --obaChat: #f0f0f0;
+  font-size: large;
+  --black: #434343;
+  --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
+  --nav-shadow: 0px 2px 0px rgb(237 236 236);
 }
 
 /*********************/
 /*  GENERAL STYLING  */
 /*********************/
-#sideMenu, .hiddenInfo {
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-    height: 0.1em;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 0.3em;
+#sideMenu,
+.hiddenInfo {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 0.1em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.3em;
 }
 
 /*********************/
@@ -46,300 +47,306 @@
 /*********************/
 
 /* Oba logo */
-.header figure{
-    padding: 0;
-    margin: 1rem;
+.header figure {
+  padding: 0;
+  margin: 1rem;
 }
 .header img {
-    max-width: 5rem;
+  max-width: 5rem;
 }
 
 /* header - navigation menu*/
 .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--textColor);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--textColor);
 }
 
 /* Navigation menu with oba logo + hamburgermenu icon */
 .header section#navMobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* menu icon - hamburger */
 .header section#navMobile label {
-    cursor: pointer;
-    margin: 1.5rem 1rem;
+  cursor: pointer;
+  margin: 1.5rem 1rem;
 }
 
 /* Navigation menu - create hamburgermenu lines */
 section#navMobile span.labelLines {
-    background-color: var(--black);
-    display: block;
-    height: 0.3rem;
-    position: relative;
-    width: 2rem;
-    border-radius: 0.3em;
+  background-color: var(--black);
+  display: block;
+  height: 0.3rem;
+  position: relative;
+  width: 2rem;
+  border-radius: 0.3em;
 }
 
 section#navMobile span.labelLines::before,
 section#navMobile span.labelLines::after {
-    background-color: var(--black);
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    border-radius: 0.3em;
+  background-color: var(--black);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  border-radius: 0.3em;
 }
 
 section#navMobile span.labelLines::before {
-    top: 0.5em;
+  top: 0.5em;
 }
 
 section#navMobile span.labelLines::after {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 /* Styling mobile menu */
 /* geen id of class meegeven, anders geen menu content */
 header nav {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
-    background-color: var(--textColor);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  background-color: var(--textColor);
 }
 
 nav ul.menu li {
-    text-align: center;
-    border-bottom: 0.1em solid var(--black);
-    margin: 0 1.5em;
-    padding: 1rem;
-    color: var(--black);
+  text-align: center;
+  border-bottom: 0.1em solid var(--black);
+  margin: 0 1.5em;
+  padding: 1rem;
+  color: var(--black);
 }
 
 nav ul.menu a {
-    display: block;
-    color: var(--black);
-    font-size: 1em;
-    font-weight: bold;
+  display: block;
+  color: var(--black);
+  font-size: 1em;
+  font-weight: bold;
 }
 
 /* toggle menu icon */
-.sideMenu:checked~.navMenu {
-    max-height: 100%;
+.sideMenu:checked ~ .navMenu {
+  max-height: 100%;
+  position: static;
+  height: 100vh;
 }
 
-.sideMenu:checked~section#navMobile label span.labelLines {
-    background-color: transparent;
+.sideMenu:checked ~ section#navMobile label span.labelLines {
+  background-color: transparent;
 }
 
-.sideMenu:checked~section#navMobile label span.labelLines::before {
-    transform: rotate(-45deg);
-    top: 0;
+.sideMenu:checked ~ section#navMobile label span.labelLines::before {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
-.sideMenu:checked~section#navMobile label span.labelLines::after {
-    transform: rotate(45deg);
-    top: 0;
+.sideMenu:checked ~ section#navMobile label span.labelLines::after {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 /*********************/
 /*  SVG + Chat title */
 /*********************/
-#chatTitleContainer{
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
+#chatTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
 /* inside nav h1 */
 #chatTitleContainer h1 {
-    text-align: center;
-    margin: 0.5em 0.5em 0 0.5em;
-    color: var(--mainRed);
-    align-items: center;
-    display: flex;
-    font-size: 1rem;
-  }
+  text-align: center;
+  margin: 0.5em 0.5em 0 0.5em;
+  color: var(--mainRed);
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+}
 
-  /*svg bot head*/
-  #chatTitleContainer #botSvg {
-    max-width: 2rem;
-  }
+/*svg bot head*/
+#chatTitleContainer #botSvg {
+  max-width: 2rem;
+}
 
-  /* Select talen */
-  select {
-    cursor: pointer;
-  }
-  .selectHidden {
-    visibility: hidden;
-    padding-right: 0.625em;
-  }
-  
-  .styledSelect {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: var(--textColor);
-    padding: 0 0.625em;
-    font-weight: bold;
-  }
-  
-  .styledSelect:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border: 0.3125em solid transparent;
-    border-color: var(--black) transparent transparent transparent;
-    position: absolute;
-    top: 0.5625em;
-    right: 0.375em;
-  }
-  
-  .styledSelect:active,
-  .styledSelect.active {
-    background-color: #eee;
-  }
-  
-  .options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    z-index: 999;
-    margin: 0 0;
-    padding: 0 0;
-    list-style: none;
-    border: 1px solid var(--darkGreen);
-    background-color: var(--textColor);
-    -webkit-box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.2);
-  }
-  
-  .options li {
-    padding: 0 1em;
-    margin: 0 0;
-    padding: 0 0.625em;
-  }
-  
-  .options li:hover {
-    background-color: var(--darkGreen);
-    color: var(--textColor);
-  }
-  
-  /* Information cors bug catalogus*/
-  #formInfo {
-    margin-top: 1rem;
-  }
-  #corsLink a {
-    margin: 0;
-  }
-  input#corsInfo,
-  .hiddenInfo {
-    clip: rect(0, 0, 0, 0);
-    clip-path: inset(50%);
-    height: 0.1em;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 0.3em;
-  }
-  
-  #corsLink {
-    visibility: hidden;
-    position: absolute;
-    left: -9999px;
-    transition: 4s;
-  }
-  
-  body:has(#corsInfo:checked) #corsLink {
-    visibility: visible;
-    position: static;
-    transition: 4s;
-  }
+/* Select talen */
+select {
+  cursor: pointer;
+}
+.selectHidden {
+  visibility: hidden;
+  padding-right: 0.625em;
+}
+
+.styledSelect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--textColor);
+  padding: 0 0.625em;
+  font-weight: bold;
+}
+
+.styledSelect:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0.3125em solid transparent;
+  border-color: var(--black) transparent transparent transparent;
+  position: absolute;
+  top: 0.5625em;
+  right: 0.375em;
+}
+
+.styledSelect:active,
+.styledSelect.active {
+  background-color: #eee;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none;
+  border: 1px solid var(--darkGreen);
+  background-color: var(--textColor);
+  -webkit-box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.2);
+}
+
+.options li {
+  padding: 0 1em;
+  margin: 0 0;
+  padding: 0 0.625em;
+}
+
+.options li:hover {
+  background-color: var(--darkGreen);
+  color: var(--textColor);
+}
+
+/* Information cors bug catalogus*/
+#formInfo {
+  margin-top: 1rem;
+}
+#corsLink a {
+  margin: 0;
+}
+input#corsInfo,
+.hiddenInfo {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 0.1em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.3em;
+}
+
+#corsLink {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  transition: 4s;
+}
+
+body:has(#corsInfo:checked) #corsLink {
+  visibility: visible;
+  position: static;
+  transition: 4s;
+}
 
 /*********************/
 /*   WEBSITE MODE    */
 /*********************/
 @media (min-width: 40em) {
-    .max-widthGeneral {
-        max-width: 80vw;
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .max-widthGeneral {
+    max-width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-    /*Navigation hamburger menu mobile*/
+  /*Navigation hamburger menu mobile*/
 
-    header #navContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: var(--nav-shadow);
-    }
+  header #navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--nav-shadow);
+  }
 
-    header nav {
-        position: relative;
-        width: fit-content;
-        max-height: none;
-        background-color: transparent;
-    }
+  header nav {
+    position: relative;
+    width: fit-content;
+    max-height: none;
+    background-color: transparent;
+  }
 
-    ul.menu li {
-        display: inline-flex;
-        margin-right: 0.5em !important;
-        border-bottom: none !important;
-        font-weight: bold;
-    }
+  ul.menu {
+    background-color: var(--textColor);
+  }
 
-    ul.menu li:hover {
-        cursor: pointer;
-        color: var(--green);
-        text-decoration: underline;
-    }
+  ul.menu li {
+    display: inline-flex;
+    margin-right: 0.5em !important;
+    border-bottom: none !important;
+    font-weight: bold;
+  }
 
-    ul.menu li:nth-of-type(3):hover {
-        cursor: pointer;
-        color: var(--green);
-        text-decoration: none;
-    }
+  ul.menu li:hover {
+    cursor: pointer;
+    color: var(--green);
+    text-decoration: underline;
+  }
 
-    ul.menu li #selectbox:hover {
-        cursor: pointer;
-    }
+  ul.menu li:nth-of-type(3):hover {
+    cursor: pointer;
+    color: var(--green);
+    text-decoration: none;
+  }
 
-    ul.menu a {
-        text-decoration: none;
-    }
+  ul.menu li #selectbox:hover {
+    cursor: pointer;
+  }
 
-    ul.menu a:hover {
-        text-decoration: underline;
-        color: var(--green);
-    }
+  ul.menu a {
+    text-decoration: none;
+  }
 
-    /* Remove hamburgermenu on web mode */
-    .header label {
-        display: none;
-    }
+  ul.menu a:hover {
+    text-decoration: underline;
+    color: var(--green);
+  }
 
-    /* Web mode - SVG + Chat title */
-    #chatTitleContainer h1 {
-        font-size: 1.2rem;
-    }
+  /* Remove hamburgermenu on web mode */
+  .header label {
+    display: none;
+  }
 
-     /*svg bot head*/
+  /* Web mode - SVG + Chat title */
+  #chatTitleContainer h1 {
+    font-size: 1.2rem;
+  }
+
+  /*svg bot head*/
   #chatTitleContainer #botSvg {
     max-width: 3rem;
   }
