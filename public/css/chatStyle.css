@@ -303,7 +303,7 @@ article.itemDetailCatalogus button:focus {
 
 /* styling details container */
 #itemDetails article,
-article.itemDetailCatalogus {
+article.itemDetailCatalogus, .itemDetailsDiv {
   background-color: #ffffff;
   padding: 1em;
   border-radius: 0 0.5em 0.5em 0.5em;
@@ -312,7 +312,7 @@ article.itemDetailCatalogus {
 }
 
 #itemDetails article button,
-article.itemDetailCatalogus button {
+article.itemDetailCatalogus button, .itemDetailsDiv button {
   display: flex;
   flex-direction: column-reverse;
   background: none;

@@ -64,15 +64,6 @@ const createResultItem = (result) => {
 
   // Add click event listener to show item details
   resultItem.addEventListener("click", () => {
-    // Check if there is already an active itemDetailsDiv
-    const activeItemDetailsDiv = document.querySelector(
-      ".itemDetailsDiv.active"
-    ); 
-    if (activeItemDetailsDiv) {
-      // Close the active itemDetailsDiv
-      activeItemDetailsDiv.classList.remove("active");
-    }
-
     const itemDetails = [
       {
         img: img,
@@ -154,9 +145,24 @@ const createResultItem = (result) => {
         }
       }
     });
-    itemDetailsDiv.appendChild(detailsDiv);
+
+    // Create a container element for the item details
+    const itemDetailsContainer = document.createElement("div");
+
+    // Add the "itemDetailsContainer" class to the itemDetailsContainer element
+    itemDetailsContainer.classList.add("itemDetailsContainer");
+
+    // Append the detailsDiv to the itemDetailsContainer
+    itemDetailsContainer.appendChild(detailsDiv);
+
+
+    // Append the itemDetailsContainer to the searchResults element
+    searchResults.appendChild(itemDetailsContainer);
+    // Append the itemDetailsDiv to the searchResults element 
+    searchResults.appendChild(itemDetailsDiv);
+
     //scroll animation
-    const lastResult = itemDetailsDiv.lastElementChild;
+    const lastResult = itemDetailsContainer.lastElementChild;
     lastResult.scrollIntoView({
       behavior: "smooth",
       block: "end",
@@ -184,7 +190,11 @@ const loadItems = () => {
     loadMoreButton.style.display = "block";
   });
 
-  searchResults.appendChild(divResultContainer);
+  // searchResults.appendChild(divResultContainer);
+  const searchResultsContainer = document.createElement("div");
+  searchResultsContainer.classList.add("searchResultsContainer");
+  searchResultsContainer.appendChild(divResultContainer);
+  searchResults.appendChild(searchResultsContainer);
 
   //scroll animation
   const lastResult = searchResults.lastElementChild;
@@ -218,8 +228,7 @@ const handleSearchFormSubmit = async (event) => {
 
   const botMessage = document.createElement("div");
   botMessage.classList.add("speechOba");
-  botMessage.appendChild(obaBotMessage)
-
+  botMessage.appendChild(obaBotMessage);
 
   // create userinput message and add
   const messageBot = document.createElement("p");
