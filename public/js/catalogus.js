@@ -231,7 +231,5 @@ function getCategoryFacet(category) {
   const foundCategory = categories.find(
     (catalogus) => catalogus.name === category
   );
-  uiState("tryAgain");
-  uiState("contactOba");
   return foundCategory ? foundCategory.facet : "";
 }
