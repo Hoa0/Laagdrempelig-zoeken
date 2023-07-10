@@ -358,10 +358,12 @@ article.itemDetailCatalogus button,
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
   margin: 1rem 0;
+  max-width: 75vw;
 }
 
 p.speechOba {
   margin: 1rem 0;
+  max-width: 75vw;
 }
 
 .speechOba a {
@@ -378,13 +380,12 @@ p.speechOba {
 /*********************/
 /*   WEBSITE MODE    */
 /*********************/
-@media (min-width: 60em) {
+@media (min-width: 40em) {
   #itemDetails article,
-  ul li.speechOba,
-  .speechOba,
+  p.speechOba .speechOba,
   .itemDetailCatalogus {
     width: fit-content;
-    max-width: 47em;
+    max-width: 70vw !important;
   }
 
   /* styling details container */

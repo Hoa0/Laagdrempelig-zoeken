@@ -125,6 +125,8 @@ nav ul.menu li {
   margin: 0 1.5em;
   padding: 1rem;
   color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 nav ul.menu a {
@@ -302,6 +304,7 @@ body:has(#corsInfo:checked) #corsLink {
 
   ul.menu {
     background-color: var(--textColor);
+    margin-right: -0.5em;
   }
 
   ul.menu li {
@@ -309,6 +312,7 @@ body:has(#corsInfo:checked) #corsLink {
     margin-right: 0.5em !important;
     border-bottom: none !important;
     font-weight: bold;
+    padding: 0 !important;
   }
 
   ul.menu li:hover {
