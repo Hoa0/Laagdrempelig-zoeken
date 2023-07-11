@@ -163,7 +163,7 @@ nav ul.menu a {
 #chatTitleContainer {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  padding: 1rem 0;
 }
 
 /* inside nav h1 */

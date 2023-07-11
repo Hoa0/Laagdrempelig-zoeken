@@ -232,6 +232,7 @@ button.catalogusButton:focus:after {
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
   /* max-width: 20em; */
+  transition: border 0.3s ease;
 }
 
 .searchResultsItems article:hover {
