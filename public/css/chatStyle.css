@@ -283,6 +283,7 @@ button.catalogusButton:focus:after {
   position: static;
   display: block;
   margin-bottom: 1rem;
+  width: fit-content;
 }
 
 /* focus */
@@ -290,10 +291,10 @@ input:focus,
 button:focus,
 .buttonContainer button:focus,
 #searchResults article:focus,
-#itemDetails article:focus,
-#itemDetails article button:focus,
-article.itemDetailCatalogus:focus,
-article.itemDetailCatalogus button:focus {
+.itemDetails article:focus,
+.itemDetails article button:focus,
+.itemDetailCatalogus:focus,
+.itemDetailCatalogus button:focus {
   border: solid var(--green) 0.3em;
 }
 
@@ -310,18 +311,22 @@ article.itemDetailCatalogus button:focus {
 }
 
 /* styling details container */
+.itemDetailCatalogus {
+  display: grid;
+  margin-bottom: 1rem;
+}
+
 #itemDetails article,
-article.itemDetailCatalogus,
+.itemDetailCatalogus,
 .itemDetailsDiv {
   background-color: #ffffff;
   padding: 1em;
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
-  display: grid;
 }
 
 #itemDetails article button,
-article.itemDetailCatalogus button,
+.itemDetailCatalogus button,
 .itemDetailsDiv button {
   display: flex;
   flex-direction: column-reverse;
@@ -419,5 +424,11 @@ p.speechOba {
 
   .itemDetailsDiv > article {
     margin-left: 1rem;
+  }
+
+  /* styling details container */
+  .itemDetailCatalogus {
+    display: flex;
+    margin-bottom: 1rem;
   }
 }
