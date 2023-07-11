@@ -59,7 +59,7 @@ const createResultItem = (result) => {
 
   // Create the result item element
   const resultItem = document.createElement("article");
-  resultItem.innerHTML = `<img src='${img}'> <h2>${title}</h2><h3>${author}</h3>`;
+  resultItem.innerHTML = `<img src='${img}' alt="${title}"> <h2>${title}</h2><h3>${author}</h3>`;
   resultItem.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
 
   // Add click event listener to show item details
@@ -100,6 +100,7 @@ const createResultItem = (result) => {
       if (item.img) {
         const imgElement = document.createElement("img");
         imgElement.src = item.img;
+        imgElement.alt = result.titles[0];
         const figure = document.createElement("figure");
         figure.appendChild(imgElement)
         detailsDiv.appendChild(figure);
