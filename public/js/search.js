@@ -100,7 +100,9 @@ const createResultItem = (result) => {
       if (item.img) {
         const imgElement = document.createElement("img");
         imgElement.src = item.img;
-        detailsDiv.appendChild(imgElement);
+        const figure = document.createElement("figure");
+        figure.appendChild(imgElement)
+        detailsDiv.appendChild(figure);
         detailsDiv.setAttribute("tabindex", "0");
       } else if (item.link) {
         const button = document.createElement("button");

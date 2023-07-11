@@ -338,15 +338,17 @@ button:focus,
 }
 
 /* Select item Titel */
-.itemDetailsDiv article h2 {
+.itemDetailsDiv article h2,
+.itemDetailCatalogus article h2 {
   font-weight: bold;
-  margin: 1em 0 0 0;
+  font-size: 1.3rem;
 }
 
 /* Select auteur */
 #searchResults article h3,
 .itemDetailsDiv article h3 {
   font-style: italic;
+  font-size: 1rem;
 }
 
 /* Selecte item samenvatting */

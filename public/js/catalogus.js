@@ -135,6 +135,7 @@ function showResults(category, results) {
         if (item.img) {
           const imgElement = document.createElement("img");
           imgElement.src = item.img;
+          imgElement.alt = result.titles[0];
           figure.appendChild(imgElement);
           detailsArticle.appendChild(figure);
         } else if (item.link) {
