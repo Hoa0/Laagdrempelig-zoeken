@@ -18,7 +18,7 @@
   --darkGreen: rgb(59, 88, 80);
   --obaBlue: rgb(0, 100, 200);
   --obaLightBlue: rgb(0, 150, 230);
-  --obaLightGreen: rgb(180, 200, 0);
+  --obaLightGreen: rgb(232 237 186);
   --grey: rgb(248 249 249);
   --textColor: white;
   --obaChat: #f0f0f0;
@@ -212,16 +212,10 @@ button.catalogusButton:focus:after {
 
 .searchResultsItems {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   gap: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
-}
-
-.searchResultsItems {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 1em;
 }
 
 .searchResultsItems article {
@@ -233,8 +227,8 @@ button.catalogusButton:focus:after {
   gap: 1em;
   background-color: #ffffff;
   padding: 1em;
-  border-radius: 0 0.5em 0.5em 0.5em;
-  box-shadow: var(--shadow-down-light);
+  /* border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light); */
   /* max-width: 20em; */
   transition: border 0.3s ease;
 }
@@ -250,12 +244,6 @@ button.catalogusButton:focus:after {
 
 .searchResultsItems article p:nth-of-type(1) {
   font-weight: bold;
-}
-
-.searchResultsItems {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 1em;
 }
 
 .searchResultsItems img {
@@ -356,10 +344,14 @@ button:focus,
   font-size: 1rem;
 }
 
+/* results title styling*/
 .searchResultsItems article h2 {
   width: 100%;
   font-size: 1.3em;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Selecte item samenvatting */
@@ -406,7 +398,8 @@ p.speechOba {
 /*********************/
 @media (min-width: 40em) {
   #itemDetails article,
-  .itemDetailCatalogus {
+  .itemDetailCatalogus,
+  .itemDetailsDiv.active {
     width: fit-content;
     max-width: 70vw !important;
   }
