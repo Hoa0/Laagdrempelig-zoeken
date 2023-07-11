@@ -271,14 +271,18 @@ button.catalogusButton:focus:after {
 /* detail hidden and show */
 .itemDetailsDiv {
   /* Standaard stijl voor itemDetailsDiv */
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
   /* Verberg standaard alle itemDetailsDiv */
 }
 
 .itemDetailsDiv.active {
   /* Stijl voor actieve itemDetailsDiv */
+  visibility: visible;
+  position: static;
   display: block;
-  /* Toon de actieve itemDetailsDiv */
+  margin-bottom: 1rem;
 }
 
 /* focus */
@@ -301,6 +305,10 @@ article.itemDetailCatalogus button:focus {
   gap: 0.5em;
 }
 
+.itemDetailsDiv > article {
+  margin-left: 0rem;
+}
+
 /* styling details container */
 #itemDetails article,
 article.itemDetailCatalogus,
@@ -321,29 +329,28 @@ article.itemDetailCatalogus button,
   border: none;
   cursor: pointer;
   color: var(--green);
-  margin: 1em;
-  padding: 1em;
+  padding: 1em 0 0;
 }
 
 /* Select item Titel */
-#itemDetails article h2 {
+.itemDetailsDiv article h2 {
   font-weight: bold;
   margin: 1em 0 0 0;
 }
 
 /* Select auteur */
 #searchResults article h3,
-#itemDetails article h3 {
+.itemDetailsDiv article h3 {
   font-style: italic;
 }
 
 /* Selecte item samenvatting */
-#itemDetails article p:nth-of-type(1),
+.itemDetailsDiv article p:nth-of-type(1),
 .itemDetailCatalogus p:nth-of-type(1) {
   margin: 1em 0;
 }
 
-#itemDetails article img,
+.itemDetailsDiv article img,
 .itemDetailCatalogus img {
   max-width: fit-content;
   float: left;
@@ -392,5 +399,25 @@ p.speechOba {
   #itemDetails article,
   article.itemDetailCatalogus {
     display: block;
+  }
+
+  /* detail hidden and show */
+  .itemDetailsDiv {
+    /* Standaard stijl voor itemDetailsDiv */
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    /* Verberg standaard alle itemDetailsDiv */
+  }
+
+  .itemDetailsDiv.active {
+    /* Stijl voor actieve itemDetailsDiv */
+    visibility: visible;
+    position: static;
+    display: flex;
+  }
+
+  .itemDetailsDiv > article {
+    margin-left: 1rem;
   }
 }

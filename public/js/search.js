@@ -89,7 +89,8 @@ const createResultItem = (result) => {
       },
     ];
 
-    const detailsDiv = document.createElement("article");
+    const detailsDiv = document.createElement("div");//
+    const detailsArticle = document.createElement("article")//
 
     //** add details class */
     detailsDiv.classList.add("itemDetailsDiv");
@@ -125,23 +126,23 @@ const createResultItem = (result) => {
           chatElement.scrollTop = chatElement.scrollHeight;
         });
         button.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-        detailsDiv.appendChild(button);
+        detailsArticle.appendChild(button);
       } else {
         if (index === 1) {
           const h2 = document.createElement("h2");
           h2.textContent = item.text;
           h2.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-          detailsDiv.appendChild(h2);
+          detailsArticle.appendChild(h2);
         } else if (index === 2) {
           const h3 = document.createElement("h3");
           h3.textContent = item.text;
           h3.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-          detailsDiv.appendChild(h3);
+          detailsArticle.appendChild(h3);
         } else {
           const p = document.createElement("p");
           p.textContent = item.text;
           p.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-          detailsDiv.appendChild(p);
+          detailsArticle.appendChild(p);
         }
       }
     });
@@ -151,6 +152,9 @@ const createResultItem = (result) => {
 
     // Add the "itemDetailsContainer" class to the itemDetailsContainer element
     itemDetailsContainer.classList.add("itemDetailsContainer");
+
+    // Append text details to the details article
+    detailsDiv.appendChild(detailsArticle)
 
     // Append the detailsDiv to the itemDetailsContainer
     itemDetailsContainer.appendChild(detailsDiv);
