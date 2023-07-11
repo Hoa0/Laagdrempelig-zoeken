@@ -162,8 +162,12 @@ nav ul.menu a {
 /*********************/
 #chatTitleContainer {
   display: flex;
-  justify-content: center;
   padding: 1rem 0;
+}
+#chatTitleContainer > article:nth-of-type(1) {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 /* inside nav h1 */
@@ -274,6 +278,103 @@ body:has(#corsInfo:checked) #corsLink {
   opacity: 1;
   font-size: inherit;
   max-height: 999em;
+}
+
+/*********************/
+/* Instruction       */
+/*********************/
+
+#helpBtn {
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--green);
+  border: none;
+  transition: 4s;
+  font-weight: bold;
+  background-color: #fff;
+  align-items: center;
+  position: absolute;
+  top: 16.3%;
+  right: 10%;
+  transform: translate(0, -50%);
+}
+
+#svgInfo {
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+#svgInfo:hover::after {
+  content: "Tekst die wordt weergegeven";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem;
+}
+
+/*--- content ---*/
+
+.instructionImages {
+  display: none;
+}
+
+.activeInstructionBtn {
+  color: var(--textColor) !important;
+  background-color: var(--green);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.modal span {
+  cursor: pointer;
+}
+
+.modalContent {
+  position: relative;
+  background-color: white;
+  width: 80%;
+  margin: 10% auto;
+  padding: 1rem;
+}
+
+.modalContent.large {
+  width: 75%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.3);
+  height: 30px;
+  width: 30px;
+  font-size: 1.3rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+  cursor: pointer;
+}
+
+.open {
+  display: block;
 }
 
 /*********************/

@@ -4,9 +4,7 @@ function animateGSAP() {
         return;
     }
     const categorieBtn = document.getElementById("speechBtnCateg");
-    const nav = document.getElementsByTagName("header");
-    const titleChat = document.getElementById("chatTitleContainer");
-    const contentChat = document.getElementById("chat");
+    const main = document.getElementsByTagName("main");
 
     // Hiding elements by default with CSS
     gsap.set(categorieBtn, {
@@ -21,17 +19,7 @@ function animateGSAP() {
     });
 
     function animation() {
-        gsap.from(nav, {
-            duration: 1,
-            y: 30,
-            opacity: 0
-        });
-        gsap.from(titleChat, {
-            duration: 1,
-            y: 30,
-            opacity: 0
-        });
-        gsap.from(contentChat, {
+        gsap.from(main, {
             duration: 1,
             y: 30,
             opacity: 0

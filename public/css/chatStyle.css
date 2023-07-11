@@ -153,7 +153,8 @@ label.readMoreTrigger:hover {
 }
 
 /*----- Catalogus btns ----*/
-button.catalogusButton {
+button.catalogusButton,
+button.instructionsButtons {
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -171,7 +172,9 @@ button.catalogusButton {
 }
 
 button.catalogusButton::before,
-button.catalogusButton::after {
+button.instructionsButtons::before,
+button.catalogusButton::after,
+button.instructionsButtons::after {
   content: "";
   position: absolute;
   top: -1.5em;
@@ -184,18 +187,22 @@ button.catalogusButton::after {
   transition: 4s;
 }
 
-button.catalogusButton::before {
+button.catalogusButton::before,
+button.instructionsButtons::before {
   left: -80%;
   transform: translate3d(0, 5em, 0) rotate(-340deg);
 }
 
-button.catalogusButton::after {
+button.catalogusButton::after,
+button.instructionsButtons::after {
   right: -80%;
   transform: translate3d(0, 5em, 0) rotate(390deg);
 }
 
 button.catalogusButton:hover,
-button.catalogusButton:focus {
+button.instructionsButtons:hover,
+button.catalogusButton:focus,
+button.instructionsButtons:focus {
   color: var(--textColor);
   cursor: pointer;
 }
@@ -203,7 +210,11 @@ button.catalogusButton:focus {
 button.catalogusButton:hover:before,
 button.catalogusButton:hover:after,
 button.catalogusButton:focus:before,
-button.catalogusButton:focus:after {
+button.catalogusButton:focus:after,
+button.instructionsButtons:hover:before,
+button.instructionsButtons:hover:after,
+button.instructionsButtons:focus:before,
+button.instructionsButtons:focus:after {
   transform: none;
   background-color: var(--green);
 }
@@ -314,8 +325,8 @@ button:focus,
 .itemDetailsDiv {
   background-color: #ffffff;
   padding: 1em;
-  border-radius: 0 0.5em 0.5em 0.5em;
-  box-shadow: var(--shadow-down-light);
+  /* border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light); */
 }
 
 #itemDetails article button,
