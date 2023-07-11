@@ -224,9 +224,10 @@ document.addEventListener("DOMContentLoaded", () => {
           '<div class="message" tabindex="0"><p>' + category + "</p></div>";
 
         searchResults.innerHTML +=
-          '<div><p class="speechOba" tabindex="0"> Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
-          category +
-          ". Kan ik nog iets voor je zoeken?</p></div>";
+          '<div class="speechOba" tabindex="0"><p tabindex="0"> Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
+          category;
+        searchResults.innerHTML +=
+          '<div class="speechOba" tabindex="0"><p tabindex="0">Kan ik nog iets voor je zoeken?</p></div>';
         // Resultaten weergeven met titel bovenaan
         showResults(category, results);
       } else {

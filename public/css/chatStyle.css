@@ -126,6 +126,10 @@ button#searchButton {
   margin: 1rem 0;
 }
 
+.readMoreWrap > p:nth-of-type(1) {
+  margin-top: 0;
+}
+
 /* intro "lees meer "*/
 label.readMoreTrigger {
   font-weight: bold;
@@ -338,7 +342,7 @@ button:focus,
   padding: 1em 0 0;
 }
 
-/* Select item Titel */
+/*Select item Titel */
 .itemDetailsDiv article h2,
 .itemDetailCatalogus article h2 {
   font-weight: bold;
@@ -350,6 +354,12 @@ button:focus,
 .itemDetailsDiv article h3 {
   font-style: italic;
   font-size: 1rem;
+}
+
+.searchResultsItems article h2 {
+  width: 100%;
+  font-size: 1.3em;
+  text-align: center;
 }
 
 /* Selecte item samenvatting */
@@ -373,12 +383,11 @@ button:focus,
   border-radius: 0 0.5em 0.5em 0.5em;
   box-shadow: var(--shadow-down-light);
   margin: 1rem 0;
-  max-width: 75vw;
+  max-width: 80vw;
 }
 
 p.speechOba {
   margin: 1rem 0;
-  max-width: 75vw;
 }
 
 .speechOba a {
@@ -397,12 +406,14 @@ p.speechOba {
 /*********************/
 @media (min-width: 40em) {
   #itemDetails article,
-  p.speechOba .speechOba,
   .itemDetailCatalogus {
     width: fit-content;
     max-width: 70vw !important;
   }
 
+  .speechOba {
+    max-width: 60vw;
+  }
   /* styling details container */
   #itemDetails article,
   article.itemDetailCatalogus {

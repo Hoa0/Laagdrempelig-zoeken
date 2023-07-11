@@ -9,17 +9,18 @@
           <form>
             <input type="checkbox" class="readMoreStateIntro" id="obaInfo" />
             <div class="readMoreWrap">
-              <p>Hallo! Ik ben de obaAssistent en ik help je met verschillende dingen
-                in de OBA (Openbare Bibliotheek Amsterdam).</p>
+              <p>Hallo! Ik ben de obaAssistent en ik help je met verschillende informatie te
+                vinden in de OBA (Openbare Bibliotheek Amsterdam).</p>
               <div class="readMoreTarget">
                 <p>Ik kan je helpen om boeken, tijdschriften, films, muziek en nog veel meer te vinden. Ik
                   gebruik de OBA API, waardoor ik toegang heb tot veel informatie. Of je
                   nu een bepaald boek zoekt, wilt weten welke films er zijn, of
                   nieuwsgierig bent naar recente tijdschriften, ik kan je helpen om te
-                  vinden wat je zoekt. Ik ben eigenlijk een virtuele gids die je door de
-                  grote collectie van de OBA kan leiden. Dus als je iets wilt weten of
-                  iets speciaals zoekt, aarzel dan niet om mij te vragen!
+                  vinden wat je zoekt.
                 </p>
+                <p>Ik ben eigenlijk een virtuele gids die je door de
+                  grote collectie van de OBA kan leiden. Dus als je iets wilt weten of
+                  iets speciaals zoekt, aarzel dan niet om mij te vragen!</p>
               </div>
             </div>
             <label for="obaInfo" id="obaInfo" class="readMoreTrigger"></label>
@@ -32,7 +33,7 @@
           <%- include('partials/catalogusBtns'); %>
         </div>
 
-        <div id="searchResults"></div>
+        <div id="searchResults" tabindex="0"></div>
         <button id="loadMoreButton">Laad meer resultaten</button>
         <div id="itemDetails"></div>
       </div>

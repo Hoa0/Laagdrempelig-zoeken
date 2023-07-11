@@ -264,16 +264,16 @@ input#corsInfo,
 }
 
 #corsLink {
-  visibility: hidden;
-  position: absolute;
-  left: -9999px;
-  transition: 4s;
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
 }
 
 body:has(#corsInfo:checked) #corsLink {
-  visibility: visible;
-  position: static;
-  transition: 4s;
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
 }
 
 /*********************/
