@@ -18,23 +18,49 @@
         <div class="modalContent">
             <span data-dismiss="modal">Sluiten X</span>
 
-            <button class="instructionsButtons activeInstructionBtn" data-target="content1">Video uitleg</button>
-            <button class="instructionsButtons" data-target="content2">Foto's met uitleg</button>
+            <button class="instructionsButtons activeInstructionBtn" data-target="content1">Foto's met uitleg</button>
+            <button class="instructionsButtons" data-target="content2">Video uitleg</button>
 
             <article id="content1" class="content instructionVideo instructionHelp">
-                <h2>Video uitleg</h2>
-                <video controls>
-                    <!-- <source src="myVideo.webm" type="video/webm" />
-                                                    <source src="myVideo.mp4" type="video/mp4" />
-                                                    <p>
-                                                        Your browser doesn't support HTML video. Here is a
-                                                        <a href="myVideo.mp4">link to the video</a> instead.
-                                                    </p> -->
-                </video>
+                <h2>Welkom, hierbij geven aan hoe ObaAssistent werkt</h2>
+
+                <div class="contentImages activeContentImages">
+                    <h1>Content 1</h1>
+                    <p>This is the first content.</p>
+                </div>
+                <div class="contentImages">
+                    <h1>Content 2</h1>
+                    <p>This is the second content.</p>
+                </div>
+                <div class="contentImages">
+                    <h1>Content 3</h1>
+                    <p>This is the third content.</p>
+                </div>
+                <div class="contentImages">
+                    <h1>Content 4</h1>
+                    <p>This is the fourth content.</p>
+                </div>
+                <div class="contentImages">
+                    <h1>Content 5</h1>
+                    <p>This is the fifth content.</p>
+                </div>
+
+                <button class="button" id="vorige">Vorige</button>
+                <button class="button" id="volgende">Volgende</button>
+
+
             </article>
 
             <article id="content2" class="content instructionImages">
                 <h2>Hi 2</h2>
+                <video controls>
+                    <source src="myVideo.webm" type="video/webm" />
+                    <source src="myVideo.mp4" type="video/mp4" />
+                    <p>
+                        Your browser doesn't support HTML video. Here is a
+                        <a href="myVideo.mp4">link to the video</a> instead.
+                    </p>
+                </video>
             </article>
         </div>
     </div>

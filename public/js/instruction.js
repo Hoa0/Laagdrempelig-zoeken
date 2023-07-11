@@ -62,3 +62,46 @@ buttons.forEach(function (button) {
         this.classList.add("activeInstructionBtn");
     });
 });
+
+/** content uitleg met images */
+const vorigeBtn = document.getElementById("vorige");
+const volgendeBtn = document.getElementById("volgende");
+const contents = document.getElementsByClassName("contentImages");
+let currentIndex = 0;
+
+// Functie om de huidige content te tonen
+function showContent(index) {
+    // Verberg alle contentsecties
+    for (let i = 0; i < contents.length; i++) {
+        contents[i].classList.remove("activeContentImages");
+    }
+    // Toon de gewenste contentsectie
+    contents[index].classList.add("activeContentImages");
+}
+
+// Functie om naar de volgende content te gaan
+function nextContent() {
+    if (currentIndex < contents.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    showContent(currentIndex);
+}
+
+// Functie om naar de vorige content te gaan
+function previousContent() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = contents.length - 1;
+    }
+    showContent(currentIndex);
+}
+
+// Voeg klikgebeurtenissen toe aan de knoppen
+vorigeBtn.addEventListener("click", previousContent);
+volgendeBtn.addEventListener("click", nextContent);
+
+// Toon de eerste content bij het laden van de pagina
+showContent(currentIndex);

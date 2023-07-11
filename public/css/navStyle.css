@@ -253,6 +253,10 @@ select {
 #formInfo {
   margin-top: 1rem;
 }
+
+#formInfo svg {
+  cursor: pointer;
+}
 #corsLink a {
   margin: 0;
 }
@@ -374,6 +378,14 @@ body:has(#corsInfo:checked) #corsLink {
 }
 
 .open {
+  display: block;
+}
+
+/* instruction images uitleg */
+.contentImages {
+  display: none;
+}
+.activeContentImages {
   display: block;
 }
 
