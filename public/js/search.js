@@ -24,13 +24,14 @@ let currentIndex = 0;
 const itemsPerLoad = 5;
 let responseDataSet;
 
+/** aangepast */
 // Function to create a chat message element
-const createMessage = (text) => {
-  const message = document.createElement("li");
-  message.classList.add("message");
-  message.textContent = text;
-  return message;
-};
+// const createMessage = (text) => {
+//   const message = document.createElement("li");
+//   message.classList.add("message");
+//   message.textContent = text;
+//   return message;
+// };
 
 // Function to create a search result item element
 const createResultItem = (result) => {
@@ -58,28 +59,51 @@ const createResultItem = (result) => {
 
   // Create the result item element
   const resultItem = document.createElement("article");
-  resultItem.innerHTML = `<img src='${img}'> <h2>${title}</h2><h3>${author}</h3>`;
+  resultItem.innerHTML = `<img src='${img}' alt="${title}"> <h2>${title}</h2><h3>${author}</h3>`;
   resultItem.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
 
   // Add click event listener to show item details
   resultItem.addEventListener("click", () => {
     const itemDetails = [
-      { img: img },
-      { text: `${title}` },
-      { text: `${author}` },
-      { text: `Samenvatting: ${summariesText}` },
-      { text: `Talen: ${language}` },
-      { text: `Uitgever: ${publisher}` },
-      { text: "Delen", link: detailLinks },
+      {
+        img: img,
+      },
+      {
+        text: `${title}`,
+      },
+      {
+        text: `${author}`,
+      },
+      {
+        text: `Samenvatting: ${summariesText}`,
+      },
+      {
+        text: `Talen: ${language}`,
+      },
+      {
+        text: `Uitgever: ${publisher}`,
+      },
+      {
+        text: "Delen",
+        link: detailLinks,
+      },
     ];
 
-    const detailsDiv = document.createElement("article");
+    const detailsDiv = document.createElement("div");//
+    const detailsArticle = document.createElement("article")//
+
+    //** add details class */
+    detailsDiv.classList.add("itemDetailsDiv");
+    detailsDiv.classList.add("active");
 
     itemDetails.forEach((item, index) => {
       if (item.img) {
         const imgElement = document.createElement("img");
         imgElement.src = item.img;
-        detailsDiv.appendChild(imgElement);
+        imgElement.alt = result.titles[0];
+        const figure = document.createElement("figure");
+        figure.appendChild(imgElement)
+        detailsDiv.appendChild(figure);
         detailsDiv.setAttribute("tabindex", "0");
       } else if (item.link) {
         const button = document.createElement("button");
@@ -105,30 +129,51 @@ const createResultItem = (result) => {
           chatElement.scrollTop = chatElement.scrollHeight;
         });
         button.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-        detailsDiv.appendChild(button);
+        detailsArticle.appendChild(button);
       } else {
         if (index === 1) {
           const h2 = document.createElement("h2");
           h2.textContent = item.text;
           h2.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-          detailsDiv.appendChild(h2);
+          detailsArticle.appendChild(h2);
         } else if (index === 2) {
           const h3 = document.createElement("h3");
           h3.textContent = item.text;
           h3.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-          detailsDiv.appendChild(h3);
+          detailsArticle.appendChild(h3);
         } else {
           const p = document.createElement("p");
           p.textContent = item.text;
           p.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-          detailsDiv.appendChild(p);
+          detailsArticle.appendChild(p);
         }
       }
     });
-    itemDetailsDiv.appendChild(detailsDiv);
+
+    // Create a container element for the item details
+    const itemDetailsContainer = document.createElement("div");
+
+    // Add the "itemDetailsContainer" class to the itemDetailsContainer element
+    itemDetailsContainer.classList.add("itemDetailsContainer");
+
+    // Append text details to the details article
+    detailsDiv.appendChild(detailsArticle)
+
+    // Append the detailsDiv to the itemDetailsContainer
+    itemDetailsContainer.appendChild(detailsDiv);
+
+
+    // Append the itemDetailsContainer to the searchResults element
+    searchResults.appendChild(itemDetailsContainer);
+    // Append the itemDetailsDiv to the searchResults element 
+    searchResults.appendChild(itemDetailsDiv);
+
     //scroll animation
-    const lastResult = itemDetailsDiv.lastElementChild;
-    lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
+    const lastResult = itemDetailsContainer.lastElementChild;
+    lastResult.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
   });
 
   return resultItem;
@@ -152,11 +197,18 @@ const loadItems = () => {
     loadMoreButton.style.display = "block";
   });
 
-  searchResults.appendChild(divResultContainer);
+  // searchResults.appendChild(divResultContainer);
+  const searchResultsContainer = document.createElement("div");
+  searchResultsContainer.classList.add("searchResultsContainer");
+  searchResultsContainer.appendChild(divResultContainer);
+  searchResults.appendChild(searchResultsContainer);
 
   //scroll animation
   const lastResult = searchResults.lastElementChild;
-  lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
+  lastResult.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+  });
 
   currentIndex += itemsPerLoad;
 
@@ -177,13 +229,24 @@ const handleSearchFormSubmit = async (event) => {
   const input = document.getElementById("query");
   const userInput = input.value;
 
-  // Create and append chat message
-  const message = createMessage(userInput);
-  chatMessages.appendChild(message);
+  // create response from chatbot
+  const obaBotMessage = document.createElement("p");
+  obaBotMessage.textContent = `Hier zijn de gevonden resultaten voor: ${userInput}`;
 
-  // Append chat messages container to results container
-  const resultsContainer = document.querySelector(".results-container");
-  resultsContainer.appendChild(chatMessages);
+  const botMessage = document.createElement("div");
+  botMessage.classList.add("speechOba");
+  botMessage.appendChild(obaBotMessage);
+
+  // create userinput message and add
+  const messageBot = document.createElement("p");
+  messageBot.textContent = userInput;
+
+  const messageDiv = document.createElement("div");
+  messageDiv.classList.add("message");
+  messageDiv.appendChild(messageBot);
+
+  searchResults.appendChild(messageDiv);
+  searchResults.appendChild(botMessage);
 
   try {
     // Set UI state to loading
@@ -195,7 +258,9 @@ const handleSearchFormSubmit = async (event) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query: userInput }),
+      body: JSON.stringify({
+        query: userInput,
+      }),
     });
 
     if (response.ok) {
@@ -230,9 +295,7 @@ const handleSearchFormSubmit = async (event) => {
         uiState("loading", input.value);
 
         // Hide UI elements with the user input value
-        uiState("hide", input.value);
-        uiState("tryAgain");
-        uiState("contactOba");
+        uiState("hide");
       }
     } else {
       // Handle server response error

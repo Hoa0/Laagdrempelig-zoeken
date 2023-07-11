@@ -1,5 +1,4 @@
 import { uiState } from "./ui.js";
-
 //catalogus script
 const api_url_base =
   "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/api/v1/search/?q=";
@@ -99,13 +98,14 @@ function showResults(category, results) {
 
     // Add click event listener to show item details
     resultItem.addEventListener("click", () => {
+
       let detailsArticle = resultItem.querySelector(
         "article.itemDetailCatalogus"
       );
 
       // Create item details article if it doesn't exist
       if (!detailsArticle) {
-        detailsArticle = document.createElement("article");
+        detailsArticle = document.createElement("div");
         detailsArticle.classList.add("itemDetailCatalogus");
         itemDetailsContainer.appendChild(detailsArticle);
       }
@@ -128,11 +128,16 @@ function showResults(category, results) {
         { text: "Delen", link: result.detailLink },
       ];
 
+      const figure = document.createElement("figure");
+      const catalogusDetails = document.createElement("article");
+
       itemDetails.forEach((item, index) => {
         if (item.img) {
           const imgElement = document.createElement("img");
           imgElement.src = item.img;
-          detailsArticle.appendChild(imgElement);
+          imgElement.alt = result.titles[0];
+          figure.appendChild(imgElement);
+          detailsArticle.appendChild(figure);
         } else if (item.link) {
           const button = document.createElement("button");
           button.innerHTML = `${item.text}`;
@@ -156,29 +161,33 @@ function showResults(category, results) {
             const chatElement = document.getElementById("chat");
             chatElement.scrollTop = chatElement.scrollHeight;
           });
-          detailsArticle.appendChild(button);
+          // detailsArticle.appendChild(button);
+          catalogusDetails.appendChild(button);
         } else {
           if (index === 1) {
             const h2 = document.createElement("h2");
             h2.textContent = item.text;
             h2.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-            detailsArticle.appendChild(h2);
+            catalogusDetails.appendChild(h2);
           } else if (index === 2) {
             const h3 = document.createElement("h3");
             h3.textContent = item.text;
             h3.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-            detailsArticle.appendChild(h3);
+            catalogusDetails.appendChild(h3);
           } else {
             const p = document.createElement("p");
             p.textContent = item.text;
             p.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-            detailsArticle.appendChild(p);
+            catalogusDetails.appendChild(p);
           }
         }
       });
 
-      const lastResult = resultContainer.lastElementChild;
-      lastResult.scrollIntoView({ behavior: "smooth", block: "end" });
+      detailsArticle.appendChild(figure);
+      detailsArticle.appendChild(catalogusDetails);
+
+      const lastResultDetail = detailsArticle.lastElementChild;
+      lastResultDetail.scrollIntoView({ behavior: "smooth", block: "end" });
     });
   });
 
@@ -202,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchButtons.forEach((button) => {
     button.addEventListener("click", async () => {
+      button.style.fontWeight = "bold";
       const category = button.dataset.category;
       const facet = getCategoryFacet(category);
       const searchTerm = "*"; // Enter desired search term here
@@ -211,12 +221,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (results.length > 0) {
         searchResults.innerHTML +=
-          '<ul id="chatMessages" tabindex="0"><li class="message"><p>' + category + "</p></li></ul>";
+          '<div class="message" tabindex="0"><p>' + category + "</p></div>";
 
         searchResults.innerHTML +=
-          '<ul><li class="speechOba" tabindex="0"><p>Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
-          category +
-          ". Kan ik nog iets voor je zoeken?</p></li></ul>";
+          '<div class="speechOba" tabindex="0"><p tabindex="0"> Wat leuk dat je informatie wilt vinden uit ons overzicht! Hier zijn de resultaten die ik voor je heb gevonden: ' +
+          category;
+        searchResults.innerHTML +=
+          '<div class="speechOba" tabindex="0"><p tabindex="0">Kan ik nog iets voor je zoeken?</p></div>';
         // Resultaten weergeven met titel bovenaan
         showResults(category, results);
       } else {
@@ -231,7 +242,5 @@ function getCategoryFacet(category) {
   const foundCategory = categories.find(
     (catalogus) => catalogus.name === category
   );
-  uiState("tryAgain");
-  uiState("contactOba");
   return foundCategory ? foundCategory.facet : "";
 }

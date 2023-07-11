@@ -1,0 +1,452 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  font-family: "Avenir";
+  --mainRed: #ff0000;
+  --lightGreen: rgba(70, 146, 125, 0.25);
+  --green: rgba(70, 146, 125);
+  --darkGreen: rgb(59, 88, 80);
+  --obaBlue: rgb(0, 100, 200);
+  --obaLightBlue: rgb(0, 150, 230);
+  --obaLightGreen: rgb(232 237 186);
+  --grey: rgb(248 249 249);
+  --textColor: white;
+  --obaChat: #f0f0f0;
+  font-size: large;
+  --black: #434343;
+  --alabaster: #f8f8f8;
+  --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
+}
+
+/* Hidden information or elements */
+.hiddenInfo,
+input#obaInfo {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 0.1em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.3em;
+}
+
+#chat {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--alabaster);
+}
+
+#chatMessage {
+  margin: 0;
+  padding: 1rem;
+  list-style-type: none;
+  flex-grow: 2;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin: 0.5em 0;
+}
+
+#chat ul#chatMessage li {
+  width: fit-content;
+}
+
+form#searchForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  position: relative;
+  background-color: var(--alabaster);
+  border-top: 0.25em solid var(--green);
+}
+
+form#searchForm input {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 1em 3rem 1em 1em;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5em 0 0 0.5em;
+  box-shadow: var(--shadow-down-light);
+  height: 4rem;
+}
+
+button#searchButton {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--green);
+  border-radius: 0 0.5em 0.5em 0;
+  padding: 0.75em;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  line-height: 1.625em;
+  height: 4rem;
+}
+
+/* Oba introduction show more and less*/
+.readMoreTarget {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+
+.readMoreStateIntro:checked ~ .readMoreWrap .readMoreTarget {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.readMoreStateIntro ~ .readMoreTrigger:before {
+  content: "Lees meer";
+}
+
+.readMoreStateIntro:checked ~ .readMoreTrigger:before {
+  content: "Lees minder";
+}
+
+.readMoreWrap p {
+  margin: 1rem 0;
+}
+
+.readMoreWrap > p:nth-of-type(1) {
+  margin-top: 0;
+}
+
+/* intro "lees meer "*/
+label.readMoreTrigger {
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+label.readMoreTrigger:hover {
+  color: var(--green);
+}
+
+/* search input introduction for user */
+#searchIntroduction {
+  border-radius: 1rem;
+  background-color: rgb(180 200 0 / 40%);
+  width: 25rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+/*----- Catalogus btns ----*/
+button.catalogusButton,
+button.instructionsButtons {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  color: var(--green);
+  border: 0.15em solid var(--green);
+  border-radius: 1.5rem;
+  transition: 4s;
+  margin: 1rem 0.5rem 0 0;
+  font-weight: bold;
+}
+
+button.catalogusButton::before,
+button.instructionsButtons::before,
+button.catalogusButton::after,
+button.instructionsButtons::after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  z-index: -1;
+  width: 200%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 40%;
+  background-color: var(--green);
+  transition: 4s;
+}
+
+button.catalogusButton::before,
+button.instructionsButtons::before {
+  left: -80%;
+  transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+button.catalogusButton::after,
+button.instructionsButtons::after {
+  right: -80%;
+  transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+button.catalogusButton:hover,
+button.instructionsButtons:hover,
+button.catalogusButton:focus,
+button.instructionsButtons:focus {
+  color: var(--textColor);
+  cursor: pointer;
+}
+
+button.catalogusButton:hover:before,
+button.catalogusButton:hover:after,
+button.catalogusButton:focus:before,
+button.catalogusButton:focus:after,
+button.instructionsButtons:hover:before,
+button.instructionsButtons:hover:after,
+button.instructionsButtons:focus:before,
+button.instructionsButtons:focus:after {
+  transform: none;
+  background-color: var(--green);
+}
+
+/* results styling*/
+
+.searchResultsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.searchResultsItems article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  background-color: #ffffff;
+  padding: 1em;
+  /* border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light); */
+  /* max-width: 20em; */
+  transition: border 0.3s ease;
+}
+
+.searchResultsItems article:hover {
+  border: var(--green) 0.2em solid;
+  cursor: pointer;
+}
+
+.searchResultsItems article:focus {
+  background-color: var(--obaLightGreen);
+}
+
+.searchResultsItems article p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.searchResultsItems img {
+  max-width: 100%;
+}
+
+/* message from user input */
+.message {
+  background-color: var(--green);
+  color: var(--alabaster);
+  margin-left: auto;
+  width: fit-content;
+  padding: 0.75em;
+  border-radius: 0.5em 0 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+}
+
+/* detail hidden and show */
+.itemDetailsDiv {
+  /* Standaard stijl voor itemDetailsDiv */
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  /* Verberg standaard alle itemDetailsDiv */
+}
+
+.itemDetailsDiv.active {
+  /* Stijl voor actieve itemDetailsDiv */
+  visibility: visible;
+  position: static;
+  display: block;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+/* focus */
+input:focus,
+button:focus,
+.buttonContainer button:focus,
+#searchResults article:focus,
+.itemDetails article:focus,
+.itemDetails article button:focus,
+.itemDetailCatalogus:focus,
+.itemDetailCatalogus button:focus {
+  border: solid var(--green) 0.3em;
+}
+
+/* details styling */
+/* itemDetails */
+#itemDetails,
+.detailsCatalogus {
+  display: grid;
+  gap: 0.5em;
+}
+
+.itemDetailsDiv > article {
+  margin-left: 0rem;
+}
+
+/* styling details container */
+.itemDetailCatalogus {
+  display: grid;
+  margin-bottom: 1rem;
+}
+
+#itemDetails article,
+.itemDetailCatalogus,
+.itemDetailsDiv {
+  background-color: #ffffff;
+  padding: 1em;
+  /* border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light); */
+}
+
+#itemDetails article button,
+.itemDetailCatalogus button,
+.itemDetailsDiv button {
+  display: flex;
+  flex-direction: column-reverse;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--green);
+  padding: 1em 0 0;
+}
+
+/*Select item Titel */
+.itemDetailsDiv article h2,
+.itemDetailCatalogus article h2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Select auteur */
+#searchResults article h3,
+.itemDetailsDiv article h3 {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* results title styling*/
+.searchResultsItems article h2 {
+  width: 100%;
+  font-size: 1.3em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Selecte item samenvatting */
+.itemDetailsDiv article p:nth-of-type(1),
+.itemDetailCatalogus p:nth-of-type(1) {
+  margin: 1em 0;
+}
+
+.itemDetailsDiv article img,
+.itemDetailCatalogus img {
+  max-width: fit-content;
+  float: left;
+  margin-right: 1rem;
+}
+
+/* Oba bot styling */
+.speechOba {
+  background-color: #ffffff;
+  width: fit-content;
+  padding: 0.75em;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  box-shadow: var(--shadow-down-light);
+  margin: 1rem 0;
+  max-width: 80vw;
+}
+
+p.speechOba {
+  margin: 1rem 0;
+}
+
+.speechOba a {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.speechOba a:hover {
+  color: var(--green);
+}
+
+/*********************/
+/*   WEBSITE MODE    */
+/*********************/
+@media (min-width: 40em) {
+  #itemDetails article,
+  .itemDetailCatalogus,
+  .itemDetailsDiv.active {
+    width: fit-content;
+    max-width: 70vw !important;
+  }
+
+  .speechOba {
+    max-width: 60vw;
+  }
+  /* styling details container */
+  #itemDetails article,
+  article.itemDetailCatalogus {
+    display: block;
+  }
+
+  /* detail hidden and show */
+  .itemDetailsDiv {
+    /* Standaard stijl voor itemDetailsDiv */
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    /* Verberg standaard alle itemDetailsDiv */
+  }
+
+  .itemDetailsDiv.active {
+    /* Stijl voor actieve itemDetailsDiv */
+    visibility: visible;
+    position: static;
+    display: flex;
+  }
+
+  .itemDetailsDiv > article {
+    margin-left: 1rem;
+  }
+
+  /* styling details container */
+  .itemDetailCatalogus {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}

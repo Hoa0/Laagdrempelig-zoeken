@@ -1,5 +1,5 @@
 const loading = document.querySelector(".loading");
-const resultsContainer = document.querySelector(".results-container");
+const resultsContainer = document.querySelector("#chatMessage");
 
 // Show loading animation
 export function showLoading() {
@@ -13,8 +13,8 @@ export function hideLoading() {
 
 // Handle UI states
 export function uiState(typeState, param = "") {
-  const ul = document.createElement("ul");
-  const li = document.createElement("li");
+  const ul = document.createElement("div");
+  const li = document.createElement("p");
 
   switch (typeState) {
     case "noData":
@@ -32,14 +32,6 @@ export function uiState(typeState, param = "") {
       break;
 
     case "hide":
-      ul.style.display = param ? "block" : "none";
-      li.classList.add("speechOba");
-      li.textContent = param
-        ? `
-      Ik heb resultaten gevonden voor ${param}. Scroll naar boven voor de resultaten.`
-        : "";
-      ul.appendChild(li);
-      resultsContainer.appendChild(ul);
       hideLoading();
       break;
 
@@ -79,6 +71,14 @@ export function uiState(typeState, param = "") {
       ul.style.display = "block";
       li.classList.add("speechOba");
       li.textContent = `Niet gevonden wat je zocht? Probeer het nog een keer.`;
+      ul.appendChild(li);
+      resultsContainer.appendChild(ul);
+      break;
+
+    case "results":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Hier zijn de gevonden resultaten voor: `;
       ul.appendChild(li);
       resultsContainer.appendChild(ul);
       break;
