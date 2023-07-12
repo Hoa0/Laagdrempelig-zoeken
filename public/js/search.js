@@ -89,7 +89,7 @@ const createResultItem = (result) => {
     const detailsDiv = document.createElement("div");
     const detailsArticle = document.createElement("article");
 
-    //** add details class */
+    //* add details class */
     detailsDiv.classList.add("itemDetailsDiv");
     detailsDiv.classList.add("active");
 
@@ -177,7 +177,9 @@ const createResultItem = (result) => {
   return resultItem;
 };
 
-// Function to load items and display them in the search results
+/**
+ * Function to load items and display them in the search results
+ */
 const loadItems = () => {
   const itemsToLoad = responseDataSet.results.slice(
     currentIndex,
