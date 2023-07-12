@@ -98,7 +98,6 @@ function showResults(category, results) {
 
     // Add click event listener to show item details
     resultItem.addEventListener("click", () => {
-
       let detailsArticle = resultItem.querySelector(
         "article.itemDetailCatalogus"
       );
@@ -118,10 +117,11 @@ function showResults(category, results) {
         { text: `${result.titles[0]}` },
         { text: `${result.authors ? result.authors[0] : "Onbekend"}` },
         {
-          text: `Samenvatting: ${result.summaries && result.summaries.length > 0
-            ? result.summaries[0]
-            : "Niet beschikbaar"
-            }`,
+          text: `Samenvatting: ${
+            result.summaries && result.summaries.length > 0
+              ? result.summaries[0]
+              : "Niet beschikbaar"
+          }`,
         },
         { text: `Talen: ${result.languages}` },
         { text: `Uitgever: ${result.publisher}` },
@@ -141,8 +141,10 @@ function showResults(category, results) {
         } else if (item.link) {
           const button = document.createElement("button");
           button.innerHTML = `${item.text}`;
-          button.setAttribute("title", "Click to share!");
+          button.setAttribute("title", "Klik om te delen!");
           button.innerHTML += `<i class="material-icons">&#xe80d;</i>`;
+          button.classList.add("shareLink");
+          
           button.addEventListener("click", () => {
             navigator.clipboard
               .writeText(item.link)
@@ -158,10 +160,9 @@ function showResults(category, results) {
               });
 
             // Scroll to the bottom of the "chat" element
-            const chatElement = document.getElementById("chat");
+            const chatElement = document.getElementById("chatMessage");
             chatElement.scrollTop = chatElement.scrollHeight;
           });
-          // detailsArticle.appendChild(button);
           catalogusDetails.appendChild(button);
         } else {
           if (index === 1) {
