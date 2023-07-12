@@ -1,9 +1,9 @@
 import fetch from "node-fetch";
 
 /**
- * 
- * @param {Express.Request} req 
- * @param {Express.Response} res 
+ *
+ * @param {Express.Request} req
+ * @param {Express.Response} res
  */
 export const fetchData = async (req, res) => {
   const publicKey = "0076bc3bc11d080e07a303360178002a";
@@ -31,10 +31,8 @@ export const fetchData = async (req, res) => {
     }
     // Parse the response body as text
     const responseBody = await response.text();
-    // console.log(responseBody); // Log the fetched data to the console
 
     // Render the response in the index.ejs template
-    // res.render("pages/index.ejs", { responseBody });
     res.json({ data: responseBody });
   } catch (error) {
     console.error("Error:", error.message);
