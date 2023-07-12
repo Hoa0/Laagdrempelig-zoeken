@@ -249,6 +249,7 @@ button.instructionsButtons:focus:after {
   gap: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  transition: border 0.3s ease;
 }
 
 .searchResultsItems article {
@@ -260,9 +261,6 @@ button.instructionsButtons:focus:after {
   gap: 1em;
   background-color: #ffffff;
   padding: 1em;
-  /* border-radius: 0 0.5em 0.5em 0.5em;
-  box-shadow: var(--shadow-down-light); */
-  /* max-width: 20em; */
   transition: border 0.3s ease;
 }
 
