@@ -59,6 +59,17 @@ const createResultItem = (result) => {
   resultItem.innerHTML = `<img src='${img}' alt="${title}"> <h2>${title}</h2><h3>${author}</h3>`;
   resultItem.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
 
+  // Add hover event listener
+  resultItem.addEventListener("mouseover", () => {
+    // Show the title when hovering over the result item
+    resultItem.setAttribute("title", title);
+  });
+
+  // Remove the title when the mouse leaves the result item
+  resultItem.addEventListener("mouseleave", () => {
+    resultItem.removeAttribute("title");
+  });
+
   // Add click event listener to show item details
   resultItem.addEventListener("click", () => {
     const itemDetails = [
