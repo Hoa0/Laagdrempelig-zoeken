@@ -353,6 +353,11 @@ body:has(#corsInfo:checked) #corsLink {
   width: 80%;
   margin: 10% auto;
   padding: 1rem;
+  height: 80%;
+}
+
+.modalContent img {
+  width: 100%;
 }
 
 .modalContent.large {
