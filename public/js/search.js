@@ -122,7 +122,7 @@ const createResultItem = (result) => {
             })
             .catch((error) => {
               console.error("Failed to copy link:", error);
-              // Handle the error or provide user feedback
+              // Provide user feedback
               uiState("noLink");
             });
 
