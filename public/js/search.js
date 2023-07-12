@@ -88,10 +88,12 @@ const createResultItem = (result) => {
 
     const detailsDiv = document.createElement("div");
     const detailsArticle = document.createElement("article");
+    const itemButtons = document.createElement("div")
 
     //* add details class */
     detailsDiv.classList.add("itemDetailsDiv");
     detailsDiv.classList.add("active");
+    itemButtons.classList.add("itemButtons")
 
     itemDetails.forEach((item, index) => {
       if (item.img) {
@@ -108,6 +110,11 @@ const createResultItem = (result) => {
         button.setAttribute("title", "Klik om te delen!");
         button.innerHTML += `<i class="material-icons">&#xe80d;</i>`;
         button.classList.add("shareLink");
+
+        const favoButton = document.createElement("button");
+        favoButton.innerHTML = "<span>&#9829;</span>Favoriet"; // Replace "Another Button" with the desired content
+        favoButton.classList.add("itemFavo");
+        favoButton.setAttribute("title", "Opslaan als favoriet")
 
         button.addEventListener("click", () => {
           navigator.clipboard
@@ -128,7 +135,9 @@ const createResultItem = (result) => {
           chatElement.scrollTop = chatElement.scrollHeight;
         });
         button.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-        detailsArticle.appendChild(button);
+        itemButtons.appendChild(button)
+        itemButtons.appendChild(favoButton);
+        detailsArticle.appendChild(itemButtons);
       } else {
         if (index === 1) {
           const h2 = document.createElement("h2");
