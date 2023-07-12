@@ -28,7 +28,7 @@ let responseDataSet;
 
 /**
  * Function to create a search result item element
- * @param {*} result 
+ * @param {Array} result 
  * @returns 
  */
 const createResultItem = (result) => {
