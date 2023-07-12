@@ -1,6 +1,6 @@
 div.loading {
-  --color: #cb8f32;
-  --duration: 6.8s;
+  --color: #cb8f32; /* Custom variable for the loading animation color */
+  --duration: 6.8s; /* Custom variable for the duration of the loading animation */
   width: 2em;
   height: 0.75em;
   position: relative;
