@@ -1,5 +1,5 @@
 const loading = document.querySelector(".loading");
-const searchResults = document.querySelector("#searchResults")
+const searchResults = document.querySelector("#searchResults");
 
 // Show loading animation
 export function showLoading() {
@@ -87,6 +87,14 @@ export function uiState(typeState, param = "") {
       ul.style.display = "block";
       li.classList.add("speechOba");
       li.textContent = `Hier zijn extra resultaten die overeenkomen met je zoekopdracht.`;
+      ul.appendChild(li);
+      searchResults.appendChild(ul);
+      break;
+
+    case "notAvailable":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Sorry deze feature is nog niet beschikbaar.`;
       ul.appendChild(li);
       searchResults.appendChild(ul);
       break;

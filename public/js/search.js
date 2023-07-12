@@ -28,8 +28,8 @@ let responseDataSet;
 
 /**
  * Function to create a search result item element
- * @param {Array} result 
- * @returns 
+ * @param {Array} result
+ * @returns
  */
 const createResultItem = (result) => {
   // Destructure properties from the result object
@@ -88,12 +88,12 @@ const createResultItem = (result) => {
 
     const detailsDiv = document.createElement("div");
     const detailsArticle = document.createElement("article");
-    const itemButtons = document.createElement("div")
+    const itemButtons = document.createElement("div");
 
     //* add details class */
     detailsDiv.classList.add("itemDetailsDiv");
     detailsDiv.classList.add("active");
-    itemButtons.classList.add("itemButtons")
+    itemButtons.classList.add("itemButtons");
 
     itemDetails.forEach((item, index) => {
       if (item.img) {
@@ -110,11 +110,6 @@ const createResultItem = (result) => {
         button.setAttribute("title", "Klik om te delen!");
         button.innerHTML += `<i class="material-icons">&#xe80d;</i>`;
         button.classList.add("shareLink");
-
-        const favoButton = document.createElement("button");
-        favoButton.innerHTML = "<span>&#9829;</span>Favoriet"; // Replace "Another Button" with the desired content
-        favoButton.classList.add("itemFavo");
-        favoButton.setAttribute("title", "Opslaan als favoriet")
 
         button.addEventListener("click", () => {
           navigator.clipboard
@@ -134,8 +129,21 @@ const createResultItem = (result) => {
           const chatElement = document.getElementById("chatMessage");
           chatElement.scrollTop = chatElement.scrollHeight;
         });
+
+        const favoButton = document.createElement("button");
+        favoButton.innerHTML = "<span>&#9829;</span>Favoriet"; // Replace "Another Button" with the desired content
+        favoButton.classList.add("itemFavo");
+        favoButton.setAttribute("title", "Opslaan als favoriet");
+
+        favoButton.addEventListener("click", () => {
+          uiState("notAvailable");
+          // Scroll to the bottom of the "chat" element
+          const chatElement = document.getElementById("chatMessage");
+          chatElement.scrollTop = chatElement.scrollHeight;
+        });
+        favoButton.setAttribute("tabindex", "0");
         button.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
-        itemButtons.appendChild(button)
+        itemButtons.appendChild(button);
         itemButtons.appendChild(favoButton);
         detailsArticle.appendChild(itemButtons);
       } else {
@@ -232,7 +240,7 @@ const loadItems = () => {
 
 /**
  * Function to handle form submission for search
- * @param {*} event 
+ * @param {*} event
  */
 const handleSearchFormSubmit = async (event) => {
   event.preventDefault();
