@@ -378,6 +378,7 @@ div.loading ul li:nth-child(18) {
   }
 }
 
+/* Keyframes for the rotating animations */
 @keyframes links {
   4% {
     transform: rotateZ(90deg);
