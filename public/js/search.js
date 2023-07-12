@@ -26,7 +26,11 @@ let currentIndex = 0;
 const itemsPerLoad = 5;
 let responseDataSet;
 
-// Function to create a search result item element
+/**
+ * Function to create a search result item element
+ * @param {*} result 
+ * @returns 
+ */
 const createResultItem = (result) => {
   // Destructure properties from the result object
   const {
