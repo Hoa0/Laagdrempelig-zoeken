@@ -83,5 +83,13 @@ export function uiState(typeState, param = "") {
       ul.appendChild(li);
       searchResults.appendChild(ul);
       break;
+
+    case "loadMore":
+      ul.style.display = "block";
+      li.classList.add("speechOba");
+      li.textContent = `Hier zijn extra resultaten die overeenkomen met je zoekopdracht.`;
+      ul.appendChild(li);
+      searchResults.appendChild(ul);
+      break;
   }
 }
