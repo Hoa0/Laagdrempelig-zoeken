@@ -253,43 +253,6 @@ select {
   color: var(--textColor);
 }
 
-/* Information cors bug catalogus*/
-#formInfo {
-  margin-top: 1rem;
-}
-
-#formInfo svg {
-  cursor: pointer;
-}
-
-#corsLink a {
-  margin: 0;
-}
-
-input#corsInfo,
-.hiddenInfo {
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  height: 0.1em;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 0.3em;
-}
-
-#corsLink {
-  opacity: 0;
-  max-height: 0;
-  font-size: 0;
-  transition: 0.25s ease;
-}
-
-body:has(#corsInfo:checked) #corsLink {
-  opacity: 1;
-  font-size: inherit;
-  max-height: 999em;
-}
-
 /*********************/
 /* Instruction       */
 /*********************/
