@@ -108,17 +108,17 @@ button#searchButton {
   transition: 0.25s ease;
 }
 
-.readMoreStateIntro:checked ~ .readMoreWrap .readMoreTarget {
+.readMoreStateIntro:checked~.readMoreWrap .readMoreTarget {
   opacity: 1;
   font-size: inherit;
   max-height: 999em;
 }
 
-.readMoreStateIntro ~ .readMoreTrigger:before {
+.readMoreStateIntro~.readMoreTrigger:before {
   content: "Lees meer";
 }
 
-.readMoreStateIntro:checked ~ .readMoreTrigger:before {
+.readMoreStateIntro:checked~.readMoreTrigger:before {
   content: "Lees minder";
 }
 
@@ -126,7 +126,7 @@ button#searchButton {
   margin: 1rem 0;
 }
 
-.readMoreWrap > p:nth-of-type(1) {
+.readMoreWrap>p:nth-of-type(1) {
   margin-top: 0;
 }
 
@@ -153,7 +153,7 @@ label.readMoreTrigger:hover {
 }
 
 /*----- Catalogus btns ----*/
-button.catalogusButton,
+button.styleBtn,
 button.instructionsButtons {
   display: inline-block;
   position: relative;
@@ -169,11 +169,12 @@ button.instructionsButtons {
   transition: 4s;
   margin: 1rem 0.5rem 0 0;
   font-weight: bold;
+  background-color: #fff;
 }
 
-button.catalogusButton::before,
+button.styleBtn::before,
 button.instructionsButtons::before,
-button.catalogusButton::after,
+button.styleBtn::after,
 button.instructionsButtons::after {
   content: "";
   position: absolute;
@@ -187,30 +188,30 @@ button.instructionsButtons::after {
   transition: 4s;
 }
 
-button.catalogusButton::before,
+button.styleBtn::before,
 button.instructionsButtons::before {
   left: -80%;
   transform: translate3d(0, 5em, 0) rotate(-340deg);
 }
 
-button.catalogusButton::after,
+button.styleBtn::after,
 button.instructionsButtons::after {
   right: -80%;
   transform: translate3d(0, 5em, 0) rotate(390deg);
 }
 
-button.catalogusButton:hover,
+button.styleBtn:hover,
 button.instructionsButtons:hover,
-button.catalogusButton:focus,
+button.styleBtn:focus,
 button.instructionsButtons:focus {
   color: var(--textColor);
   cursor: pointer;
 }
 
-button.catalogusButton:hover:before,
-button.catalogusButton:hover:after,
-button.catalogusButton:focus:before,
-button.catalogusButton:focus:after,
+button.styleBtn:hover:before,
+button.styleBtn:hover:after,
+button.styleBtn:focus:before,
+button.styleBtn:focus:after,
 button.instructionsButtons:hover:before,
 button.instructionsButtons:hover:after,
 button.instructionsButtons:focus:before,
@@ -310,7 +311,7 @@ button:focus,
   gap: 0.5em;
 }
 
-.itemDetailsDiv > article {
+.itemDetailsDiv>article {
   margin-left: 0rem;
 }
 
@@ -408,6 +409,7 @@ p.speechOba {
 /*   WEBSITE MODE    */
 /*********************/
 @media (min-width: 40em) {
+
   #itemDetails article,
   .itemDetailCatalogus,
   .itemDetailsDiv.active {
@@ -418,6 +420,7 @@ p.speechOba {
   .speechOba {
     max-width: 60vw;
   }
+
   /* styling details container */
   #itemDetails article,
   article.itemDetailCatalogus {
@@ -440,7 +443,7 @@ p.speechOba {
     display: flex;
   }
 
-  .itemDetailsDiv > article {
+  .itemDetailsDiv>article {
     margin-left: 1rem;
   }
 
@@ -472,6 +475,6 @@ button.itemFavo {
   gap: 0.5em;
 }
 
-button.itemFavo span{
+button.itemFavo span {
   transform: scale(2);
 }

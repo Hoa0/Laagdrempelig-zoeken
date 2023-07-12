@@ -26,6 +26,7 @@
   --black: #434343;
   --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
   --nav-shadow: 0px 2px 0px rgb(237 236 236);
+  --yellow: #EBA934;
 }
 
 /*********************/
@@ -51,6 +52,7 @@
   padding: 0;
   margin: 1rem;
 }
+
 .header img {
   max-width: 5rem;
 }
@@ -137,22 +139,22 @@ nav ul.menu a {
 }
 
 /* toggle menu icon */
-.sideMenu:checked ~ .navMenu {
+.sideMenu:checked~.navMenu {
   max-height: 100%;
   position: static;
   height: 100vh;
 }
 
-.sideMenu:checked ~ section#navMobile label span.labelLines {
+.sideMenu:checked~section#navMobile label span.labelLines {
   background-color: transparent;
 }
 
-.sideMenu:checked ~ section#navMobile label span.labelLines::before {
+.sideMenu:checked~section#navMobile label span.labelLines::before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.sideMenu:checked ~ section#navMobile label span.labelLines::after {
+.sideMenu:checked~section#navMobile label span.labelLines::after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -164,7 +166,8 @@ nav ul.menu a {
   display: flex;
   padding: 1rem 0;
 }
-#chatTitleContainer > article:nth-of-type(1) {
+
+#chatTitleContainer>article:nth-of-type(1) {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -189,6 +192,7 @@ nav ul.menu a {
 select {
   cursor: pointer;
 }
+
 .selectHidden {
   visibility: hidden;
   padding-right: 0.625em;
@@ -257,9 +261,11 @@ select {
 #formInfo svg {
   cursor: pointer;
 }
+
 #corsLink a {
   margin: 0;
 }
+
 input#corsInfo,
 .hiddenInfo {
   clip: rect(0, 0, 0, 0);
@@ -287,37 +293,50 @@ body:has(#corsInfo:checked) #corsLink {
 /*********************/
 /* Instruction       */
 /*********************/
-
 #helpBtn {
+  margin: 0;
+  position: absolute;
+  top: calc(9% + 0.625em);
+  right: calc(10% + 0.3125em);
+  text-align: center;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1em;
+  line-height: 1.625em;
   cursor: pointer;
-  display: flex;
-  text-decoration: none;
-  font-weight: 500;
+  border: none;
+}
+
+#helpBtn:hover {
+  cursor: pointer;
+  background-color: var(--green);
+}
+
+#helpBtn:hover::before {
+  color: var(--yellow);
+}
+
+#helpBtn::before {
+  content: "Help";
+  font-weight: bold;
   font-size: 1rem;
   color: var(--green);
-  border: none;
-  transition: 4s;
+  position: absolute;
+  top: 0rem;
+  left: -2.5rem;
+}
+
+#helpBtn::after {
+  content: "?";
   font-weight: bold;
-  background-color: #fff;
-  align-items: center;
-  position: absolute;
-  top: 16.3%;
-  right: 10%;
-  transform: translate(0, -50%);
+  font-size: 1rem;
+  color: var(--textColor);
 }
 
-#svgInfo {
-  margin-left: 0.5rem;
-  position: relative;
-}
 
-#svgInfo:hover::after {
-  content: "Tekst die wordt weergegeven";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 0.5rem;
-}
+
 
 /*--- content ---*/
 
@@ -390,6 +409,7 @@ body:has(#corsInfo:checked) #corsLink {
 .contentImages {
   display: none;
 }
+
 .activeContentImages {
   display: block;
 }
@@ -471,5 +491,12 @@ body:has(#corsInfo:checked) #corsLink {
   /*svg bot head*/
   #chatTitleContainer #botSvg {
     max-width: 3rem;
+  }
+
+  #helpBtn {
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    right: 10%;
   }
 }
