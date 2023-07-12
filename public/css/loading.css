@@ -4,10 +4,6 @@ div.loading {
   width: 2em;
   height: 0.75em;
   position: relative;
-  /* margin: 2em 0 0 0;
-  left: 50%;
-  bottom: 0;
-  top: 7em; */
   display: none;
   z-index: 1;
 }
