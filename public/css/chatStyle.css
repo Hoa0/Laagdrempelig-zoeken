@@ -451,10 +451,27 @@ p.speechOba {
   }
 }
 
+/* itemDetails buttons delen/favo */
+div.itemButtons {
+  display: flex;
+  gap: 2em;
+  align-items: flex-end;
+}
+
 /* Delen link */
-button.shareLink:hover {
+button.shareLink:hover, button.itemFavo:hover {
   text-decoration: underline;
   gap: 1em;
   font-weight: 800;
   transition: 1s;
+}
+
+/* favoriet button in itemDetails */
+button.itemFavo {
+  display: grid;
+  gap: 0.5em;
+}
+
+button.itemFavo span{
+  transform: scale(2);
 }
