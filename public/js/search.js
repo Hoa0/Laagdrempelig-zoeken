@@ -1,6 +1,8 @@
 import { uiState } from "./ui.js";
 
-// Function to set tabindex to 0 for all elements
+/**
+ * Function to set tabindex to 0 for all elements
+ */
 const setTabindexToZero = () => {
   const elements = document.querySelectorAll("*");
   elements.forEach((element) => {
