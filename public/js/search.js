@@ -222,7 +222,10 @@ const loadItems = () => {
   }
 };
 
-// Function to handle form submission for search
+/**
+ * Function to handle form submission for search
+ * @param {*} event 
+ */
 const handleSearchFormSubmit = async (event) => {
   event.preventDefault();
   currentIndex = 0;
@@ -310,7 +313,9 @@ const handleSearchFormSubmit = async (event) => {
   }
 };
 
-// Function to handle "Load More" button click
+/**
+ * Function to handle "Load More" button click
+ */
 const handleLoadMoreButtonClick = () => {
   uiState("loadMore");
   const storedDataSet = localStorage.getItem("responseDataSet");
