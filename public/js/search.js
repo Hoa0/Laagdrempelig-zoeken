@@ -114,7 +114,7 @@ const createResultItem = (result) => {
             .writeText(item.link)
             .then(() => {
               console.log("Link copied to clipboard:", item.link);
-              // Provide user feedback or perform other actions after successful copy
+              // Provide user feedback after successful copy
               uiState("copied");
             })
             .catch((error) => {
@@ -274,7 +274,7 @@ const handleSearchFormSubmit = async (event) => {
       // Make a deep copy of the response data
       const dirtySet = JSON.parse(JSON.stringify(responseData.data));
 
-      // Remove leading space and parse the cleaned data
+      // Remove space and parse the cleaned data
       responseDataSet = JSON.parse(dirtySet.substring(1));
 
       // Get the length of the response data
