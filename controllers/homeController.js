@@ -2,8 +2,8 @@ import fetch from "node-fetch";
 
 /**
  * 
- * @param {*} req 
- * @param {*} res 
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
  */
 export const fetchData = async (req, res) => {
   const publicKey = "0076bc3bc11d080e07a303360178002a";
