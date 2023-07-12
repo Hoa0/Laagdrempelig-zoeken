@@ -252,7 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Resultaten weergeven met titel bovenaan
         showResults(category, results);
       } else {
-        console.log("No results found");
+        searchResults.innerHTML +=
+        '<div class="message" tabindex="0"><p>' + category + "</p></div>";
+        searchResults.innerHTML +=
+          '<div class="speechOba" tabindex="0"><p> Helaas geen resultaten gevonden voor ' + category + ", Kan ik nog iets voor je zoeken?</p></div>";
       }
     });
   });

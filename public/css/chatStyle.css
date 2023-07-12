@@ -131,14 +131,25 @@ button#searchButton {
 }
 
 /* intro "lees meer "*/
-label.readMoreTrigger {
+.readMoreBtn{
+  border:none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: avenir;
+  margin-top: 1rem;
+}
+
+button.readMoreBtn:focus{
+  border: none !important;
+}
+label.readMoreTrigger, button.readMoreBtn {
   font-weight: bold;
   color: var(--black);
   text-decoration: underline;
   cursor: pointer;
 }
 
-label.readMoreTrigger:hover {
+label.readMoreTrigger:hover, button.readMoreBtn:hover  {
   color: var(--green);
 }
 
@@ -227,6 +238,9 @@ button.instructionsButtons:focus:after {
   transition: opacity 0.25s ease;
 }
 
+.catalogusContainer p:nth-of-type(1){
+  margin:1.5rem 0 0.5rem 0;
+}
 /* results styling*/
 
 .searchResultsItems {
