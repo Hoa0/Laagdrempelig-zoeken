@@ -1,5 +1,4 @@
 const loading = document.querySelector(".loading");
-const resultsContainer = document.querySelector("#chatMessage");
 const searchResults = document.querySelector("#searchResults")
 
 // Show loading animation
