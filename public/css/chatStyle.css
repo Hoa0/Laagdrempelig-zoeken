@@ -450,3 +450,11 @@ p.speechOba {
     margin-bottom: 1rem;
   }
 }
+
+/* Delen link */
+button.shareLink:hover {
+  text-decoration: underline;
+  gap: 1em;
+  font-weight: 800;
+  transition: 1s;
+}
