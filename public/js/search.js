@@ -89,8 +89,8 @@ const createResultItem = (result) => {
       },
     ];
 
-    const detailsDiv = document.createElement("div"); 
-    const detailsArticle = document.createElement("article"); 
+    const detailsDiv = document.createElement("div");
+    const detailsArticle = document.createElement("article");
 
     //** add details class */
     detailsDiv.classList.add("itemDetailsDiv");
@@ -216,6 +216,7 @@ const loadItems = () => {
   // Hide the "Load More" button if all items have been loaded
   if (currentIndex >= responseDataSet.results.length) {
     loadMoreButton.style.display = "none";
+    uiState("tryAgain");
   } else {
     loadMoreButton.style.display = "block";
   }
@@ -311,6 +312,7 @@ const handleSearchFormSubmit = async (event) => {
 
 // Function to handle "Load More" button click
 const handleLoadMoreButtonClick = () => {
+  uiState("loadMore");
   const storedDataSet = localStorage.getItem("responseDataSet");
 
   if (storedDataSet) {
