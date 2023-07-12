@@ -1,5 +1,10 @@
 import fetch from "node-fetch";
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 export const fetchData = async (req, res) => {
   const publicKey = "0076bc3bc11d080e07a303360178002a";
   const query = req.body.query;
