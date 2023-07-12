@@ -26,15 +26,6 @@ let currentIndex = 0;
 const itemsPerLoad = 5;
 let responseDataSet;
 
-/** aangepast */
-// Function to create a chat message element
-// const createMessage = (text) => {
-//   const message = document.createElement("li");
-//   message.classList.add("message");
-//   message.textContent = text;
-//   return message;
-// };
-
 // Function to create a search result item element
 const createResultItem = (result) => {
   // Destructure properties from the result object
