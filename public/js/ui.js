@@ -1,5 +1,6 @@
 const loading = document.querySelector(".loading");
 const resultsContainer = document.querySelector("#chatMessage");
+const searchResults = document.querySelector("#searchResults")
 
 // Show loading animation
 export function showLoading() {
@@ -23,7 +24,7 @@ export function uiState(typeState, param = "") {
       li.textContent =
         "Oeps! Er is iets misgegaan. Ik kan de resultaten niet ophalen. Probeer iets anders.";
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       hideLoading();
       break;
 
@@ -40,7 +41,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.textContent = `Sorry, het is niet mogelijk om de link te kopiëren.`;
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       break;
 
     case "copied":
@@ -48,7 +49,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.textContent = `De link is gekopieerd! Je kan het nu delen.`;
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       break;
 
     case "useChat":
@@ -56,7 +57,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.textContent = `Je kan ook meteen beginnen met typen in chat.`;
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       break;
 
     case "contactOba":
@@ -64,7 +65,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.innerHTML = `Liever chatten met een OBA medewerker?<a href="https://www.oba.nl/service/contact/chatmetdeoba.html" target="_blank"> Klik hier</a>`;
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       break;
 
     case "tryAgain":
@@ -72,7 +73,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.textContent = `Niet gevonden wat je zocht? Probeer het nog een keer.`;
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       break;
 
     case "results":
@@ -80,7 +81,7 @@ export function uiState(typeState, param = "") {
       li.classList.add("speechOba");
       li.textContent = `Hier zijn de gevonden resultaten voor: `;
       ul.appendChild(li);
-      resultsContainer.appendChild(ul);
+      searchResults.appendChild(ul);
       break;
   }
 }
