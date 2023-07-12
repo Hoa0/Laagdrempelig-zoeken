@@ -412,7 +412,7 @@ p.speechOba {
   .itemDetailCatalogus,
   .itemDetailsDiv.active {
     width: fit-content;
-    max-width: 70vw !important;
+    max-width: 53vw !important;
   }
 
   .speechOba {

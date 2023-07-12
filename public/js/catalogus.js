@@ -130,6 +130,8 @@ function showResults(category, results) {
 
       const figure = document.createElement("figure");
       const catalogusDetails = document.createElement("article");
+      const itemButtons = document.createElement("div");
+      itemButtons.classList.add("itemButtons");
 
       itemDetails.forEach((item, index) => {
         if (item.img) {
@@ -144,7 +146,7 @@ function showResults(category, results) {
           button.setAttribute("title", "Klik om te delen!");
           button.innerHTML += `<i class="material-icons">&#xe80d;</i>`;
           button.classList.add("shareLink");
-          
+
           button.addEventListener("click", () => {
             navigator.clipboard
               .writeText(item.link)
@@ -163,7 +165,25 @@ function showResults(category, results) {
             const chatElement = document.getElementById("chatMessage");
             chatElement.scrollTop = chatElement.scrollHeight;
           });
-          catalogusDetails.appendChild(button);
+
+          // favobutton
+          const favoButton = document.createElement("button");
+          favoButton.innerHTML = "<span>&#9829;</span>Favoriet"; // Replace "Another Button" with the desired content
+          favoButton.classList.add("itemFavo");
+          favoButton.setAttribute("title", "Opslaan als favoriet");
+
+          favoButton.addEventListener("click", () => {
+            uiState("notAvailable");
+            
+            // Scroll to the bottom of the "chat" element
+            const chatElement = document.getElementById("chatMessage");
+            chatElement.scrollTop = chatElement.scrollHeight;
+          });
+
+          favoButton.setAttribute("tabindex", "0");
+          itemButtons.appendChild(button);
+          itemButtons.appendChild(favoButton);
+          catalogusDetails.appendChild(itemButtons);
         } else {
           if (index === 1) {
             const h2 = document.createElement("h2");
