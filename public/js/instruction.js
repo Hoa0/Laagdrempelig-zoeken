@@ -1,6 +1,17 @@
+//DOM - show modal
 const modelBtn = document.getElementById("helpBtn");
+// DOM - content modal laten zien van insctructies 
+const buttons = document.querySelectorAll(".instructionsButtons");
+// DOM - content uitleg met images 
+const vorigeBtn = document.getElementById("vorige");
+const volgendeBtn = document.getElementById("volgende");
+const contents = document.getElementsByClassName("contentImages");
+let currentIndex = 0;
+// DOM begin bescherm, lees meer over de catalogus buttons laten zien 
+const readMoreBtn = document.querySelector('.readMoreBtn');
+const hiddenContent = document.querySelector('.hiddenCatalogus');
 
-/** show modal */
+/** show modal functies en sluiten ervan*/
 function openModal() {
     const target = event.target;
     if (
@@ -31,11 +42,6 @@ function closeModal() {
 modelBtn.addEventListener("click", openModal);
 document.addEventListener("click", closeModal);
 
-
-
-/** content */
-const buttons = document.querySelectorAll(".instructionsButtons");
-
 // Voeg een klikgebeurtenis toe aan elke knop
 buttons.forEach(function (button) {
     button.addEventListener("click", function () {
@@ -63,13 +69,8 @@ buttons.forEach(function (button) {
     });
 });
 
-/** content uitleg met images */
-const vorigeBtn = document.getElementById("vorige");
-const volgendeBtn = document.getElementById("volgende");
-const contents = document.getElementsByClassName("contentImages");
-let currentIndex = 0;
 
-// Functie om de huidige content te tonen
+// Functie om de huidige content te tonen - uitleg images tonen
 function showContent(index) {
     // Verberg alle contentsecties
     for (let i = 0; i < contents.length; i++) {
@@ -105,3 +106,23 @@ volgendeBtn.addEventListener("click", nextContent);
 
 // Toon de eerste content bij het laden van de pagina
 showContent(currentIndex);
+
+/**
+ * Functie om lees en lees minder button
+ * begin bescherm, lees meer om vervolgens de catalogus buttons te laten zien 
+ */
+readMoreBtn.addEventListener('click', () => {
+    hiddenContent.classList.toggle('hiddenCatalogus');
+    if (hiddenContent.classList.contains('hiddenCatalogus')) {
+        setTimeout(() => {
+            hiddenContent.style.display = 'none';
+        }, 250); // Wacht 250 milliseconden voordat de display op 'none' wordt gezet
+        readMoreBtn.textContent = 'Lees meer';
+    } else {
+        hiddenContent.style.display = 'block';
+        setTimeout(() => {
+            hiddenContent.style.opacity = 1;
+        }, 0); // Wacht 0 milliseconden voordat de opacity op 1 wordt gezet
+        readMoreBtn.textContent = 'Lees minder';
+    }
+});

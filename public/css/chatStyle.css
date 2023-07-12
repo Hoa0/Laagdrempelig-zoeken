@@ -220,6 +220,13 @@ button.instructionsButtons:focus:after {
   background-color: var(--green);
 }
 
+/* catalogus lees meer*/
+.hiddenCatalogus {
+  opacity: 0;
+  display:none;
+  transition: opacity 0.25s ease;
+}
+
 /* results styling*/
 
 .searchResultsItems {
