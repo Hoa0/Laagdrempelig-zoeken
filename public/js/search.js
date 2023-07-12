@@ -89,8 +89,8 @@ const createResultItem = (result) => {
       },
     ];
 
-    const detailsDiv = document.createElement("div");//
-    const detailsArticle = document.createElement("article")//
+    const detailsDiv = document.createElement("div"); 
+    const detailsArticle = document.createElement("article"); 
 
     //** add details class */
     detailsDiv.classList.add("itemDetailsDiv");
@@ -102,7 +102,7 @@ const createResultItem = (result) => {
         imgElement.src = item.img;
         imgElement.alt = result.titles[0];
         const figure = document.createElement("figure");
-        figure.appendChild(imgElement)
+        figure.appendChild(imgElement);
         detailsDiv.appendChild(figure);
         detailsDiv.setAttribute("tabindex", "0");
       } else if (item.link) {
@@ -110,6 +110,8 @@ const createResultItem = (result) => {
         button.innerHTML = `${item.text}`;
         button.setAttribute("title", "Klik om te delen!");
         button.innerHTML += `<i class="material-icons">&#xe80d;</i>`;
+        button.classList.add("shareLink");
+
         button.addEventListener("click", () => {
           navigator.clipboard
             .writeText(item.link)
@@ -125,7 +127,7 @@ const createResultItem = (result) => {
             });
 
           // Scroll to the bottom of the "chat" element
-          const chatElement = document.getElementById("chat");
+          const chatElement = document.getElementById("chatMessage");
           chatElement.scrollTop = chatElement.scrollHeight;
         });
         button.setAttribute("tabindex", "0"); // Add tabindex attribute for tab navigation
@@ -157,15 +159,14 @@ const createResultItem = (result) => {
     itemDetailsContainer.classList.add("itemDetailsContainer");
 
     // Append text details to the details article
-    detailsDiv.appendChild(detailsArticle)
+    detailsDiv.appendChild(detailsArticle);
 
     // Append the detailsDiv to the itemDetailsContainer
     itemDetailsContainer.appendChild(detailsDiv);
 
-
     // Append the itemDetailsContainer to the searchResults element
     searchResults.appendChild(itemDetailsContainer);
-    // Append the itemDetailsDiv to the searchResults element 
+    // Append the itemDetailsDiv to the searchResults element
     searchResults.appendChild(itemDetailsDiv);
 
     //scroll animation
