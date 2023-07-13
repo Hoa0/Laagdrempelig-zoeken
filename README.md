@@ -14,7 +14,7 @@ Het doel van dit project is om de digitale inclusie in Amsterdam te vergroten do
 
 # Documentatie
 
-Documentatie kan je vinden in de [wiki](https://github.com/Hoa0/Laagdrempelig-zoeken/wiki/Design-Rationale) van deze repository. 
+Documentatie kan je vinden in de [wiki](https://github.com/Hoa0/Laagdrempelig-zoeken/wiki/) van deze repository. 
 
 
 # Features
