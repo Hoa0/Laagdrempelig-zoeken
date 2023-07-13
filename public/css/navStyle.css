@@ -352,9 +352,13 @@ select {
 }
 
 .contentImagesText {
-  max-width: 50vw;
+  max-width: 48vw;
   margin: 0 auto;
   padding: 1rem 0;
+}
+
+.contentImagesText p {
+  margin: 1rem 0;
 }
 
 /* button container vorige & volgende*/
