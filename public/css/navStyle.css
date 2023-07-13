@@ -324,7 +324,7 @@ select {
 
 .modalContent {
   position: relative;
-  background-color: white;
+  background-color: rgb(223, 223, 223);
   width: 90%;
   margin: 10% auto;
   padding: 1rem;
@@ -336,6 +336,7 @@ select {
   margin-right: auto;
   margin-left: auto;
   display: flex;
+  border: 0.3em solid black;
 }
 
 .modalContent > span {
@@ -352,7 +353,7 @@ select {
 }
 
 .contentImagesText {
-  max-width: 48vw;
+  max-width: 60vw;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -366,7 +367,7 @@ select {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 50vw;
+  max-width: 60vw;
   padding: 1rem 0;
 }
 
