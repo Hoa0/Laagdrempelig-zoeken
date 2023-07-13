@@ -53,6 +53,10 @@
   margin: 1rem;
 }
 
+h2, h3 {
+  color: var(--black);
+}
+
 .header img {
   max-width: 5rem;
 }
@@ -303,15 +307,6 @@ select {
 
 /*--- content ---*/
 
-.instructionImages {
-  display: none;
-}
-
-.activeInstructionBtn {
-  color: var(--textColor) !important;
-  background-color: var(--green);
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -332,18 +327,48 @@ select {
 .modalContent {
   position: relative;
   background-color: white;
-  width: 80%;
+  width: 90%;
   margin: 10% auto;
   padding: 1rem;
-  height: 80%;
+  height: 75vh;
 }
 
 .modalContent img {
-  width: 100%;
+  max-width: 60vw;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+.modalContent>span {
+  display: flex;
+  justify-content: end;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--green);
+}
+
+.instructionImages>h2 {
+  text-align: center;
+  box-shadow: var(--nav-shadow);
+}
+
+.instructionImages h3, p {
+  /* text-align: center; */
+}
+
+/* button container vorige & volgende*/
+.instructionImages>div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 50vw;
+  padding: 1rem 0;
+
 }
 
 .modalContent.large {
-  width: 75%;
+  /* width: 75%; */
 }
 
 .close {

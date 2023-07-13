@@ -42,33 +42,6 @@ function closeModal() {
 modelBtn.addEventListener("click", openModal);
 document.addEventListener("click", closeModal);
 
-// Voeg een klikgebeurtenis toe aan elke knop
-buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-        // Haal de doelwaarde van de knop op
-        const target = this.dataset.target;
-
-        // Haal alle artikelen op met de specifieke class
-        const articles = document.querySelectorAll(".content");
-
-        // Verberg alle artikelen
-        articles.forEach(function (article) {
-            article.style.display = "none";
-        });
-
-        // Toon het doelartikel
-        document.getElementById(target).style.display = "block";
-
-        // Verwijder de "activeInstructionBtn" klasse van alle knoppen
-        buttons.forEach(function (btn) {
-            btn.classList.remove("activeInstructionBtn");
-        });
-
-        // Voeg de "activeInstructionBtn" klasse toe aan de geklikte knop
-        this.classList.add("activeInstructionBtn");
-    });
-});
-
 
 // Functie om de huidige content te tonen - uitleg images tonen
 function showContent(index) {
