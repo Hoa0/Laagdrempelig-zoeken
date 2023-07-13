@@ -26,7 +26,7 @@
   --black: #434343;
   --shadow-down-light: 1px 1px 2px rgba(0, 0, 0, 0.16);
   --nav-shadow: 0px 2px 0px rgb(237 236 236);
-  --yellow: #EBA934;
+  --yellow: #eba934;
 }
 
 /*********************/
@@ -53,7 +53,8 @@
   margin: 1rem;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: var(--black);
 }
 
@@ -143,22 +144,22 @@ nav ul.menu a {
 }
 
 /* toggle menu icon */
-.sideMenu:checked~.navMenu {
+.sideMenu:checked ~ .navMenu {
   max-height: 100%;
   position: static;
   height: 100vh;
 }
 
-.sideMenu:checked~section#navMobile label span.labelLines {
+.sideMenu:checked ~ section#navMobile label span.labelLines {
   background-color: transparent;
 }
 
-.sideMenu:checked~section#navMobile label span.labelLines::before {
+.sideMenu:checked ~ section#navMobile label span.labelLines::before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.sideMenu:checked~section#navMobile label span.labelLines::after {
+.sideMenu:checked ~ section#navMobile label span.labelLines::after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -171,7 +172,7 @@ nav ul.menu a {
   padding: 1rem 0;
 }
 
-#chatTitleContainer>article:nth-of-type(1) {
+#chatTitleContainer > article:nth-of-type(1) {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -302,9 +303,6 @@ select {
   color: var(--textColor);
 }
 
-
-
-
 /*--- content ---*/
 
 .modal {
@@ -340,7 +338,7 @@ select {
   display: flex;
 }
 
-.modalContent>span {
+.modalContent > span {
   display: flex;
   justify-content: end;
   font-weight: bold;
@@ -348,23 +346,23 @@ select {
   color: var(--green);
 }
 
-.instructionImages>h2 {
+.instructionImages > h2 {
   text-align: center;
   box-shadow: var(--nav-shadow);
 }
 
-.instructionImages h3, p {
+.instructionImages h3,
+p {
   /* text-align: center; */
 }
 
 /* button container vorige & volgende*/
-.instructionImages>div {
+.instructionImages > div {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 50vw;
   padding: 1rem 0;
-
 }
 
 .modalContent.large {
@@ -482,9 +480,9 @@ select {
   }
 
   #helpBtn {
-    margin: 0;
+    margin: 1rem 0;
     position: absolute;
-    top: 10%;
+    top: 12%;
     right: 10%;
   }
 }
